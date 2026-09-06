@@ -1,0 +1,66 @@
+{
+  "articleId": "art-55",
+  "paragraph": 1,
+  "sourceVersion": "20260701",
+  "sourceUrl": "https://law.go.kr/LSW/lsInfoP.do?lsiSeq=280405&efYd=20260701&ancYnChk=0&chrClsCd=010202#J55:0",
+  "imageSourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=123278409",
+  "imageLocalPath": "data/sources/article55-table.gif",
+  "imageSha256": "dc4b5dbc3860b83da1c53971893e5d9adfbba49b16da3f6b9e4f8edefc30bb0b",
+  "status": "visually-transcribed-from-official-image",
+  "unit": "KRW",
+  "lowerBoundSemantics": "exclusive except first includes zero",
+  "upperBoundSemantics": "inclusive; null is unbounded",
+  "formula": "baseTax + (taxableBase - lowerBound) * ratePercent / 100",
+  "scope": "거주자 종합소득과세표준에 적용하는 제55조제1항 산출세액 표. 과세표준 산정, 공제, 세액감면, 원천징수, 귀속연도 적용례와 끝수처리는 제외.",
+  "sourceIssue": "공식 HTML 이미지 alt의 10억원 초과 행에 누적기초세액 3억8406만원이 누락되어 있다. 이미지 원본에 표시된 값을 전사했다. 이는 법문 자체의 결함이 아닌 웹 접근성 대체텍스트의 결함이다.",
+  "rows": [
+    {
+      "lowerBound": 0,
+      "upperBound": 14000000,
+      "baseTax": 0,
+      "ratePercent": 6
+    },
+    {
+      "lowerBound": 14000000,
+      "upperBound": 50000000,
+      "baseTax": 840000,
+      "ratePercent": 15
+    },
+    {
+      "lowerBound": 50000000,
+      "upperBound": 88000000,
+      "baseTax": 6240000,
+      "ratePercent": 24
+    },
+    {
+      "lowerBound": 88000000,
+      "upperBound": 150000000,
+      "baseTax": 15360000,
+      "ratePercent": 35
+    },
+    {
+      "lowerBound": 150000000,
+      "upperBound": 300000000,
+      "baseTax": 37060000,
+      "ratePercent": 38
+    },
+    {
+      "lowerBound": 300000000,
+      "upperBound": 500000000,
+      "baseTax": 94060000,
+      "ratePercent": 40
+    },
+    {
+      "lowerBound": 500000000,
+      "upperBound": 1000000000,
+      "baseTax": 174060000,
+      "ratePercent": 42
+    },
+    {
+      "lowerBound": 1000000000,
+      "upperBound": null,
+      "baseTax": 384060000,
+      "ratePercent": 45
+    }
+  ]
+}

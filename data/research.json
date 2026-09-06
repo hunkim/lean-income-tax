@@ -1,0 +1,26 @@
+{
+  "implementedArticles": [
+    {
+      "articleId": "art-55",
+      "scope": "제1항 기본 세율표 숫자 부분",
+      "fullArticle": false,
+      "classification": "conditional",
+      "sourceReview": "Astra visual table correspondence + actual Solar numeric fidelity review",
+      "externalAssumptions": [
+        "거주자 해당성",
+        "확정된 종합소득과세표준",
+        "적용 귀속연도 및 다른 규정"
+      ],
+      "unimplemented": [
+        "공제·감면",
+        "기납부액·환급액",
+        "지방소득세",
+        "법정 끝수처리",
+        "제55조 제2항"
+      ]
+    }
+  ],
+  "corpusClassification": "Other articles pending; no whole-law semantic review claim.",
+  "sourceSha256": "987d1730ca7bd9d55f1346f45f254e219f419adbfa82b9ccf88b4987ff084f94",
+  "numericReview": "reports/solar/numeric-review-final.json"
+}

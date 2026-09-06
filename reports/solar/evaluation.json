@@ -1,0 +1,37 @@
+{
+  "source": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7873&mi=6437",
+  "checked_at": "2026-09-06",
+  "requested_model": "solar-pro4",
+  "response_model": "solar-pro4-260806",
+  "first_attempt_passed": false,
+  "retry_used": true,
+  "accepted": false,
+  "theorem_count": 0,
+  "accepted_sha256": null,
+  "scope": "제55조 제1항 첫 구간의 산출세액 ×100 산술 모형. 법적 적용 전제와 연말정산 전체는 미구현.",
+  "guided_round": {
+    "accepted": true,
+    "response_model": "solar-pro4-260806",
+    "theorem_count": 4,
+    "accepted_sha256": "2b6e7a248c1d28487145ba6865cf2d729a4bc4803739a9c99c62b15102382ccf",
+    "assistance": "Astra provided exact Std proof tactics; original unaided task remains failed.",
+    "adopted_sha256": "c80faad027680a2bc982deef43bde1049b94be1ce7434a5e57e0e7c9c7f0ca81",
+    "adoption_edits": "Astra corrected Korean comments only: output is 100 times tax, and applicability is limited to first band. Definitions and all four proofs unchanged.",
+    "adopted_compiler_exit_code": 0
+  },
+  "numeric_fidelity_review": {
+    "record": "reports/solar/numeric-review-final.json",
+    "response_model": "solar-pro4-260806",
+    "finish_reason": "stop",
+    "result": {
+      "match": true,
+      "mismatches": [],
+      "checkedRows": 8,
+      "scope": "제55조제1항 표 8행과 tax100 정의: 구간경계(상한포함), 누적기초세액×100, 초과액 기준, 세율 완전일치"
+    },
+    "reviewed_source_sha256": "6e4fa1102b107a5775291c69b2489b6d67a2c7a8caf5f5d80a3cdaec58214207",
+    "reviewed_rates_sha256": "e9cab6ce715d52f6e3fd625b9751cec0c9ee94cece27e485b676e61c25e8424f",
+    "source_version": "20260701",
+    "scope": "Source-table to definition numeric fidelity only; not kernel verification or whole-law approval."
+  }
+}

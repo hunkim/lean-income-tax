@@ -1,0 +1,7 @@
+.env*
+.vercel/
+dist/
+node_modules/
+lean/.lake/
+__pycache__/
+*.pyc

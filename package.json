@@ -1,0 +1,1 @@
+{"name":"lean-income-tax","version":"0.1.0","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","prebuild":"npm test","test":"node --test tests/*.test.mjs","verify":"python3 scripts/verify_lean.py","dev":"python3 -m http.server 4174 --directory dist"},"engines":{"node":">=22"}}

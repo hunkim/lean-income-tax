@@ -1,0 +1,335 @@
+[
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=54188375",
+    "alt": "@@LATEX@@2019년12월31일부터소급하여3년\\left(2012년1월1일부터2019년12월31일까지의근무기간이3년미만인경우에는해당근무기간으로한다\\right)동안지급받은총급여의연평균환산액 \\times \\frac{1}{10} \\times \\frac{2012년1월1일부터2019년12월31일까지의근무기간}{12} \\times 3 + 퇴직한날부터소급하여3년\\left(2020년1월1일부터퇴직한날까지의근무기간이3년미만인경우에는해당근무기간으로한다\\right)동안지급받은총급여의연평균환산액 \\times \\frac{1}{10} \\times \\frac{2020년1월1일이후의근무기간}{12} \\times 2@@/LATEX@@",
+    "localPath": "data/sources/images/54188375.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "4ea2bfae5cde9a828622dbf0b43a8d80f13eed70de399db30b2bad4e723a7c6c",
+    "bytes": 6438,
+    "retrievedAt": "2026-09-06T02:50:35.299876+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=151113713",
+    "alt": "@@LATEX@@필요경비산입한도액 = A- B@@/LATEX@@\n\nA: 기부금을 필요경비에 산입하기 전의 해당 과세기간의 소득금액(이하 이 조에서 \"기준소득금액\"이라 한다)\nB: 제45조에 따른 이월결손금(이하 이 조에서 \"이월결손금\"이라 한다)",
+    "localPath": "data/sources/images/151113713.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "858165feb58f561484e07e9cc7e033430893979a3929c3fd3890c419a6d3c709",
+    "bytes": 6298,
+    "retrievedAt": "2026-09-06T02:50:35.300085+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=91482927",
+    "alt": "@@LATEX@@필요경비산입한도액 = \\left[\\left\\{A- \\left(B + C\\right)\\right\\} \\times 100분의10\\right] + \\left[\\left\\{A- \\left(B + C\\right)\\right\\} \\times 100분의20과종교단체외에기부한금액중적은금액\\right]@@/LATEX@@\n\nA: 기준소득금액\nB: 제2항에 따라 필요경비에 산입하는 기부금\nC: 이월결손금",
+    "localPath": "data/sources/images/91482927.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "5bb625b8e54a3f3bc514a64a32ed4c550e5d03593a1d1384fa7d54e71fb19dbd",
+    "bytes": 3290,
+    "retrievedAt": "2026-09-06T02:50:35.299725+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=91482935",
+    "alt": "@@LATEX@@필요경비산입한도액 = \\left[A- \\left(B + C\\right)\\right] \\times 100분의30@@/LATEX@@\n\nA: 기준소득금액\nB: 제2항에 따라 필요경비에 산입하는 기부금\nC: 이월결손금\n",
+    "localPath": "data/sources/images/91482935.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "5e6e42a8285353aac85ce5958dca97e5cf643b960da6561363df8fbd36744630",
+    "bytes": 2632,
+    "retrievedAt": "2026-09-06T02:50:35.299453+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=92069563",
+    "alt": "@@LATEX@@\\mathrm{기본한도금액} = A \\times B \\times \\frac{1}{12}@@/LATEX@@\n\nA: 1천200만원(「조세특례제한법」 제6조제1항에 따른 중소기업의 경우에는 3천600만원)\nB: 해당 과세기간의 개월 수[개월 수는 역(曆)에 따라 계산하되, 1개월 미만의 일수는 1개월로 한다]",
+    "localPath": "data/sources/images/92069563.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "1a0f7af6f626bfb5d8ad03a3fd72ddc1fd1cbc6f93ab56cdea88cd79359c4d55",
+    "bytes": 12878,
+    "retrievedAt": "2026-09-06T02:50:35.307973+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=151111067",
+    "alt": "img151111067",
+    "localPath": "data/sources/images/151111067.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "7c645bd72583edccc09a895e8363448b9ab8066007b45e6d977fc5466e94222e",
+    "bytes": 7556,
+    "retrievedAt": "2026-09-06T02:50:35.413733+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=22185071",
+    "alt": "총급여액 공제액\n500만원 이하 총 급여액의 100분의 70\n500만원 초과 1천 500만원 이하 @@LATEX@@350만원 + \\left(500만원을초과하는금액의100분의40\\right)@@/LATEX@@\n1천 500만원 초과 4천 500만원 이하 @@LATEX@@750만원 + \\left(1천500만원을초과하는금액의100분의15\\right)@@/LATEX@@\n4천 500만원 초과 1억원 이하 @@LATEX@@1천200만원 + \\left(4천500만원을초과하는금액의100분의5\\right)@@/LATEX@@\n1억원 초과 1천475만원 + \\left(1억원을초과하는금액의100분의2\\right)",
+    "localPath": "data/sources/images/22185071.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "54b777c2af000aa3ac8e1a53f67aed86c7134b6523d8e8812cc1a7f8164574e1",
+    "bytes": 5147,
+    "retrievedAt": "2026-09-06T02:50:35.411391+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=22185101",
+    "alt": "총연금액 공제액\n350만원 이하 총연금액\n350만원 초과 700만원 이하 @@LATEX@@350만원 + \\left(350만원을초과하는금액의100분의40\\right)@@/LATEX@@\n700만원 초과 1400만원 이하 @@LATEX@@490만원 + \\left(700만원을초과하는금액의100분의20\\right)@@/LATEX@@\n1400만원 초과 @@LATEX@@630만원 + \\left(1400만원을초과하는금액의100분의10\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/22185101.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "bc497c077c5b7833018fa6524bec6511d9bd8819602e7be0b51bc374ec90df77",
+    "bytes": 4047,
+    "retrievedAt": "2026-09-06T02:50:35.411568+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=123529667",
+    "alt": "근속연수 공제액\n5년 이하 @@LATEX@@100만원 \\times \\mathrm{근속연수}@@/LATEX@@\n5년 초과 10년 이하 @@LATEX@@500만원 + 200만원 \\times \\left(\\mathrm{근속연수}- 5년\\right)@@/LATEX@@\n10년 초과 20년 이하 @@LATEX@@1천500만원 + 250만원 \\times \\left(\\mathrm{근속연수}- 10년\\right)@@/LATEX@@\n20년 초과 @@LATEX@@4천만원 + 300만원 \\times \\left(\\mathrm{근속연수}- 20년\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/123529667.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "bbfb9eb7cafd053d340453f14ce94e9c94e851be67843d31502d0be2213779aa",
+    "bytes": 7598,
+    "retrievedAt": "2026-09-06T02:50:35.415766+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=22185936",
+    "alt": "환산급여 공제액\n8백만원 이하 환산급여의 100퍼센트\n8백만원 초과 7천만원 이하 @@LATEX@@8백만원 + \\left(8백만원초과분의60퍼센트\\right)@@/LATEX@@\n7천만원 초과 1억원 이하 @@LATEX@@4천520만원 + \\left(7천만원초과분의55퍼센트\\right)@@/LATEX@@\n1억원 초과 3억원 이하 @@LATEX@@6천170만원 + \\left(1억원초과분의45퍼센트\\right)@@/LATEX@@\n3억원 초과 @@LATEX@@1억5천170만원 + \\left((3억원초과분의35퍼센트\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/22185936.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "3f08dc361f1d44c50d96956e1049d56b359e782d172235b7d9dc8969227b5414",
+    "bytes": 4726,
+    "retrievedAt": "2026-09-06T02:50:35.410995+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=123278409",
+    "alt": "종합소득 과세표준 세율\n1,400만원 이하 과세표준의 6퍼센트\n1,400만원 초과 5,000만원 이하 @@LATEX@@84만원 + \\left(1,400만원을초과하는금액의15퍼센트\\right)@@/LATEX@@\n5,000만원 초과 8,800만원 이하 @@LATEX@@624만원 + \\left(5,000만원을초과하는금액의24퍼센트\\right)@@/LATEX@@\n8,800만원 초과 1억5천만원 이하 @@LATEX@@1,536만원 + \\left(8,800만원을초과하는금액의35퍼센트\\right)@@/LATEX@@\n1억5천만원 초과 3억원 이하 @@LATEX@@3,706만원 + \\left(1억5천만원을초과하는금액의38퍼센트\\right)@@/LATEX@@\n3억원 초과 5억원 이하 @@LATEX@@9,406만원 + \\left(3억원을초과하는금액의40퍼센트\\right)@@/LATEX@@\n5억원 초과 10억원 이하 @@LATEX@@1억7,406만원 + \\left(5억원을초과하는금액의42퍼센트\\right)@@/LATEX@@\n10억원 초과 @@LATEX@@10억원을 초과하는 금액의 45퍼센트@@/LATEX@@",
+    "localPath": "data/sources/images/123278409.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "dc4b5dbc3860b83da1c53971893e5d9adfbba49b16da3f6b9e4f8edefc30bb0b",
+    "bytes": 20841,
+    "retrievedAt": "2026-09-06T02:50:35.544497+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=92069607",
+    "alt": "@@LATEX@@\\mathrm{공제한도금액} = A \\times \\frac{B}{C}@@/LATEX@@\n\nA: 제55조에 따라 계산한 해당 과세기간의 종합소득산출세액 또는 퇴직소득 산출세액\nB: 국외원천소득(「조세특례제한법」이나 그 밖의 법률에 따라 세액감면 또는 면제를 적용받는 경우에는 세액감면 또는 면제 대상 국외원천소득에 세액감면 또는 면제 비율을 곱한 금액은 제외한다)\nC: 해당 과세기간의 종합소득금액 또는 퇴직소득금액",
+    "localPath": "data/sources/images/92069607.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "5839d23a142b83455180c7f609ec97275ec85f7e6abd0d9b887b4a809e10ed6e",
+    "bytes": 15490,
+    "retrievedAt": "2026-09-06T02:50:35.535978+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=22185317",
+    "alt": "근로소득에 대한 종합소득 산출세액 공제액\n130만원 이하 산출세액의 100분의 55\n130만원 초과 @@LATEX@@71만5천원 + \\left(130만원을초과하는금액의100분의30\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/22185317.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "f62ffd349b257532d49f15d9436a7aea1c94e753ecd43c440ad49d7268a351e9",
+    "bytes": 2935,
+    "retrievedAt": "2026-09-06T02:50:35.528311+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=22185366",
+    "alt": "<납입연수> <공제액>\n5년 이하 @@LATEX@@30만원 \\times \\mathrm{납입연수}@@/LATEX@@\n5년 초과 10년 이하 @@LATEX@@150만원 + 50만원 \\times \\left(\\mathrm{납입연수}- 5년\\right)@@/LATEX@@\n10년 초과 20년 이하 @@LATEX@@400만원 + 80만원 \\times \\left(\\mathrm{납입연수}- 10년\\right)@@/LATEX@@\n20년 초과 @@LATEX@@1천200만원 + 120만원 \\times \\left(\\mathrm{납입연수}- 20\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/22185366.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "01a8608217611983ff9f8c2c2a4d6e08d2b2bfbbed3ba9237e1e321e0fc9c83d",
+    "bytes": 3601,
+    "retrievedAt": "2026-09-06T02:50:35.527851+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=22185947",
+    "alt": "@@LATEX@@\\mathrm{중간예납추계액} = \\left(\\frac{\\mathrm{종합소득산출세액}}{2}\\right)- \\left(중간예납기간종료일까지의종합소득에대한감면세액 \\cdot 세액공제액, 토지등매매차익예정신고산출세액 수시부과세액및원천징수세액\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/22185947.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "42df540f3fd51487a52503cce55ce956c676b174b9e4184d395e95d77bd5dbc6",
+    "bytes": 2982,
+    "retrievedAt": "2026-09-06T02:50:35.528173+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=110410477",
+    "alt": "@@LATEX@@\\mathrm{가산세} = A \\times \\frac{B}{C} \\times 100분의5@@/LATEX@@\n\nA: 종합소득산출세액\nB: 사업소득금액\nC: 종합소득금액",
+    "localPath": "data/sources/images/110410477.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "c59148e20fdcad6ac4f914ff7d1714d3faef4c1a282b776274dd1bd2a1187958",
+    "bytes": 3599,
+    "retrievedAt": "2026-09-06T02:50:35.636751+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=54190061",
+    "alt": "@@LATEX@@\\mathrm{가산세} = A \\times \\frac{B}{C} \\times 100분의20@@/LATEX@@\n\nA: 종합소득산출세액\nB: 기장하지 아니한 소득금액 또는 기장하여야 할 금액에 미달한 소득금액\nC: 종합소득금액",
+    "localPath": "data/sources/images/54190061.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "cbf5d0342c9ce9cf7466ad924c79e53a915ccbc8fa665c64282e49351f66ea7a",
+    "bytes": 2915,
+    "retrievedAt": "2026-09-06T02:50:35.645131+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=54190077",
+    "alt": "@@LATEX@@\\mathrm{가산세} = A \\times \\frac{B}{C} \\times 1천분의2@@/LATEX@@\n\nA: 해당 과세기간의 수입금액\nB: 미신고기간(과세기간 중 사업용계좌를 신고하지 아니한 기간으로서 신고기한의 다음 날부터 신고일 전날까지의 일수를 말하며, 미신고기간이 2개 이상의 과세기간에 걸쳐 있으면 각 과세기간별로 미신고기간을 적용한다)\nC: 365(윤년에는 366으로 한다)",
+    "localPath": "data/sources/images/54190077.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "a30a0a847b02ac36ceecabdbd127915bce2abbfe9f2dabf73ba6f08955928c40",
+    "bytes": 4186,
+    "retrievedAt": "2026-09-06T02:50:35.642372+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=54190099",
+    "alt": "@@LATEX@@\\mathrm{가산세} = A \\times \\frac{B}{C} \\times 100분의1@@/LATEX@@\n\nA: 해당 과세기간의 수입금액(현금영수증가맹점 가입대상인 업종의 수입금액만 해당하며, 제163조에 따른 계산서 및 「부가가치세법」 제32조에 따른 세금계산서 발급분 등 대통령령으로 정하는 수입금액은 제외한다)\nB: 미가입기간(제162조의3제1항에 따른 가입기한의 다음 날부터 가입일 전날까지의 일수를 말하며, 미가입기간이 2개 이상의 과세기간에 걸쳐 있으면 각 과세기간별로 미가입기간을 적용한다)\nC: 365(윤년에는 366으로 한다)",
+    "localPath": "data/sources/images/54190099.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "5edef4e1f62876883ba29aef85da3768f355b1501fa8e2df3eb08be3e65e437c",
+    "bytes": 5491,
+    "retrievedAt": "2026-09-06T02:50:35.642487+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=27776173",
+    "alt": "@@LATEX@@양도소득세감면액 = A \\times \\frac{\\left(B- C\\right)}{D} \\times E@@/LATEX@@\n\nA: 제104조에 따른 양도소득 산출세액\nB: 감면대상 양도소득금액\nC: 제103조제2항에 따른 양도소득 기본공제\nD: 제92조에 따른 양도소득 과세표준\nE: 이 법 또는 다른 조세에 관한 법률에서 정한 감면율",
+    "localPath": "data/sources/images/27776173.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "cd7287f61deba1ec99c726145586efc4da612ea7c444ca0b82af457b2693ffb7",
+    "bytes": 3634,
+    "retrievedAt": "2026-09-06T02:50:35.642062+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=39763405",
+    "alt": "표 1\n보유기간 공제율\n3년 이상 4년 미만 100분의 6\n4년 이상 5년 미만 100분의 8\n5년 이상 6년 미만100분의 10\n6년 이상 7년 미만 100분의 12\n7년 이상 8년 미만 100분의 14\n8년 이상 9년 미만 100분의 16\n9년 이상 10년 미만 100분의 18\n10년 이상 11년 미만 100분의 20\n11년 이상 12년 미만 100분의 22\n12년 이상 13년 미만 100분의 24\n13년 이상 14년 미만 100분의 26\n14년 이상 15년 미만 100분의 28\n15년 이상 100분의 30\n",
+    "localPath": "data/sources/images/39763405.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "ad2cd167a0b9365eccb81b9dee16c2d16b5456c123422289934103d757a1c922",
+    "bytes": 17706,
+    "retrievedAt": "2026-09-06T02:50:35.833824+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=73631051",
+    "alt": "표 2\n보유기간 공제율 거주기간 공제율\n3년 이상 4년 미만 100분의 12\n2년 이상 3년 미만(보유기간 3년 이상에 한정함) 100분의 8\n3년 이상 4년 미만 100분의 12\n\n4년 이상 5년 미만 100분의 16 4년 이상 5년 미만 100분의 16\n5년 이상 6년 미만 100분의 20 5년 이상 6년 미만 100분의 20\n6년 이상 7년 미만 100분의 24 6년 이상 7년 미만 100분의 24\n7년 이상 8년 미만 100분의 28 7년 이상 8년 미만 100분의 28\n8년 이상 9년 미만 100분의 32 8년 이상 9년 미만 100분의 32\n9년 이상 10년 미만 100분의 36 9년 이상 10년 미만 100분의 36\n10년 이상  100분의 40 10년 이상 100분의 40\n",
+    "localPath": "data/sources/images/73631051.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "fe35378286c775658846106ef28f51353dcb9d7cef8ecc01b0e434d2e6f74eb1",
+    "bytes": 8303,
+    "retrievedAt": "2026-09-06T02:50:35.823184+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=136133891",
+    "alt": "@@LATEX@@주택이아닌건물로보유한기간에해당하는제2항표1에따른보유기간별공제율 + 주택으로보유한기간에해당하는제2항표2에따른보유기간별공제율@@/LATEX@@",
+    "localPath": "data/sources/images/136133891.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "9dcc3284c4a0650dca91ed7cbe24bb3390c05b0fe5aa83ae472982c122bd80b8",
+    "bytes": 5122,
+    "retrievedAt": "2026-09-06T02:50:35.744842+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=136133961",
+    "alt": "@@LATEX@@주택으로보유한기간중거주한기간에해당하는제2항표2에따른거주기간별공제율@@/LATEX@@",
+    "localPath": "data/sources/images/136133961.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "b7eba94c8c44765b0ebd0877b5fc14945eb585650295f0d2c0b55b907242d1a6",
+    "bytes": 3470,
+    "retrievedAt": "2026-09-06T02:50:35.822996+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=123529917",
+    "alt": "양도소득과세표준 세율\n1,400만원 이하 16퍼센트\n1,400만원 초과 5,000만원 이하 @@LATEX@@224만원 + \\left(1,400만원초과액 \\times 25퍼센트\\right)@@/LATEX@@\n5,000만원 초과 8,800만원 이하 @@LATEX@@1,124만원 + \\left(5,000만원초과액 \\times 34퍼센트\\right)@@/LATEX@@\n8,800만원 초과 1억5천만원 이하 @@LATEX@@2,416만원 + \\left(8,800만원초과액 \\times 45퍼센트\\right)@@/LATEX@@\n1억5천만원 초과 3억원 이하 @@LATEX@@5,206만원 + \\left(1억5천만원초과액 \\times 48퍼센트\\right)@@/LATEX@@\n3억원 초과 5억원 이하 @@LATEX@@1억2,406만원 + \\left(3억원초과액 \\times 50퍼센트\\right)@@/LATEX@@\n5억원 초과 10억원 이하 @@LATEX@@2억2,406만원 + \\left(5억원초과액 \\times 52퍼센트\\right)@@/LATEX@@\n10억원 초과 @@LATEX@@4억8,406만원 + \\left(10억원초과액 \\times 55퍼센트\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/123529917.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "ee429e42d70e436e0895c735ce42cb9c8c9e2acccf18642796bc3c64e478d67d",
+    "bytes": 18642,
+    "retrievedAt": "2026-09-06T02:50:35.835675+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=123529897",
+    "alt": "양도소득과세표준 세율\n1,400만원 이하 16퍼센트\n1,400만원 초과 5,000만원 이하 @@LATEX@@224만원 + \\left(1,400만원초과액 \\times 25퍼센트\\right)@@/LATEX@@\n5,000만원 초과 8,800만원 이하 @@LATEX@@1,124만원 + \\left(5,000만원초과액 \\times 34퍼센트\\right)@@/LATEX@@\n8,800만원 초과 1억5천만원 이하 @@LATEX@@2,416만원 + \\left(8,800만원초과액 \\times 45퍼센트\\right)@@/LATEX@@\n1억5천만원 초과 3억원 이하 @@LATEX@@5,206만원 + \\left(1억5천만원초과액 \\times 48퍼센트\\right)@@/LATEX@@\n3억원 초과 5억원 이하 @@LATEX@@1억2,406만원 + \\left(3억원초과액 \\times 50퍼센트\\right)@@/LATEX@@\n5억원 초과 10억원 이하 @@LATEX@@2억2,406만원 + \\left(5억원초과액 \\times 52퍼센트\\right)@@/LATEX@@\n10억원 초과 @@LATEX@@4억8,406만원 + \\left(10억원초과액 \\times 55퍼센트\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/123529897.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "4baf7821c1afa1ec0ae94920da1ac6121f9969939285341b8b93b9f1ba7ea945",
+    "bytes": 18743,
+    "retrievedAt": "2026-09-06T02:50:35.909464+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=147191637",
+    "alt": "양도소득과세표준 세율\n3억원 이하 20퍼센트\n3억원 초과  @@LATEX@@6천만원 + \\left(3억원초과액 \\times 25퍼센트\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/147191637.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "e6eb6f21c1407f7238c661c2998fde46d6dfdf605c47a74257dbc250acf90edb",
+    "bytes": 4723,
+    "retrievedAt": "2026-09-06T02:50:35.902220+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=91482959",
+    "alt": "양도소득과세표준 세율\n3억원 이하 20퍼센트\n3억원 초과 @@LATEX@@6천만원 + \\left(3억원초과액 \\times 25퍼센트\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/91482959.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "f0b358d1b11eac7c32aeb7b04e9be301f73567d8f27c1a35b9c892d412902d04",
+    "bytes": 2522,
+    "retrievedAt": "2026-09-06T02:50:35.924221+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=27777192",
+    "alt": "@@LATEX@@예정신고산출세액 = \\left(A- B- C\\right) \\times D@@/LATEX@@\n\nA: 양도차익\nB: 장기보유 특별공제\nC: 양도소득 기본공제\nD: 제104조제1항에 따른 세율",
+    "localPath": "data/sources/images/27777192.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "223a1966fca254591537d6834003e3cd4d1d051a38e86e80dff31695097f0253",
+    "bytes": 2657,
+    "retrievedAt": "2026-09-06T02:50:35.944879+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=27777230",
+    "alt": "@@LATEX@@예정신고산출세액 = \\left[\\left(A + B- C\\right) \\times D\\right]- E@@/LATEX@@\n\nA: 이미 신고한 자산의 양도소득금액\nB: 2회 이후 신고하는 자산의 양도소득금액\nC: 양도소득 기본공제\nD: 제104조제1항제1호에 따른 세율\nE: 이미 신고한 예정신고 산출세액",
+    "localPath": "data/sources/images/27777230.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "fcc9aa12e95e5dbb76e6ad54cd888230b11b39439e03b461d69931a1c67d8cb5",
+    "bytes": 3428,
+    "retrievedAt": "2026-09-06T02:50:35.936847+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=92071303",
+    "alt": "@@LATEX@@예정신고산출세액 = \\left[\\left(A + B- C\\right) \\times D\\right]- E@@/LATEX@@\n\nA: 이미 신고한 자산의 양도소득금액\nB: 2회 이후 신고하는 자산의 양도소득금액\nC: 양도소득 기본공제\nD: 제104조제1항제8호 또는 제9호에 따른 세율\nE: 이미 신고한 예정신고 산출세액",
+    "localPath": "data/sources/images/92071303.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "b56fa7812bf8d529f1dedaa24cea631c642ee09347ad071a24fd0a1d022b5208",
+    "bytes": 13566,
+    "retrievedAt": "2026-09-06T02:50:36.004937+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=147191901",
+    "alt": "@@LATEX@@예정신고산출세액 = \\left[\\left(A + B- C\\right) \\times D\\right]- E@@/LATEX@@\n\nA: 이미 신고한 자산의 양도소득금액\nB: 2회 이후 신고하는 자산의 양도소득금액\nC: 양도소득 기본공제\nD: 제104조제1항제11호가목2)에 따른 세율\nE: 이미 신고한 예정신고 산출세액",
+    "localPath": "data/sources/images/147191901.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "b7dc5bc75894f2bd26a1867b97c08a4c443ca42318c2abb349feaa690085cca1",
+    "bytes": 7148,
+    "retrievedAt": "2026-09-06T02:50:36.009894+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=91482963",
+    "alt": "@@LATEX@@예정신고산출세액 = \\left[\\left(A + B- C\\right) \\times D\\right]- E@@/LATEX@@\n\nA: 이미 신고한 자산의 양도소득금액\nB: 2회 이후 신고하는 자산의 양도소득금액\nC: 양도소득 기본공제\nD: 제104조제1항제14호에 따른 세율\nE: 이미 신고한 예정신고 산출세액",
+    "localPath": "data/sources/images/91482963.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "81eba147fd789aa4bd2b448f1c49618ed8699c8777ee5bd4ae92fd037b1153c0",
+    "bytes": 3505,
+    "retrievedAt": "2026-09-06T02:50:36.019418+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=54190743",
+    "alt": "@@LATEX@@\\mathrm{공제한도금액} = A \\times \\frac{B}{C}@@/LATEX@@\n\nA: 제118조의5에 따라 계산한 해당 과세기간의 국외자산에 대한 양도소득 산출세액\nB: 해당 국외자산 양도소득금액\nC: 해당 과세기간의 국외자산에 대한 양도소득금액",
+    "localPath": "data/sources/images/54190743.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "4a49f34a4257db4c8884489ddedf04eb22d51dc2f8674627becba1856107c35e",
+    "bytes": 3228,
+    "retrievedAt": "2026-09-06T02:50:36.021694+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=147191903",
+    "alt": "양도소득과세표준 세율\n3억원 이하 20퍼센트\n3억원 초과 @@LATEX@@6천만원 + \\left(3억원초과액 \\times 25퍼센트\\right)@@/LATEX@@",
+    "localPath": "data/sources/images/147191903.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "6c3176b2a545ff47ac3dc3687063612907ed98171416f30edb929421095e9e49",
+    "bytes": 4622,
+    "retrievedAt": "2026-09-06T02:50:36.043186+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=22186230",
+    "alt": "나이(연금수령일 현재) 세율\n70세 미만 100분의 5\n70세 이상 80세 미만 100분의 4\n80세 이상 100분의 3",
+    "localPath": "data/sources/images/22186230.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "1ad64995944a2cfaf46f5ce8f5a5e09c07ceb0d6cfb9d204e833001846be61b5",
+    "bytes": 2767,
+    "retrievedAt": "2026-09-06T02:50:36.084979+00:00"
+  },
+  {
+    "sourceUrl": "https://law.go.kr/LSW/flDownload.do?flSeq=159513073",
+    "alt": "양도소득과세표준 세율\n3억원 이하 100분의 20\n3억원 초과 @@LATEX@@6천만원 + \\left(3억원초과액\\right) \\times 100분의25@@/LATEX@@",
+    "localPath": "data/sources/images/159513073.gif",
+    "reviewStatus": "unreviewed",
+    "sha256": "6ede53876167d258ff0f80b559eda033b71946c52681cc500add353dcacca684",
+    "bytes": 4413,
+    "retrievedAt": "2026-09-06T02:50:36.105925+00:00"
+  }
+]

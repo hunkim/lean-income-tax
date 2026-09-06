@@ -1,0 +1,53 @@
+{
+  "request": {
+    "model": "solar-pro4",
+    "reasoning_effort": "low",
+    "max_tokens": 2000,
+    "messages": [
+      {
+        "role": "system",
+        "content": "숫자 대조만 수행하세요. 짧은 JSON만 응답하세요."
+      },
+      {
+        "role": "user",
+        "content": "숫자만 검토. 코드 출력은 세액100배이다. 아래 공식 국세청 표와 코드의 8개 구간 상수·경계·세율이 같은가? 응답은 300자 이하 한국어 JSON {match:boolean, mismatches:[]}만. 시행일·연말정산 해석은 검토대상 아님. 표: 14000000이하 6%; 50000000이하 840000원+15%; 88000000이하6240000원+24%;150000000이하15360000원+35%;300000000이하37060000원+38%;500000000이하94060000원+40%;1000000000이하174060000원+42%;초과384060000원+45%. 각 초과분은 직전 상한 초과액.\nimport Std\nnamespace IncomeTax\n/- 소득세법 제55조 제1항, 시행 2026-04-21 고정본.\n과세표준은 원 단위 자연수, 출력은 정확한 세액의 100배입니다.\n[주석 T1] 과세표준·거주자 해당성은 외부 확정. 총급여를 넣지 않습니다.\n[주석 T2] 공제·감면·기납부세액·지방소득세 및 끝수처리 미구현.\n이는 연말정산 환급액이 아닌 기본 세율표의 부분 모델입니다. -/\ndef tax100 (x : Nat) : Nat :=\n  if x ≤ 14000000 then 6*x\n  else if x ≤ 50000000 then 84000000 + 15*(x-14000000)\n  else if x ≤ 88000000 then 624000000 + 24*(x-50000000)\n  else if x ≤ 150000000 then 1536000000 + 35*(x-88000000)\n  else if x ≤ 300000000 then 3706000000 + 38*(x-150000000)\n  else if x ≤ 500000000 then 9406000000 + 40*(x-300000000)\n  else if x ≤ 1000000000 then 17406000000 + 42*(x-500000000)\n  else 38406000000 + 45*(x-1000000000)\n\ntheorem zero_tax : tax100 0 = 0 := by decide\n\ntheorem first_band (x : Nat) (h : x ≤ 14000000) : tax100 x = 6*x := by\n  simp [tax100,h]\n\ntheorem tax_monotone (x y : Nat) (h : x ≤ y) : tax100 x ≤ tax100 y := by\n  unfold tax100\n  repeat' split\n  all_goals omega\n\n/- [주석 T3] 공제·지원금 등을 포함한 실수령액 전체에 대한 정리가 아닙니다. -/\ntheorem increase_bounded (x y : Nat) (h : x ≤ y) :\n    tax100 y - tax100 x ≤ 45*(y-x) := by\n  unfold tax100\n  repeat' split\n  all_goals omega\n\ntheorem first_boundary : tax100 14000000 = 84000000 := by decide\ntheorem above_first_boundary : tax100 14000001 = 84000015 := by decide\ntheorem example_20m : tax100 20000000 = 174000000 := by decide\ntheorem top_boundary : tax100 1000000000 = 38406000000 := by decide\nend IncomeTax\n"
+      }
+    ]
+  },
+  "response": {
+    "id": "e5d297c8-7b54-47ac-8843-ee5c1f58c20f",
+    "object": "chat.completion",
+    "created": 1788663205,
+    "model": "solar-pro4-260806",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": null,
+          "reasoning": "Here's a thinking process:\n\n1.  **Analyze User Input:**\n    - **Task:** Compare the provided tax table (공식 국세청 표) with the code's constants, boundaries, and tax rates for 8 brackets.\n    - **Constraint 1:** Only check numbers.\n    - **Constraint 2:** Code output is 100x the tax amount.\n    - **Constraint 3:** Response must be a short JSON in Korean, max 300 characters.\n    - **Constraint 4:** Format: `{match:boolean, mismatches:[]}`.\n    - **Constraint 5:** Ignore enforcement dates and year-end tax settlement interpretations.\n    - **Table Provided:**\n        - ≤ 14,000,000: 6%\n        - ≤ 50,000,000: 840,000원 + 15%\n        - ≤ 88,000,000: 6,240,000원 + 24%\n        - ≤ 150,000,000: 15,360,000원 + 35%\n        - ≤ 300,000,000: 37,060,000원 + 38%\n        - ≤ 500,000,000: 94,060,000원 + 40%\n        - ≤ 1,000,000,000: 174,060,000원 + 42%\n        - > 1,000,000,000: 384,060,000원 + 45%\n        - Note: Each bracket's fixed amount is based on exceeding the previous upper limit.\n    - **Code Provided (Lean):**\n        - `if x ≤ 14000000 then 6*x` (6% -> 6*x, correct for 100x tax)\n        - `else if x ≤ 50000000 then 84000000 + 15*(x-14000000)` (840,000 * 100 = 84,000,000. Correct.)\n        - `else if x ≤ 88000000 then 624000000 + 24*(x-50000000)` (6,240,000 * 100 = 624,000,000. Correct.)\n        - `else if x ≤ 150000000 then 1536000000 + 35*(x-88000000)` (15,360,000 * 100 = 1,536,000,000. Correct.)\n        - `else if x ≤ 300000000 then 3706000000 + 38*(x-150000000)` (37,060,000 * 100 = 3,706,000,000. Correct.)\n        - `else if x ≤ 500000000 then 9406000000 + 40*(x-300000000)` (94,060,000 * 100 = 9,406,000,000. Correct.)\n        - `else if x ≤ 1000000000 then 17406000000 + 42*(x-500000000)` (174,060,000 * 100 = 17,406,000,000. Correct.)\n        - `else 38406000000 + 45*(x-1000000000)` (384,060,000 * 100 = 38,406,000,000. Correct.)\n    - **Compare boundaries & rates:**\n        - Band 1: ≤14M, 6% -> Match\n        - Band 2: ≤50M, 840k+15% -> Code: 84M+15% on (x-14M) -> Match\n        - Band 3: ≤88M, 6.24M+24% -> Code: 624M+24% on (x-50M) -> Match\n        - Band 4: ≤150M, 15.36M+35% -> Code: 1536M+35% on (x-88M) -> Match\n        - Band 5: ≤300M, 37.06M+38% -> Code: 3706M+38% on (x-150M) -> Match\n        - Band 6: ≤500M, 94.06M+40% -> Code: 9406M+40% on (x-300M) -> Match\n        - Band 7: ≤1B, 174.06M+42% -> Code: 17406M+42% on (x-500M) -> Match\n        - Band 8: >1B, 384.06M+45% -> Code: 38406M+45% on (x-1B) -> Match\n    - All boundaries, base amounts, and rates match exactly after accounting for the 100x scaling in the code.\n    - Therefore, `match` should be `true`, and `mismatches` should be empty `[]`.\n\n2.  **Format Output:**\n    - JSON: `{\"match\": true, \"mismatches\": []}`\n    - Language: Korean (as requested, but JSON keys/values are standard. I'll keep it simple as requested: `{match:boolean, mismatches:[]}`. The prompt says \"한국어 JSON\", so I'll just output the JSON. I can add a brief Korean note if needed, but it says \"짧은 JSON만 응답하세요.\" (Only respond with a short JSON). I will strictly output just the JSON to be safe, or ensure it's valid JSON.\n    - Check character limit: 300자 이하. `{match:true,mismatches:[]}` is well under.\n    - I will output exactly: `{\"match\": true, \"mismatches\": []}`\n\n    Let's double check the exact prompt: \"응답은 300자 이하 한국어 JSON {match:boolean, mismatches:[]}만.\"\n    I will produce: `{\"match\": true, \"mismatches\": []}` (valid JSON, matches constraints).\n\n    Wait, is there any hidden mismatch?\n    Table: 14000000이하 6% -> Code: 6*x (matches 6% * 100)\n    Table: 50000000이하 840000원+15% -> Code: 84000000 + 15*(x-14000000) -> 840000 * 100 = 84000000. (matches)\n    Table: 88000000이하 6240000원+24% -> Code: 624000000 + 24*(x-50000000) -> 6240000 * 100 = 624000000. (matches)\n    Table: 150000000이하 15360000원+35% -> Code: 1536000000 + 35*(x-88000000) -> 15360000 * 100 = 1536000000. (matches)\n    Table: 300000000이하 37060000원+38% -> Code: 3706000000 + 38*(x-150000000) -> 37060"
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1050,
+      "completion_tokens": 2000,
+      "total_tokens": 3050,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2000,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "system_fingerprint": null
+  },
+  "timestamp": "2026-09-06T02:53:55.577156+00:00",
+  "reviewed_source_sha256": "19833d0a5a1d5d78d4c15d021dd5a0af02873114c7913e24d9b68ac31941f61d"
+}

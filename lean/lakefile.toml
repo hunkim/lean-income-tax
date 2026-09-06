@@ -1,0 +1,5 @@
+name = "incomeTax"
+version = "0.1.0"
+defaultTargets = ["IncomeTax"]
+[[lean_lib]]
+name = "IncomeTax"

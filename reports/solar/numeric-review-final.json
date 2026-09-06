@@ -1,0 +1,55 @@
+{
+  "request": {
+    "model": "solar-pro4",
+    "reasoning_effort": "low",
+    "max_tokens": 12000,
+    "messages": [
+      {
+        "role": "system",
+        "content": "제공된 숫자표와 수학 정의를 독립적으로 비교하는 SolarPro4입니다. 최종 응답은 JSON만, 최대300자입니다."
+      },
+      {
+        "role": "user",
+        "content": "소득세법 제55조제1항, 시행2026-07-01 고정본의 숫자 대응만 공동 검토합니다. 제공된 공식 이미지 전사표의 8행과 Lean tax100 정의가 일치하는지 확인하세요. 출력은 세액×100인 정수입니다. 구간경계(상한포함), 누적기초세액×100, 초과액 기준, 세율을 대조하세요. 이 검토는 표와 코드의 대응뿐이며 법령전체·실제신고·귀속연도 적용례 승인도, 증명 검증도 아닙니다. 최종 답변은 짧은 JSON만: {\"match\":true 또는 false,\"mismatches\":[],\"checkedRows\":8,\"scope\":\"짧은 한국어 검토범위\"}. 증명 작성이나 긴 설명은 하지 마세요.\n공식 전사표:\n{\n  \"articleId\": \"art-55\",\n  \"paragraph\": 1,\n  \"sourceVersion\": \"20260701\",\n  \"sourceUrl\": \"https://law.go.kr/LSW/lsInfoP.do?lsiSeq=280405&efYd=20260701&ancYnChk=0&chrClsCd=010202#J55:0\",\n  \"imageSourceUrl\": \"https://law.go.kr/LSW/flDownload.do?flSeq=123278409\",\n  \"imageLocalPath\": \"data/sources/article55-table.gif\",\n  \"imageSha256\": \"dc4b5dbc3860b83da1c53971893e5d9adfbba49b16da3f6b9e4f8edefc30bb0b\",\n  \"status\": \"visually-transcribed-from-official-image\",\n  \"unit\": \"KRW\",\n  \"lowerBoundSemantics\": \"exclusive except first includes zero\",\n  \"upperBoundSemantics\": \"inclusive; null is unbounded\",\n  \"formula\": \"baseTax + (taxableBase - lowerBound) * ratePercent / 100\",\n  \"scope\": \"거주자 종합소득과세표준에 적용하는 제55조제1항 산출세액 표. 과세표준 산정, 공제, 세액감면, 원천징수, 귀속연도 적용례와 끝수처리는 제외.\",\n  \"sourceIssue\": \"공식 HTML 이미지 alt의 10억원 초과 행에 누적기초세액 3억8406만원이 누락되어 있다. 이미지 원본에 표시된 값을 전사했다. 이는 법문 자체의 결함이 아닌 웹 접근성 대체텍스트의 결함이다.\",\n  \"rows\": [\n    {\n      \"lowerBound\": 0,\n      \"upperBound\": 14000000,\n      \"baseTax\": 0,\n      \"ratePercent\": 6\n    },\n    {\n      \"lowerBound\": 14000000,\n      \"upperBound\": 50000000,\n      \"baseTax\": 840000,\n      \"ratePercent\": 15\n    },\n    {\n      \"lowerBound\": 50000000,\n      \"upperBound\": 88000000,\n      \"baseTax\": 6240000,\n      \"ratePercent\": 24\n    },\n    {\n      \"lowerBound\": 88000000,\n      \"upperBound\": 150000000,\n      \"baseTax\": 15360000,\n      \"ratePercent\": 35\n    },\n    {\n      \"lowerBound\": 150000000,\n      \"upperBound\": 300000000,\n      \"baseTax\": 37060000,\n      \"ratePercent\": 38\n    },\n    {\n      \"lowerBound\": 300000000,\n      \"upperBound\": 500000000,\n      \"baseTax\": 94060000,\n      \"ratePercent\": 40\n    },\n    {\n      \"lowerBound\": 500000000,\n      \"upperBound\": 1000000000,\n      \"baseTax\": 174060000,\n      \"ratePercent\": 42\n    },\n    {\n      \"lowerBound\": 1000000000,\n      \"upperBound\": null,\n      \"baseTax\": 384060000,\n      \"ratePercent\": 45\n    }\n  ]\n}\n\n검토 정의:\ndef tax100 (x : Nat) : Nat :=\n  if x ≤ 14000000 then 6*x\n  else if x ≤ 50000000 then 84000000 + 15*(x-14000000)\n  else if x ≤ 88000000 then 624000000 + 24*(x-50000000)\n  else if x ≤ 150000000 then 1536000000 + 35*(x-88000000)\n  else if x ≤ 300000000 then 3706000000 + 38*(x-150000000)\n  else if x ≤ 500000000 then 9406000000 + 40*(x-300000000)\n  else if x ≤ 1000000000 then 17406000000 + 42*(x-500000000)\n  else 38406000000 + 45*(x-1000000000)\n"
+      }
+    ]
+  },
+  "response": {
+    "id": "320d3845-0f00-40d1-8f22-0e570ceb5d04",
+    "object": "chat.completion",
+    "created": 1788663355,
+    "model": "solar-pro4-260806",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"match\": true,\n  \"mismatches\": [],\n  \"checkedRows\": 8,\n  \"scope\": \"제55조제1항 표 8행과 tax100 정의: 구간경계(상한포함), 누적기초세액×100, 초과액 기준, 세율 완전일치\"\n}\n```",
+          "reasoning": "The user wants me to verify if the transcribed table's 8 rows match the Lean tax100 definition. Let me check each row against the code.\n\nLet me analyze both carefully:\n\n**Transcribed table (8 rows):**\n- Row 1: lower=0, upper=14000000, baseTax=0, rate=6\n- Row 2: lower=14000000, upper=50000000, baseTax=840000, rate=15\n- Row 3: lower=50000000, upper=88000000, baseTax=6240000, rate=24\n- Row 4: lower=88000000, upper=150000000, baseTax=15360000, rate=35\n- Row 5: lower=150000000, upper=300000000, baseTax=37060000, rate=38\n- Row 6: lower=300000000, upper=500000000, baseTax=94060000, rate=40\n- Row 7: lower=500000000, upper=1000000000, baseTax=174060000, rate=42\n- Row 8: lower=1000000000, upper=null, baseTax=384060000, rate=45\n\n**Lean tax100 definition:**\n- x ≤ 14000000: 6*x → baseTax=0, rate=6 ✓\n- x ≤ 50000000: 84000000 + 15*(x-14000000) → baseTax=84000000 (×100?), rate=15\n- x ≤ 88000000: 624000000 + 24*(x-50000000) → baseTax=624000000, rate=24\n- x ≤ 150000000: 1536000000 + 35*(x-88000000) → baseTax=1536000000, rate=35\n- x ≤ 300000000: 3706000000 + 38*(x-150000000) → baseTax=3706000000, rate=38\n- x ≤ 500000000: 9406000000 + 40*(x-300000000) → baseTax=9406000000, rate=40\n- x ≤ 1000000000: 17406000000 + 42*(x-500000000) → baseTax=17406000000, rate=42\n- else: 38406000000 + 45*(x-1000000000) → baseTax=38406000000, rate=45\n\nNow, the output should be tax × 100 (integer). The table values for baseTax are in KRW (원). The Lean code values are tax × 100.\n\nLet me verify:\n- Row 1: baseTax=0, rate=6. Table says baseTax=0. Lean: 6*x. If x=0, tax=0, ×100=0. ✓\n- Row 2: baseTax=840000 (table), rate=15. Lean: 84000000 + 15*(x-14000000). Here 84000000 = 840000 × 100. ✓\n\nLet me check cumulative base taxes:\n- Row 2: At x=14000000, tax from row 1 = 6 × 14000000 = 84000000. ×100 = 84000000. Table baseTax for row 2 = 840000. That's 84000000/100 = 840000? No wait...\n\nActually let me recalculate. The formula is: baseTax + (taxableBase - lowerBound) * ratePercent / 100.\n\nFor row 2, the cumulative tax at the start of this bracket (i.e., at x=14000000) should be:\nTax at 14000000 using row 1 = 0 + (14000000 - 0) * 6 / 100 = 840000.\n\nSo baseTax for row 2 = 840000. That matches the table.\n\nNow the Lean code: 84000000 + 15*(x-14000000). Here 84000000 = 840000 × 100. ✓\n\n- Row 3: baseTax=6240000, rate=24. \n  Cumulative at x=50000000: tax at lower bound of row 2 (14000000) is 840000. Tax from 14000000 to 50000000 = (50000000-14000000)*15/100 = 36000000*15/100 = 5400000. Total = 840000 + 5400000 = 6240000. ✓ Table baseTax=6240000.\n\nLean: 624000000 + 24*(x-50000000). 624000000 = 6240000 × 100. ✓\n\n- Row 4: baseTax=15360000, rate=35.\n  At x=88000000: cumulative from row 3 = 6240000 + (88000000-50000000)*24/100 = 6240000 + 38000000*24/100 = 6240000 + 9120000 = 15360000. ✓\n\nLean: 1536000000 = 15360000 × 100. ✓\n\n- Row 5: baseTax=37060000, rate=38.\n  At x=150000000: 15360000 + (150000000-88000000)*35/100 = 15360000 + 62000000*35/100 = 15360000 + 21700000 = 37060000. ✓\n\nLean: 3706000000 = 37060000 × 100. ✓\n\n- Row 6: baseTax=94060000, rate=40.\n  At x=300000000: 37060000 + (300000000-150000000)*38/100 = 37060000 + 150000000*38/100 = 37060000 + 57000000 = 94060000. ✓\n\nLean: 9406000000 = 94060000 × 100. ✓\n\n- Row 7: baseTax=174060000, rate=42.\n  At x=500000000: 94060000 + (500000000-300000000)*40/100 = 94060000 + 200000000*40/100 = 94060000 + 80000000 = 174060000. ✓\n\nLean: 17406000000 = 174060000 × 100. ✓\n\n- Row 8: baseTax=384060000, rate=45.\n  At x=1000000000: 174060000 + (1000000000-500000000)*42/100 = 174060000 + 500000000*42/100 = 174060000 + 210000000 = 384060000. ✓\n\nLean: 38406000000 = 384060000 × 100. ✓\n\nNow let me check the bounds:\n\n**Lower bounds:**\nTable: exclusive except first includes zero. So first row starts at 0 inclusive. Row 2 starts at 14000000 exclusive.\n\nLean: x ≤ 14000000 → first bracket. Good, this matches: first bracket includes 0 and goes up to 14000000 inclusive.\n\nThen x ≤ 50000000 (and implicitly x > 14000000 from the else). So second bracket: (14000000, 50000000]. But the table says lowerBound=14000000 is exclusive, upperBound=50000000 is inclusive. So the bracket is (14000000, 50000000]. Lean: 14000000 < x ≤ 50000000. This matches.\n\nWait, the table semantics say lowerBound is \"exclusive except first includes zero\". So for row 2, lowerBound=14000000 is exclusive. That means the bracket is (14000000, 50000000].\n\nLean: `else if x ≤ 50000000` - this means x > 14000000 (from the else) and x ≤ 50000000. So the bracket is (14000000, 50000000]. ✓\n\nUpper bounds: \"inclusive; null is unbounded\". So row 1: [0, 14000000]. Lean: x ≤ 14000000. ✓\nRow 2: (14000000, 50000000]. Lean: 14000000 < x ≤ 50000000. ✓\nRow 3: (50000000, 88000000]. Lean: 50000000 < x ≤ 88000000. ✓\n...\nRow 8: (1000000000, ∞). Lean: else. ✓\n\nSo all bounds match.\n\nAll baseTaxes match when multiplied by 100.\nAll rates match.\nAll bounds match.\n\nThe match is true. No mismatches.\n\nLet me produce the JSON output."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1381,
+      "completion_tokens": 2997,
+      "total_tokens": 4378,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2924,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "system_fingerprint": null
+  },
+  "timestamp": "2026-09-06T02:56:22.379071+00:00",
+  "reviewed_source_sha256": "6e4fa1102b107a5775291c69b2489b6d67a2c7a8caf5f5d80a3cdaec58214207",
+  "reviewed_definition_sha256": "46137a07f99d383167bfd4b6a67a0fbf34df0da8ae81c88b9cb2245bedd44514",
+  "reviewed_rates_sha256": "e9cab6ce715d52f6e3fd625b9751cec0c9ee94cece27e485b676e61c25e8424f"
+}

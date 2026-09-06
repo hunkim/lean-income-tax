@@ -1,0 +1,128 @@
+{
+  "leanVersion": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "theoremCount": 13,
+  "theorems": [
+    "IncomeTax.first_band_agreement",
+    "IncomeTax.zero_tax",
+    "IncomeTax.first_band",
+    "IncomeTax.tax_monotone",
+    "IncomeTax.increase_bounded",
+    "IncomeTax.first_boundary",
+    "IncomeTax.above_first_boundary",
+    "IncomeTax.example_20m",
+    "IncomeTax.top_boundary",
+    "IncomeTax.Solar.firstBandTax100_zero",
+    "IncomeTax.Solar.firstBandTax100_14M",
+    "IncomeTax.Solar.firstBandTax100_monotone",
+    "IncomeTax.Solar.firstBandTax100_diff_bound"
+  ],
+  "sourceHashes": {
+    "lean/IncomeTax/Agreement.lean": "9aa2c40cb523867d35b42a5c516b2bd499666ad749d55f88a5cf7f44b4435855",
+    "lean/IncomeTax/Basic.lean": "6e4fa1102b107a5775291c69b2489b6d67a2c7a8caf5f5d80a3cdaec58214207",
+    "lean/IncomeTax/Solar.lean": "c80faad027680a2bc982deef43bde1049b94be1ce7434a5e57e0e7c9c7f0ca81"
+  },
+  "axioms": "'IncomeTax.first_band_agreement' depends on axioms: [propext]\n'IncomeTax.zero_tax' does not depend on any axioms\n'IncomeTax.first_band' depends on axioms: [propext]\n'IncomeTax.tax_monotone' depends on axioms: [propext, Quot.sound]\n'IncomeTax.increase_bounded' depends on axioms: [propext, Quot.sound]\n'IncomeTax.first_boundary' does not depend on any axioms\n'IncomeTax.above_first_boundary' does not depend on any axioms\n'IncomeTax.example_20m' does not depend on any axioms\n'IncomeTax.top_boundary' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_zero' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_14M' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_monotone' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Solar.firstBandTax100_diff_bound' depends on axioms: [propext, Quot.sound]",
+  "cases": [
+    {
+      "base": "0",
+      "scaled": "0"
+    },
+    {
+      "base": "1",
+      "scaled": "6"
+    },
+    {
+      "base": "13999999",
+      "scaled": "83999994"
+    },
+    {
+      "base": "14000000",
+      "scaled": "84000000"
+    },
+    {
+      "base": "14000001",
+      "scaled": "84000015"
+    },
+    {
+      "base": "20000000",
+      "scaled": "174000000"
+    },
+    {
+      "base": "49999999",
+      "scaled": "623999985"
+    },
+    {
+      "base": "50000000",
+      "scaled": "624000000"
+    },
+    {
+      "base": "50000001",
+      "scaled": "624000024"
+    },
+    {
+      "base": "87999999",
+      "scaled": "1535999976"
+    },
+    {
+      "base": "88000000",
+      "scaled": "1536000000"
+    },
+    {
+      "base": "88000001",
+      "scaled": "1536000035"
+    },
+    {
+      "base": "149999999",
+      "scaled": "3705999965"
+    },
+    {
+      "base": "150000000",
+      "scaled": "3706000000"
+    },
+    {
+      "base": "150000001",
+      "scaled": "3706000038"
+    },
+    {
+      "base": "299999999",
+      "scaled": "9405999962"
+    },
+    {
+      "base": "300000000",
+      "scaled": "9406000000"
+    },
+    {
+      "base": "300000001",
+      "scaled": "9406000040"
+    },
+    {
+      "base": "499999999",
+      "scaled": "17405999960"
+    },
+    {
+      "base": "500000000",
+      "scaled": "17406000000"
+    },
+    {
+      "base": "500000001",
+      "scaled": "17406000042"
+    },
+    {
+      "base": "999999999",
+      "scaled": "38405999958"
+    },
+    {
+      "base": "1000000000",
+      "scaled": "38406000000"
+    },
+    {
+      "base": "1000000001",
+      "scaled": "38406000045"
+    },
+    {
+      "base": "1000000000000",
+      "scaled": "44993406000000"
+    }
+  ],
+  "scope": "Article55(1) basic schedule only; no annual-settlement, rounding or eligibility claim."
+}
