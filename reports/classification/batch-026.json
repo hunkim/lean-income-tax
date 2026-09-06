@@ -1,0 +1,282 @@
+{
+  "request": {
+    "model": "solar-pro4",
+    "reasoning_effort": "low",
+    "max_tokens": 12000,
+    "messages": [
+      {
+        "role": "system",
+        "content": "당신은 Upstage SolarPro4이며 Astra와 소득세법의 수학적 형식화 가능성을 함께 연구한다. 법률자문이 아니다. 각 조문 전체 텍스트를 읽고 조문 단위의 지배적 분류를 하라. direct=주요 규칙을 명시적 산술/논리/기한으로 표현 가능(입력사실 확정은 별개); conditional=계산 또는 논리구조가 있으나 위임법령/외부 요건/해석을 명시해야 함; structural=목적 외 조직/권한/절차/연결구조를 모형화할 수 있지만 숫자계산 중심 아님; unformalized=가치/목적 등 독립적으로 판정할 의미를 이 텍스트만으로 정하지 못함. 이는 형식화 불가능의 증명이 아니고 조문 전체 구현 여부도 아니다. 이미지 alt는 검증되지 않아 실제 수식/표로 신뢰하지 마라(제55조 세율표만 별도 전사검증). image 미검증이면 반드시 unresolved에 기록하라. 입력된 모든 id를 정확히 1회 출력. 마크다운 없이 JSON {\"articles\":[{\"id\":\"...\",\"category\":\"...\",\"evidence\":\"원문에서 정확히 연속된 20~100자 인용, 생략부호나 번역금지\",\"rationale\":\"이 조문 고유의 분류 이유 1문장\",\"formalizable\":[\"정의할 수 있는 구체적 요소\"],\"unresolved\":[\"남는 구체적 해석/위임/외부사실\"],\"dependencies\":[\"위임법령이나 참조조문\"]}]}만 출력. 문장은 간결하게, 인용문은 반드시 제공 원문의 부분문자열이어야 함. Lean 코드나 이미 검증했다는 주장은 금지."
+      },
+      {
+        "role": "user",
+        "content": "[{\"id\": \"art-156-7\", \"label\": \"제156조의7(외국법인 소속 파견근로자의 소득에 대한 원천징수 특례)\", \"text\": \"제156조의7(외국법인 소속 파견근로자의 소득에 대한 원천징수 특례) ① 내국법인과 체결한 근로자파견계약에 따라 근로자를 파견하는 국외에 있는 외국법인(국내지점 또는 국내영업소는 제외하며, 이하 이 조에서 “파견외국법인”이라 한다)의 소속 근로자(이하 이 조에서 “파견근로자”라 한다)를 사용하는 내국법인(이하 “사용내국법인”이라 한다)은 제134조제1항에도 불구하고 파견근로자가 국내에서 제공한 근로의 대가를 파견외국법인에 지급하는 때에 그 지급하는 금액(파견근로자가 파견외국법인으로부터 지급받는 금액을 대통령령으로 정하는 바에 따라 사용내국법인이 확인한 경우에는 그 확인된 금액을 말한다)에 「조세특례제한법」 제18조의2제2항에 따른 세율을 적용하여 계산한 금액을 소득세로 원천징수하여 그 원천징수하는 날이 속하는 달의 다음 달 10일까지 대통령령으로 정하는 바에 따라 원천징수 관할 세무서, 한국은행 또는 체신관서에 납부하여야 한다. <개정 2017. 12. 19., 2021. 12. 8.>\\n② 파견외국법인은 제1항에 따른 파견근로자에게 해당 과세기간의 다음 연도 2월분의 근로소득을 지급할 때에 제137조에 따라 해당 과세기간의 근로소득에 대한 소득세를 원천징수하여야 한다. 이 경우 파견근로자에 대한 해당 과세기간의 과세표준과 세액의 계산, 과세표준 확정신고와 납부, 결정ㆍ경정 및 징수ㆍ환급에 대해서는 이 법에 따른 거주자 및 비거주자에 대한 관련 규정을 준용한다.\\n③ 제2항을 적용할 때 사용내국법인은 파견외국법인을 대리하여 원천징수할 수 있다.\\n④ 제1항부터 제3항까지를 적용할 때 파견근로자에 대하여 원천징수를 하는 사용내국법인 및 파견근로자의 범위, 원천징수ㆍ환급신청 등과 관련 서류의 제출 방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.\\n[본조신설 2015. 12. 15.]\", \"unverifiedImages\": false}, {\"id\": \"art-156-8\", \"label\": \"제156조의8(이자ㆍ배당 및 사용료에 대한 세율의 적용 특례)\", \"text\": \"제156조의8(이자ㆍ배당 및 사용료에 대한 세율의 적용 특례) ① 조세조약의 규정상 비거주자의 국내원천소득 중 이자, 배당 또는 사용료소득에 대해서는 제한세율과 다음 각 호의 어느 하나에 규정된 세율 중 낮은 세율을 적용한다.\\n1. 조세조약의 대상 조세에 지방소득세가 포함되지 아니하는 경우에는 제156조제1항제1호, 제2호 및 제6호에서 규정하는 세율\\n2. 조세조약의 대상 조세에 지방소득세가 포함되는 경우에는 제156조제1항제1호, 제2호 및 제6호에서 규정하는 세율에 「지방세법」 제103조의18제1항의 원천징수하는 소득세의 100분의 10을 반영한 세율\\n② 제1항에도 불구하고 제156조의4제1항에 해당하는 경우에는 제156조의4제1항에 따라 원천징수한다. 이 경우 제156조의4제3항에 따라 과세표준과 세액을 경정하는 경우에는 제한세율과 제1항 각 호의 어느 하나에 규정된 세율 중 낮은 세율을 적용한다.\\n[본조신설 2020. 12. 29.]\", \"unverifiedImages\": false}, {\"id\": \"art-156-9\", \"label\": \"제156조의9(외국인 통합계좌를 통하여 지급받는 국내원천소득에 대한 원천징수 특례)\", \"text\": \"제156조의9(외국인 통합계좌를 통하여 지급받는 국내원천소득에 대한 원천징수 특례) ① 비거주자가 외국인 통합계좌(「자본시장과 금융투자업에 관한 법률」 제12조제2항제1호나목에 따른 외국 금융투자업자가 다른 외국 투자자의 주식 매매거래를 일괄하여 주문ㆍ결제하기 위하여 자기 명의로 개설한 계좌를 말한다. 이하 같다)를 통하여 제119조에 따른 국내원천소득을 지급받는 경우 해당 국내원천소득을 외국인 통합계좌를 통하여 지급하는 자는 외국인 통합계좌의 명의인에게 그 소득금액을 지급할 때 제156조제1항 각 호에 따른 금액을 소득세로 원천징수하여야 한다.\\n② 제1항에 따라 소득을 지급받은 비거주자는 조세조약상 비과세ㆍ면제 및 제한세율을 적용받으려는 경우에는 납세지 관할 세무서장에게 경정을 청구할 수 있다.\\n③ 비거주자가 제2항에 따라 경정을 청구하는 경우 경정청구의 기한 및 방법ㆍ절차 등에 관하여는 제156조의2제5항부터 제7항까지 및 제156조의6제5항부터 제7항까지를 준용한다. 이 경우 제156조의2제5항 본문 중 “실질귀속자가” 및 “실질귀속자 또는 소득지급자가”와 제156조의6제5항 본문 중 “실질귀속자가” 및 “실질귀속자 또는 원천징수의무자가”는 각각 “비거주자가”로 본다. <개정 2025. 12. 23.>\\n[본조신설 2023. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-157\", \"label\": \"제157조(원천징수의 승계)\", \"text\": \"제157조(원천징수의 승계) ① 법인이 해산한 경우에 원천징수를 하여야 할 소득세를 징수하지 아니하였거나 징수한 소득세를 납부하지 아니하고 잔여재산을 분배하였을 때에는 청산인은 그 분배액을 한도로 하여 분배를 받은 자와 연대하여 납세의무를 진다.\\n② 법인이 합병한 경우에 합병 후 존속하는 법인이나 합병으로 설립된 법인은, 합병으로 소멸된 법인이 원천징수를 하여야 할 소득세를 납부하지 아니하면 그 소득세에 대한 납세의무를 진다.\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-160\", \"label\": \"제160조(장부의 비치ㆍ기록)\", \"text\": \"제160조(장부의 비치ㆍ기록) ① 사업자(국내사업장이 있거나 제119조제3호에 따른 소득이 있는 비거주자를 포함한다. 이하 같다)는 소득금액을 계산할 수 있도록 증명서류 등을 갖춰 놓고 그 사업에 관한 모든 거래 사실이 객관적으로 파악될 수 있도록 복식부기에 따라 장부에 기록ㆍ관리하여야 한다. <개정 2013. 1. 1.>\\n② 업종ㆍ규모 등을 고려하여 대통령령으로 정하는 업종별 일정 규모 미만의 사업자가 대통령령으로 정하는 간편장부(이하 “간편장부”라 한다)를 갖춰 놓고 그 사업에 관한 거래 사실을 성실히 기재한 경우에는 제1항에 따른 장부를 비치ㆍ기록한 것으로 본다.\\n③ 제2항에 따른 대통령령으로 정하는 업종별 일정 규모 미만의 사업자는 “간편장부대상자”라 하고, 간편장부대상자 외의 사업자는 “복식부기의무자”라 한다.\\n④ 제1항이나 제2항의 경우에 사업소득에 부동산임대업에서 발생한 소득이 포함되어 있는 사업자는 그 소득별로 구분하여 회계처리하여야 한다. 이 경우에 소득별로 구분할 수 없는 공통수입금액과 그 공통수입금액에 대응하는 공통경비는 각 총수입금액에 비례하여 그 금액을 나누어 장부에 기록한다.\\n⑤ 둘 이상의 사업장을 가진 사업자가 이 법 또는 「조세특례제한법」에 따라 사업장별로 감면을 달리 적용받는 경우에는 사업장별 거래 내용이 구분될 수 있도록 장부에 기록하여야 한다. <개정 2010. 12. 27.>\\n⑥ 삭제 <2010. 12. 27.>\\n⑦ 제1항부터 제5항까지의 규정에 따른 장부ㆍ증명서류의 기록ㆍ비치에 필요한 사항은 대통령령으로 정한다.\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-160-2\", \"label\": \"제160조의2(경비 등의 지출증명 수취 및 보관)\", \"text\": \"제160조의2(경비 등의 지출증명 수취 및 보관) ① 거주자 또는 제121조제2항 및 제5항에 따른 비거주자가 사업소득금액 또는 기타소득금액을 계산할 때 제27조 또는 제37조에 따라 필요경비를 계산하려는 경우에는 그 비용의 지출에 대한 증명서류를 받아 이를 확정신고기간 종료일부터 5년간 보관하여야 한다. 다만, 각 과세기간의 개시일 5년 전에 발생한 결손금을 공제받은 자는 해당 결손금이 발생한 과세기간의 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관하여야 한다. <개정 2010. 12. 27., 2013. 1. 1.>\\n② 제1항의 경우 사업소득이 있는 자가 사업과 관련하여 사업자(법인을 포함한다)로부터 재화 또는 용역을 공급받고 그 대가를 지출하는 경우에는 다음 각 호의 어느 하나에 해당하는 증명서류를 받아야 한다. 다만, 대통령령으로 정하는 경우에는 그러하지 아니하다. <개정 2013. 6. 7.>\\n1. 제163조 및 「법인세법」 제121조에 따른 계산서\\n2. 「부가가치세법」 제32조에 따른 세금계산서\\n3. 「여신전문금융업법」에 따른 신용카드매출전표(신용카드와 유사한 것으로서 대통령령으로 정하는 것을 사용하여 거래하는 경우 그 증명서류를 포함한다)\\n4. 제162조의3제1항에 따라 현금영수증가맹점으로 가입한 사업자가 재화나 용역을 공급하고 그 대금을 현금으로 받은 경우 그 재화나 용역을 공급받는 자에게 현금영수증 발급장치에 의하여 발급하는 것으로서 거래일시ㆍ금액 등 결제내역이 기재된 영수증(이하 “현금영수증”이라 한다)\\n③ 제2항을 적용할 때 사업자가 다음 각 호에 해당하는 경우에는 같은 항에 따른 증명서류의 수취ㆍ보관의무를 이행한 것으로 본다. <개정 2022. 12. 31.>\\n1. 제2항제1호의 계산서를 발급받지 못하여 제163조의3에 따른 매입자발행계산서를 발행하여 보관한 경우\\n2. 제2항제2호의 세금계산서를 발급받지 못하여 「부가가치세법」 제34조의2제2항에 따른 매입자발행세금계산서를 발행하여 보관한 경우\\n④ 제1항부터 제3항까지의 규정을 적용할 때 비용 지출에 대한 증명서류의 수취ㆍ보관에 관한 사항과 그 밖에 필요한 사항은 대통령령으로 정한다.\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-160-3\", \"label\": \"제160조의3(기부금영수증 발급명세의 작성ㆍ보관의무 등)\", \"text\": \"제160조의3(기부금영수증 발급명세의 작성ㆍ보관의무 등) ① 기부금영수증을 발급하는 거주자 또는 비거주자(이하 이 조에서 “기부금 영수증을 발급하는 자”로 한다)는 대통령령으로 정하는 기부자별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다. 다만, 전자기부금영수증을 발급한 경우에는 그러하지 아니하다. <개정 2013. 1. 1., 2014. 1. 1., 2020. 12. 29.>\\n② 기부금영수증을 발급하는 자는 제1항에 따라 보관하고 있는 기부자별 발급명세를 국세청장, 지방국세청장 또는 관할 세무서장이 요청하는 경우 제출하여야 한다. 다만, 전자기부금영수증을 발급한 경우에는 그러하지 아니하다. <개정 2020. 12. 29.>\\n③ 기부금영수증을 발급하는 자는 해당 과세기간의 기부금영수증 총 발급 건수 및 금액 등을 기재한 기부금영수증 발급합계표를 해당 과세기간의 다음 연도 6월 30일까지 제168조제5항에 따른 관할 세무서장에게 제출하여야 한다. 다만, 전자기부금영수증을 발급한 경우에는 그러하지 아니하다. <개정 2020. 12. 29., 2023. 12. 31.>\\n④ 기부금영수증을 발급하는 자는 해당 과세기간의 직전 과세기간에 받은 기부금에 대하여 발급한 기부금영수증 금액의 총 합계액이 3억원 이상의 금액으로서 대통령령으로 정하는 금액을 초과하는 경우에는 해당 과세기간에 받은 기부금에 대하여 그 기부금을 받은 날이 속하는 연도의 다음 연도 1월 10일까지 전자기부금영수증을 발급하여야 한다. <신설 2024. 12. 31.>\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-160-4\", \"label\": \"제160조의4(금융회사등의 증명서 발급명세의 작성ㆍ보관의무 등)\", \"text\": \"제160조의4(금융회사등의 증명서 발급명세의 작성ㆍ보관의무 등) ① 금융회사등은 이 법 또는 「조세특례제한법」에 따른 소득공제에 필요한 증명서를 발급하는 경우 대통령령으로 정하는 개인별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다. <개정 2013. 1. 1.>\\n② 금융회사등은 제1항에 따라 보관하고 있는 개인별 발급명세를 국세청장이 요청하는 경우 제출하여야 한다. <개정 2013. 1. 1.>\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-160-5\", \"label\": \"제160조의5(사업용계좌의 신고ㆍ사용의무 등)\", \"text\": \"제160조의5(사업용계좌의 신고ㆍ사용의무 등) ① 복식부기의무자는 사업과 관련하여 재화 또는 용역을 공급받거나 공급하는 거래의 경우로서 다음 각 호의 어느 하나에 해당하는 때에는 대통령령으로 정하는 사업용계좌(이하 “사업용계좌”라 한다)를 사용하여야 한다.\\n1. 거래의 대금을 금융회사등을 통하여 결제하거나 결제받는 경우\\n2. 인건비 및 임차료를 지급하거나 지급받는 경우. 다만, 인건비를 지급하거나 지급받는 거래 중에서 거래 상대방의 사정으로 사업용계좌를 사용하기 어려운 것으로서 대통령령으로 정하는 거래는 제외한다.\\n③ 복식부기의무자는 복식부기의무자에 해당하는 과세기간의 개시일(사업 개시와 동시에 복식부기의무자에 해당되는 경우에는 다음 과세기간 개시일)부터 6개월 이내에 사업용계좌를 해당 사업자의 사업장 관할 세무서장 또는 납세지 관할 세무서장에게 신고하여야 한다. 다만, 사업용계좌가 이미 신고되어 있는 경우에는 그러하지 아니하다. <개정 2010. 12. 27., 2014. 12. 23.>\\n④ 복식부기의무자는 사업용계좌를 변경하거나 추가하는 경우 제70조 및 제70조의2에 따른 확정신고기한까지 이를 신고하여야 한다. <개정 2010. 12. 27., 2012. 1. 1., 2013. 1. 1.>\\n1. 삭제 <2012. 1. 1.>\\n2. 삭제 <2012. 1. 1.>\\n⑤ 사업용계좌의 신고ㆍ변경ㆍ추가와 그 신고방법, 사업용계좌를 사용하여야 하는 거래의 범위 및 명세서 작성 등에 필요한 사항은 대통령령으로 정한다. <개정 2010. 12. 27.>\\n[전문개정 2009. 12. 31.][제목개정 2010. 12. 27.]\", \"unverifiedImages\": false}]"
+      }
+    ]
+  },
+  "requestSha256": "bdf081f4c3836190d94854fbea263b365aea4efb21c096e1988e940c159e1526",
+  "articleIds": [
+    "art-156-7",
+    "art-156-8",
+    "art-156-9",
+    "art-157",
+    "art-160",
+    "art-160-2",
+    "art-160-3",
+    "art-160-4",
+    "art-160-5"
+  ],
+  "sourceTextSha256": {
+    "art-156-7": "ad65d6d6ea65cf0c7f02dbba08c308becd31665cb8a547285f0b5b8669460cdd",
+    "art-156-8": "d70689bb0b1fd3d13e9c150865a8d9b6be62b0a6a39348465735f56304565621",
+    "art-156-9": "ef76efdf838594fa22fd5f9a77d34767c923f64da765646faa2a02613477bce0",
+    "art-157": "86cb7c0a6606d49bdb019943901009f638b49855d24d9c9fc0898f9426bc1f73",
+    "art-160": "e2cde68ee52a7ae9423c8cbda6624b308eecf47861655638e6f773c455193d07",
+    "art-160-2": "9f6654dd0c55a017895bb852535591f0c158ee27a9e5ba4f0acf97cb2fe57643",
+    "art-160-3": "a7f4b2a27124c3cc40ea5eba55ae52a7606938dc2ce05e4de6aa30ca8b321f0f",
+    "art-160-4": "5f27e1090522eda2d86e59b6721ef428d0a40201b38320332613256a7885738f",
+    "art-160-5": "132416d78cf4bd0aaaed76f656335624ecf6ca7b97efc37189724ed5e6d9d91e"
+  },
+  "timestamp": "2026-09-06T05:04:22.454102+00:00",
+  "responseRawSha256": "5b1b8d6d8569255e4259ee0d993dd1d5c3c4f9b89b34dae0be632339a7b02741",
+  "responseRaw": "{\"id\":\"dd69b7d0-a458-4819-b973-3cbba2c712da\",\"object\":\"chat.completion\",\"created\":1788671066,\"model\":\"solar-pro4-260806\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"articles\\\": [\\n    {\\n      \\\"id\\\": \\\"art-156-7\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"그 지급하는 금액(파견근로자가 파견외국법인으로부터 지급받는 금액을 대통령령으로 정하는 바에 따라 사용내국법인이 확인한 경우에는 그 확인된 금액을 말한다)에 「조세특례제한법」 제18조의2제2항에 따른 세율을 적용하여 계산한 금액을 소득세로 원천징수하여 그 원천징수하는 날이 속하는 달의 다음 달 10일까지\\\",\\n      \\\"rationale\\\": \\\"지급금액에 외부법률상 세율을 곱하고 다음 달 10일까지 납부하는 계산·기한 구조는 명시되나 세율·확인방법·절차가 위임법령과 외부법률에 의존한다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"지급금액 또는 확인된 금액\\\",\\n        \\\"조세특례제한법 제18조의2제2항 세율 적용\\\",\\n        \\\"원천징수 후 다음 달 10일까지 납부\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"조세특례제한법 제18조의2제2항의 구체적 세율값\\\",\\n        \\\"사용내국법인의 파견근로자 소득금액 확인 방법·기준\\\",\\n        \\\"파견근로자·사용내국법인의 범위\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"조세특례제한법 제18조의2제2항\\\",\\n        \\\"제134조제1항\\\",\\n        \\\"대통령령\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-156-8\\\",\\n      \\\"category\\\": \\\"direct\\\",\\n      \\\"evidence\\\": \\\"비거주자의 국내원천소득 중 이자, 배당 또는 사용료소득에 대해서는 제한세율과 다음 각 호의 어느 하나에 규정된 세율 중 낮은 세율을 적용한다.\\\",\\n      \\\"rationale\\\": \\\"제한세율과 법정 세율 중 낮은 것을 적용하는 min 비교 연산과 지방소득세 포함 여부 분기조건이 본문에 명시되어 있어 산술규칙이 직접 표현된다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"제한세율과 제156조제1항제1·2·6호 세율 중 낮은 값 선택\\\",\\n        \\\"지방소득세 미포함 시 해당 세율 그대로 적용\\\",\\n        \\\"지방소득세 포함 시 해당 세율 + 소득세법 원천징수세액 10% 반영 세율\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"조약별 제한세율의 구체적 수치\\\",\\n        \\\"제156조제1항 각 호 세율값\\\",\\n        \\\"제156조의4제1항 해당 여부 판정\\\",\\n        \\\"제156조의4제3항 경정 시 감면세율과 법정세율 중 낮은 값 적용\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"제156조제1항제1호·제2호·제6호\\\",\\n        \\\"지방세법 제103조의18제1항\\\",\\n        \\\"제156조의4제1항·제3항\\\",\\n        \\\"조세조약\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-156-9\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"비거주자가 외국인 통합계좌를 통하여 제119조에 따른 국내원천소득을 지급받는 경우 해당 국내원천소득을 외국인 통합계좌를 통하여 지급하는 자는 외국인 통합계좌의 명의인에게 그 소득금액을 지급할 때 제156조제1항 각 호에 따른 금액을 소득세로 원천징수하여야 한다.\\\",\\n      \\\"rationale\\\": \\\"통합계좌 명의인 지급 시 제156조제1항 세율로 원천징수하는 규칙과 경정청구 절차가 있으나 통합계좌 정의·원천징수 대상·경정 요건이 외부법과 준용규정에 의존한다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"외국인 통합계좌 명의인에게 지급 시 제156조제1항 각 호 금액으로 원천징수\\\",\\n        \\\"비과세·면제·제한세율 적용을 위한 비거주자 경정청구권\\\",\\n        \\\"제156조의2제5~7항·제156조의6제5~7항 준용 기한·방법\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"외국인 통합계좌 해당 여부(자본시장법 제12조제2항제1호나목 해석)\\\",\\n        \\\"제119조 국내원천소득 범위 및 해당 소득 판정\\\",\\n        \\\"비과세·면제·제한세율 적용 요건\\\",\\n        \\\"비거주자와 실질귀속자 관계 해석\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"자본시장법 제12조제2항제1호나목\\\",\\n        \\\"제119조\\\",\\n        \\\"제156조제1항 각 호\\\",\\n        \\\"제156조의2제5~7항\\\",\\n        \\\"제156조의6제5~7항\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-157\\\",\\n      \\\"category\\\": \\\"structural\\\",\\n      \\\"evidence\\\": \\\"법인이 해산한 경우에 원천징수를 하여야 할 소득세를 징수하지 아니하였거나 징수한 소득세를 납부하지 아니하고 잔여재산을 분배하였을 때에는 청산인은 그 분배액을 한도로 하여 분배를 받은 자와 연대하여 납세의무를 진다.\\\",\\n      \\\"rationale\\\": \\\"해산·감자 시 청산인의 연대납세의무와 합병 시 존속·신설법인의 납세의무 승계라는 조직·책임 구조 규정으로, 주된 숫자 계산 규칙보다는 법적 연결구조를 모형화할 수 있다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"해산 시 청산인의 분배액 한도 연대납세의무\\\",\\n        \\\"합병 시 존속·신설법인의 소멸법인 미납 원천징수 소득세 납세의무 승계\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"징수하지 않은 또는 납부하지 않은 원천징수 소득세의 확정 방식\\\",\\n        \\\"분배액의 산정 기준\\\",\\n        \\\"연대책임의 구체적 범위와 구상 관계\\\"\\n      ],\\n      \\\"dependencies\\\": []\\n    },\\n    {\\n      \\\"id\\\": \\\"art-160\\\",\\n      \\\"category\\\": \\\"structural\\\",\\n      \\\"evidence\\\": \\\"사업자는 소득금액을 계산할 수 있도록 증명서류 등을 갖춰 놓고 그 사업에 관한 모든 거래 사실이 객관적으로 파악될 수 있도록 복식부기에 따라 장부에 기록ㆍ관리하여야 한다.\\\",\\n      \\\"rationale\\\": \\\"장부 비치·기록 의무와 복식부기 원칙, 간편장부 간주, 소득별 구분경리 및 공통비 안분 등 회계·기록 조직 구조를 규정하며 구체적 산출 산술 규칙보다는 구조적 모형화가 중심이다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"복식부기에 따른 장부 기록·관리 의무\\\",\\n        \\\"간편장부 성실한 기재 시 의무이행 간주\\\",\\n        \\\"사업소득 내 부동산소득 구분경리\\\",\\n        \\\"공통수입금액과 공통경비의 총수입금액 비례 안분 기록\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"업종별 일정 규모 미만 기준\\\",\\n        \\\"간편장부 구체적 형태·요건\\\",\\n        \\\"공통경비 안분방법의 구체성\\\",\\n        \\\"국내사업장이 있거나 제119조제3호 소득이 있는 비거주자 범위\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"대통령령\\\",\\n        \\\"제119조제3호\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-160-2\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"그 비용의 지출에 대한 증명서류를 받아 이를 확정신고기간 종료일부터 5년간 보관하여야 한다. 다만, 각 과세기간의 개시일 5년 전에 발생한 결손금을 공제받은 자는 해당 결손금이 발생한 과세기간의 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관하여야 한다.\\\",\\n      \\\"rationale\\\": \\\"확정신고기간 종료일부터 5년 보관과 결손금 공제자 예외 기한(다음다음 연도 5월 31일)이 명시되나 예외사유·증명서류 종류·상대방 범위가 외부법과 위임에 의존한다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"필요경비 계산 시 지출 증명서류 수취 및 5년 보관\\\",\\n        \\\"결손금 공제자 예외: 해당 결손금 발생 과세기간 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관\\\",\\n        \\\"적격 증명서류 4종(계산서·세금계산서·신용카드매출전표·현금영수증)\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"대통령령으로 정하는 증명서류 수취 예외사유\\\",\\n        \\\"매입자발행계산서·매입자발행세금계산서 발행·보관 요건\\\",\\n        \\\"사업소득이 있는 자와 사업자의 범위\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"제27조·제37조\\\",\\n        \\\"제163조·법인세법 제121조\\\",\\n        \\\"부가가치세법 제32조·제34조의2제2항\\\",\\n        \\\"여신전문금융업법\\\",\\n        \\\"제162조의3제1항·제163조의3\\\",\\n        \\\"대통령령\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-160-3\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"기부금영수증을 발급하는 거주자 또는 비거주자(이하 이 조에서 “기부금 영수증을 발급하는 자”로 한다)는 대통령령으로 정하는 기부자별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.\\\",\\n      \\\"rationale\\\": \\\"기부자별 발급명세 5년 보관, 발급합계표 차기 연도 6월 30일 제출, 3억원 초과 시 다음 연도 1월 10일 전자발급 등 기한·요건이 명시되나 '대통령령으로 정하는 금액' 등 판정기준과 제출 요청이 위임되어 있다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"발급명세를 발급일부터 5년 보관\\\",\\n        \\\"기부자별 발급명세를 관할 세무서장 요청 시 제출\\\",\\n        \\\"발급합계표를 해당 과세기간 다음 연도 6월 30일까지 제출\\\",\\n        \\\"직전 과세기간 발급총액 3억원 이상인 경우 다음 연도 1월 10일까지 전자발급\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"대통령령으로 정하는 금액(3억원 초과 여부 판정)\\\",\\n        \\\"기부자별 발급명세 구체적 기재 항목\\\",\\n        \\\"전자기부금영수증 예외(비발급 간주) 범위\\\",\\n        \\\"관할 세무서장 요청의 구체 요건\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"대통령령\\\",\\n        \\\"제168조제5항\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-160-4\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"금융회사등은 이 법 또는 「조세특례제한법」에 따른 소득공제에 필요한 증명서를 발급하는 경우 대통령령으로 정하는 개인별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.\\\",\\n      \\\"rationale\\\": \\\"발급 시 개인별 발급명세 작성·5년 보관·국세청장 요청 시 제출 구조가 명시되나 개인별 발급명세 내용과 증명서 범위가 위임법령에 의존한다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"증명서 발급 시 개인별 발급명세 작성\\\",\\n        \\\"발급일부터 5년 보관\\\",\\n        \\\"국세청장 요청 시 보관 명세 제출\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"개인별 발급명세 구체적 기재 항목\\\",\\n        \\\"소득공제에 필요한 증명서의 범위\\\",\\n        \\\"국세청장 요청의 요건·방법\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"대통령령\\\",\\n        \\\"조세특례제한법\\\"\\n      ]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-160-5\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"복식부기의무자는 복식부기의무자에 해당하는 과세기간의 개시일(사업 개시와 동시에 복식부기의무자에 해당되는 경우에는 다음 과세기간 개시일)부터 6개월 이내에 사업용계좌를 해당 사업자의 사업장 관할 세무서장 또는 납세지 관할 세무서장에게 신고하여야 한다.\\\",\\n      \\\"rationale\\\": \\\"사업용계좌 최초 신고기한(과세기간 개시일부터 6개월 이내)과 변경·추가 신고기한(확정신고기한까지), 의무사용 거래 유형이 명시되나 거래 범위와 사업용계좌 정의가 위임되어 있다.\\\",\\n      \\\"formalizable\\\": [\\n        \\\"복식부기의무자 최초 신고기한: 과세기간 개시일부터 6개월 이내\\\",\\n        \\\"사업용계좌 변경·추가 신고기한: 확정신고기한까지\\\",\\n        \\\"금융회사 통한 대금 결제·결제, 인건비·임차료 지급 시 사업용계좌 사용\\\"\\n      ],\\n      \\\"unresolved\\\": [\\n        \\\"사업용계좌의 구체적 정의\\\",\\n        \\\"인건비와 임차료 중 상대방 사정으로 사용이 어려운 거래 예외 범위\\\",\\n        \\\"사업용계좌 사용 대상 거래의 범위\\\",\\n        \\\"복식부기의무자 해당 여부 판정(제160조 연계)\\\"\\n      ],\\n      \\\"dependencies\\\": [\\n        \\\"대통령령\\\",\\n        \\\"제70조·제70조의2(확정신고기한)\\\",\\n        \\\"제160조(복식부기의무자 정의)\\\"\\n      ]\\n    }\\n  ]\\n}\",\"reasoning\":\"Let me analyze each article and classify them according to the given categories:\\n\\n- **direct**: Main rules can be expressed as explicit arithmetic/logic/deadlines (input fact determination is separate)\\n- **conditional**: Calculation or logic structure exists but requires delegation/orders/external requirements/interpretations to be specified\\n- **structural**: Can model purpose/organization/authority/procedure/connection structure but not centered on numeric calculation\\n- **unformalized**: Cannot determine independently meaningful criteria like values/purposes from this text alone\\n\\nLet me go through each:\\n\\n**art-156-7 (제156조의7)**: This is about withholding special rule for income of dispatched workers from foreign corporations. It involves:\\n- Computing withholding tax using tax rate under 조세특례제한법 제18조의2제2항\\n- Payment deadline: by 10th of next month after withholding date\\n- Various delegated matters to Presidential Decree\\n\\nThe core calculation rule is: amount paid × tax rate from 조특법 18조의2②, but the exact rate depends on the external law and Presidential Decree details. However, the structure is clear: pay amount × rate → withhold → pay by 10th next month. The tax rate itself comes from an external law, so it's conditional.\\n\\nBut wait - the rule itself says \\\"apply the rate under 조특법 18조의2② to the amount paid\\\" - that's an explicit arithmetic operation, just the rate source is external. I'd say this is **conditional** because the rate and verification procedure are defined by Presidential Decree and external law.\\n\\n**art-156-8 (제156조의8)**: Special rate application for interest, dividends, royalties. The rule: apply the lower of (treaty limited rate) and (domestic rate + possibly additional for local income tax). This is a direct arithmetic comparison (min of two rates). The domestic rates come from 제156조제1항. The local income tax addition is 10% of withholding income tax per 지방세법. This is quite **direct** - the computation is explicit comparison of rates, though the rates themselves come from referenced provisions.\\n\\n**art-156-9 (제156조의9)**: Withholding special rule for income through foreign omnibus accounts. The withholding agent withholds at 제156조제1항 rates. Then non-resident can request correction. Procedural/structural. The calculation part is direct (withhold at specified rates), but the correction request is procedural. I'd say **conditional** because it depends on external law definitions (foreign omnibus account definition from 자본시장법) and the correction procedure references other articles.\\n\\n**art-157 (제157조)**: Succession of withholding obligation. This is about legal liability transfer upon dissolution/merger. This is **structural** - it's about legal succession of tax liability, not numeric calculation.\\n\\n**art-160 (제160조)**: Books and records keeping. This is about bookkeeping obligations. **structural** - organizational/procedural requirements.\\n\\n**art-160-2 (제160조의2)**: Receipt and storage of expenditure proof. About keeping proof documents for 5 years. There's a deadline (5 years from end of final return period, with exception for loss carryforward). **conditional** - has time-based rules with exceptions and document types defined by external laws.\\n\\n**art-160-3 (제160조의3)**: Duty to prepare and store donation receipt issuance details. Storage for 5 years, submission deadlines (June 30 next year, or Jan 10 for certain cases). **conditional** - has deadlines and thresholds (3억원) but thresholds defined by Presidential Decree.\\n\\n**art-160-4 (제160조의4)**: Financial companies' duty to prepare and store certificate issuance details. Storage for 5 years. **conditional** - simple but depends on Presidential Decree for details.\\n\\n**art-160-5 (제160조의5)**: Business account reporting/use obligation. Various deadlines (6 months from taxable period start for initial report, final return deadline for changes). **conditional** - has clear deadlines but scope defined by Presidential Decree, and \\\"복식부기의무자\\\" definition is from another provision.\\n\\nLet me now write the JSON output.\\n\\nFor each article I need:\\n- id\\n- category\\n- evidence: 20-100 char direct quote from the text\\n- rationale: 1 sentence\\n- formalizable: list of concrete elements\\n- unresolved: remaining interpretation/delegation/external facts\\n- dependencies: delegated laws or referenced articles\\n\\nLet me be more precise:\\n\\n**art-156-7**: \\n- Category: conditional (the rate is from external law 조특법 제18조의2제2항, verification procedure delegated to Presidential Decree, payment deadline is explicit)\\n- Evidence: \\\"파견외국법인에 지급하는 때에 그 지급하는 금액...에 「조세특례제한법」 제18조의2제2항에 따른 세율을 적용하여 계산한 금액을 소득세로 원천징수하여 그 원천징수하는 날이 속하는 달의 다음 달 10일까지\\\"\\n- Rationale: 계산 구조(지급금액×외부법률상 세율)와 납부기한(다음 달 10일)이 명시되나 세율과 확인방법·절차가 위임법령에 의존한다.\\n- Formalizable: 지급금액, 세율 적용, 원천징수, 납부 마감일(다음 달 10일)\\n- Unresolved: 조세특례제한법 제18조의2제2항의 세율, 파견근로자 확인 방법·기준, 사용내국법인의 확인 절차\\n- Dependencies: 조세특례제한법 제18조의2제2항, 대통령령\\n\\n**art-156-8**:\\n- Category: direct (lower of two rates - treaty rate vs domestic rate with possible local tax addition - is explicit comparison)\\n- Evidence: \\\"조세조약의 규정상 비거주자의 국내원천소득 중 이자, 배당 또는 사용료소득에 대해서는 제한세율과 다음 각 호의 어느 하나에 규정된 세율 중 낮은 세율을 적용한다.\\\"\\n- Rationale: 제한세율과 법정 세율 중 낮은 세율을 적용하는 비교 연산이 본문에 명시되고, 지방소득세 포함 여부만 분기 조건이다.\\n- Formalizable: 제한세율, 제156조제1항 세율을 저장→min 연산, 지방소득세 포함 시 +10% 반영 분기\\n- Unresolved: 조세조약상 제한세율의 구체적 값(조약별), 제156조제1항 각 호 세율값(표), 제156조의4제1항 해당 여부 판정\\n- Dependencies: 제156조제1항제1·2·6호, 지방세법 제103조의18제1항, 제156조의4\\n\\n**art-156-9**:\\n- Category: conditional (withholding at specific rates is direct, but the whole structure depends on foreign omnibus account definition, correction procedure references)\\n- Evidence: \\\"비거주자가 외국인 통합계좌...를 통하여 제119조에 따른 국내원천소득을 지급받는 경우 해당 국내원천소득을 외국인 통합계좌를 통하여 지급하는 자는 외국인 통합계좌의 명의인에게 그 소득금액을 지급할 때 제156조제1항 각 호에 따른 금액을 소득세로 원천징수하여야 한다.\\\"\\n- Rationale: 원천징수세율(제156조제1항)과 경정청구 절차가 명시되나 통합계좌 정의·원천징수 대상·경정 요건이 외부 법령과 준용규정에 의존한다.\\n- Formalizable: 통합계좌 명의인 지급 시 제156조제1항 세율 원천징수, 비거주자의 경정청구 권리, 준용되는 기한·방법\\n- Unresolved: 외국인 통합계좌 해당 여부(자본시장법 제12조제2항제1호나목 해석), 비과세·면제·제한세율 적용 요건, 원천징수 대상 국내원천소득의 범위\\n- Dependencies: 자본시장법 제12조제2항제1호나목, 제119조, 제156조제1항, 제156조의2제5~7항, 제156조의6제5~7항\\n\\n**art-157**:\\n- Category: structural (legal succession of tax liability - not numeric calculation)\\n- Evidence: \\\"법인이 해산한 경우에 원천징수를 하여야 할 소득세를 징수하지 아니하였거나 징수한 소득세를 납부하지 아니하고 잔여재산을 분배하였을 때에는 청산인은 그 분배액을 한도로 하여 분배를 받은 자와 연대하여 납세의무를 진다.\\\"\\n- Rationale: 원천징수 납세의무의 승계와 연대책임 구조를 규정하며, 숫자 계산은 분배액 한도라는 제한개념 외에 주된 산술규칙이 없다.\\n- Formalizable: 해산 시 청산인의 분배액 한도 연대납세의무, 합병 시 존속/신설법인의 납세의무 승계\\n- Unresolved: 징수하지 않은 소득세의 확정 방법, 분배액 산정 기준, 연대책임의 구체적 범위\\n- Dependencies: 별도 법령 없음(본문 내 완결)\\n\\n**art-160**:\\n- Category: structural (bookkeeping obligation structure)\\n- Evidence: \\\"사업자는 소득금액을 계산할 수 있도록 증명서류 등을 갖춰 놓고 그 사업에 관한 모든 거래 사실이 객관적으로 파악될 수 있도록 복식부기에 따라 장부에 기록ㆍ관리하여야 한다.\\\"\\n- Rationale: 장부 비치·기록 의무와 복식부기 원칙, 업종별 간편장부 인정 등 조직·절차 구조를 규정하며 구체적 숫자 계산 규칙은 아니다.\\n- Formalizable: 복식부기 기록의무, 간편장부 요건 충족 시 의무이행 간주, 업종별 규모 기준 위임, 사업소득 내 부동산소득 구분경리, 공통수입·공통경비 안분\\n- Unresolved: 업종별 일정 규모 기준, 간편장부 구체적 형태, 공통경비 안분방법\\n- Dependencies: 대통령령(업종별 규모·간편장부), 제119조제3호\\n\\n**art-160-2**:\\n- Category: conditional (has explicit 5-year retention deadline with exception logic, but document types depend on external laws and exceptions delegated)\\n- Evidence: \\\"그 비용의 지출에 대한 증명서류를 받아 이를 확정신고기간 종료일부터 5년간 보관하여야 한다. 다만, 각 과세기간의 개시일 5년 전에 발생한 결손금을 공제받은 자는 해당 결손금이 발생한 과세기간의 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관하여야 한다.\\\"\\n- Rationale: 5년 보관기한과 결손금 공제 시 예외 기한이 명시되어 있고 증명서류 종류도 열거되나 예외사유·서류종류·상대방 범위가 외부법과 위임에 걸린다.\\n- Formalizable: 확정신고기간 종료일부터 5년 보관, 결손금 공제자 예외(다음다음 연도 5월 31일), 적격 증명서류 4종 열거\\n- Unresolved: 대통령령으로 정하는 예외사유, 사업자 범위, 매입자발행계산서·세금계산서 요건\\n- Dependencies: 제163조, 법인세법 제121조, 부가가치세법 제32조·제34조의2제2항, 여신전문금융업법, 제162조의3제1항, 제163조의3, 대통령령\\n\\n**art-160-3**:\\n- Category: conditional (deadlines explicit: 5년 보관, 6월 30일 제출, 1월 10일 전자발급, threshold 3억원 but 초과 기준 delegated)\\n- Evidence: \\\"기부자별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다...해당 과세기간의 기부금영수증 총 발급 건수 및 금액 등을 기재한 기부금영수증 발급합계표를 해당 과세기간의 다음 연도 6월 30일까지...제출하여야 한다.\\\"\\n- Rationale: 5년 보관·6월 30일 제출·3억원 초과 시 1월 10일 전자발급 의무가 기한과 함께 명시되나 '대통령령으로 정하는 금액' 등 판정기준이 위임되어 있다.\\n- Formalizable: 발급명세를 발급일부터 5년 보관, 발급합계표 차기 연도 6월 30일 제출, 직전 과세기간 합계액 3억원 이상 시 다음 연도 1월 10일 전자발급\\n- Unresolved: 대통령령으로 정하는 금액(3억원 초과 판정), 기부자별 발급명세 구체적 항목, 전자기부금영수증 예외 범위\\n- Dependencies: 대통령령, 제168조제5항\\n\\n**art-160-4**:\\n- Category: conditional (simple 5년 보관 and 제출 의무, but 개인별 발급명세 내용 and submission requests depend on Commissioner)\\n- Evidence: \\\"금융회사등은 이 법 또는 「조세특례제한법」에 따른 소득공제에 필요한 증명서를 발급하는 경우 대통령령으로 정하는 개인별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.\\\"\\n- Rationale: 5년 보관과 국세청장 요청 시 제출의무가 명시되나 개인별 발급명세의 구체적 항목과 증명서 범위가 위임법령에 의존한다.\\n- Formalizable: 증명서 발급 시 개인별 발급명세 작성, 발급일부터 5년 보관, 국세청장 요청 시 제출\\n- Unresolved: 개인별 발급명세 구체적 기재 항목, 증명서 범위\\n- Dependencies: 대통령령, 조세특례제한법\\n\\n**art-160-5**:\\n- Category: conditional (explicit deadlines: 6개월 이내 신고, 확정신고기한까지 변경신고, but scope of transactions and business account definition delegated)\\n- Evidence: \\\"복식부기의무자는 복식부기의무자에 해당하는 과세기간의 개시일...부터 6개월 이내에 사업용계좌를 해당 사업자의 사업장 관할 세무서장 또는 납세지 관할 세무서장에게 신고하여야 한다.\\\"\\n- Rationale: 사업용계좌 신고기한(6개월)과 변경·추가 신고기한(확정신고기한)이 명시되어 있으나 거래 범위와 사업용계좌 정의가 위임되어 있다.\\n- Formalizable: 복식부기의무자 최초 신고 기한(과세기간 개시일부터 6개월 이내), 변경·추가 신고(확정신고기한까지), 대금결제·인건비·임차료 거래 시 사업용계좌 사용\\n- Unresolved: 사업용계좌 구체적 정의, 사업용계좌 사용 제외 거래(상대방 사정으로 어려운 경우), 거래 범위\\n- Dependencies: 대통령령, 제70조·제70조의2(확정신고기한)\\n\\nNow let me format the JSON.\"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":3435,\"completion_tokens\":5188,\"total_tokens\":8623,\"prompt_tokens_details\":{\"cached_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":2774,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}},\"system_fingerprint\":null}\n",
+  "response": {
+    "id": "dd69b7d0-a458-4819-b973-3cbba2c712da",
+    "object": "chat.completion",
+    "created": 1788671066,
+    "model": "solar-pro4-260806",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"articles\": [\n    {\n      \"id\": \"art-156-7\",\n      \"category\": \"conditional\",\n      \"evidence\": \"그 지급하는 금액(파견근로자가 파견외국법인으로부터 지급받는 금액을 대통령령으로 정하는 바에 따라 사용내국법인이 확인한 경우에는 그 확인된 금액을 말한다)에 「조세특례제한법」 제18조의2제2항에 따른 세율을 적용하여 계산한 금액을 소득세로 원천징수하여 그 원천징수하는 날이 속하는 달의 다음 달 10일까지\",\n      \"rationale\": \"지급금액에 외부법률상 세율을 곱하고 다음 달 10일까지 납부하는 계산·기한 구조는 명시되나 세율·확인방법·절차가 위임법령과 외부법률에 의존한다.\",\n      \"formalizable\": [\n        \"지급금액 또는 확인된 금액\",\n        \"조세특례제한법 제18조의2제2항 세율 적용\",\n        \"원천징수 후 다음 달 10일까지 납부\"\n      ],\n      \"unresolved\": [\n        \"조세특례제한법 제18조의2제2항의 구체적 세율값\",\n        \"사용내국법인의 파견근로자 소득금액 확인 방법·기준\",\n        \"파견근로자·사용내국법인의 범위\"\n      ],\n      \"dependencies\": [\n        \"조세특례제한법 제18조의2제2항\",\n        \"제134조제1항\",\n        \"대통령령\"\n      ]\n    },\n    {\n      \"id\": \"art-156-8\",\n      \"category\": \"direct\",\n      \"evidence\": \"비거주자의 국내원천소득 중 이자, 배당 또는 사용료소득에 대해서는 제한세율과 다음 각 호의 어느 하나에 규정된 세율 중 낮은 세율을 적용한다.\",\n      \"rationale\": \"제한세율과 법정 세율 중 낮은 것을 적용하는 min 비교 연산과 지방소득세 포함 여부 분기조건이 본문에 명시되어 있어 산술규칙이 직접 표현된다.\",\n      \"formalizable\": [\n        \"제한세율과 제156조제1항제1·2·6호 세율 중 낮은 값 선택\",\n        \"지방소득세 미포함 시 해당 세율 그대로 적용\",\n        \"지방소득세 포함 시 해당 세율 + 소득세법 원천징수세액 10% 반영 세율\"\n      ],\n      \"unresolved\": [\n        \"조약별 제한세율의 구체적 수치\",\n        \"제156조제1항 각 호 세율값\",\n        \"제156조의4제1항 해당 여부 판정\",\n        \"제156조의4제3항 경정 시 감면세율과 법정세율 중 낮은 값 적용\"\n      ],\n      \"dependencies\": [\n        \"제156조제1항제1호·제2호·제6호\",\n        \"지방세법 제103조의18제1항\",\n        \"제156조의4제1항·제3항\",\n        \"조세조약\"\n      ]\n    },\n    {\n      \"id\": \"art-156-9\",\n      \"category\": \"conditional\",\n      \"evidence\": \"비거주자가 외국인 통합계좌를 통하여 제119조에 따른 국내원천소득을 지급받는 경우 해당 국내원천소득을 외국인 통합계좌를 통하여 지급하는 자는 외국인 통합계좌의 명의인에게 그 소득금액을 지급할 때 제156조제1항 각 호에 따른 금액을 소득세로 원천징수하여야 한다.\",\n      \"rationale\": \"통합계좌 명의인 지급 시 제156조제1항 세율로 원천징수하는 규칙과 경정청구 절차가 있으나 통합계좌 정의·원천징수 대상·경정 요건이 외부법과 준용규정에 의존한다.\",\n      \"formalizable\": [\n        \"외국인 통합계좌 명의인에게 지급 시 제156조제1항 각 호 금액으로 원천징수\",\n        \"비과세·면제·제한세율 적용을 위한 비거주자 경정청구권\",\n        \"제156조의2제5~7항·제156조의6제5~7항 준용 기한·방법\"\n      ],\n      \"unresolved\": [\n        \"외국인 통합계좌 해당 여부(자본시장법 제12조제2항제1호나목 해석)\",\n        \"제119조 국내원천소득 범위 및 해당 소득 판정\",\n        \"비과세·면제·제한세율 적용 요건\",\n        \"비거주자와 실질귀속자 관계 해석\"\n      ],\n      \"dependencies\": [\n        \"자본시장법 제12조제2항제1호나목\",\n        \"제119조\",\n        \"제156조제1항 각 호\",\n        \"제156조의2제5~7항\",\n        \"제156조의6제5~7항\"\n      ]\n    },\n    {\n      \"id\": \"art-157\",\n      \"category\": \"structural\",\n      \"evidence\": \"법인이 해산한 경우에 원천징수를 하여야 할 소득세를 징수하지 아니하였거나 징수한 소득세를 납부하지 아니하고 잔여재산을 분배하였을 때에는 청산인은 그 분배액을 한도로 하여 분배를 받은 자와 연대하여 납세의무를 진다.\",\n      \"rationale\": \"해산·감자 시 청산인의 연대납세의무와 합병 시 존속·신설법인의 납세의무 승계라는 조직·책임 구조 규정으로, 주된 숫자 계산 규칙보다는 법적 연결구조를 모형화할 수 있다.\",\n      \"formalizable\": [\n        \"해산 시 청산인의 분배액 한도 연대납세의무\",\n        \"합병 시 존속·신설법인의 소멸법인 미납 원천징수 소득세 납세의무 승계\"\n      ],\n      \"unresolved\": [\n        \"징수하지 않은 또는 납부하지 않은 원천징수 소득세의 확정 방식\",\n        \"분배액의 산정 기준\",\n        \"연대책임의 구체적 범위와 구상 관계\"\n      ],\n      \"dependencies\": []\n    },\n    {\n      \"id\": \"art-160\",\n      \"category\": \"structural\",\n      \"evidence\": \"사업자는 소득금액을 계산할 수 있도록 증명서류 등을 갖춰 놓고 그 사업에 관한 모든 거래 사실이 객관적으로 파악될 수 있도록 복식부기에 따라 장부에 기록ㆍ관리하여야 한다.\",\n      \"rationale\": \"장부 비치·기록 의무와 복식부기 원칙, 간편장부 간주, 소득별 구분경리 및 공통비 안분 등 회계·기록 조직 구조를 규정하며 구체적 산출 산술 규칙보다는 구조적 모형화가 중심이다.\",\n      \"formalizable\": [\n        \"복식부기에 따른 장부 기록·관리 의무\",\n        \"간편장부 성실한 기재 시 의무이행 간주\",\n        \"사업소득 내 부동산소득 구분경리\",\n        \"공통수입금액과 공통경비의 총수입금액 비례 안분 기록\"\n      ],\n      \"unresolved\": [\n        \"업종별 일정 규모 미만 기준\",\n        \"간편장부 구체적 형태·요건\",\n        \"공통경비 안분방법의 구체성\",\n        \"국내사업장이 있거나 제119조제3호 소득이 있는 비거주자 범위\"\n      ],\n      \"dependencies\": [\n        \"대통령령\",\n        \"제119조제3호\"\n      ]\n    },\n    {\n      \"id\": \"art-160-2\",\n      \"category\": \"conditional\",\n      \"evidence\": \"그 비용의 지출에 대한 증명서류를 받아 이를 확정신고기간 종료일부터 5년간 보관하여야 한다. 다만, 각 과세기간의 개시일 5년 전에 발생한 결손금을 공제받은 자는 해당 결손금이 발생한 과세기간의 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관하여야 한다.\",\n      \"rationale\": \"확정신고기간 종료일부터 5년 보관과 결손금 공제자 예외 기한(다음다음 연도 5월 31일)이 명시되나 예외사유·증명서류 종류·상대방 범위가 외부법과 위임에 의존한다.\",\n      \"formalizable\": [\n        \"필요경비 계산 시 지출 증명서류 수취 및 5년 보관\",\n        \"결손금 공제자 예외: 해당 결손금 발생 과세기간 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관\",\n        \"적격 증명서류 4종(계산서·세금계산서·신용카드매출전표·현금영수증)\"\n      ],\n      \"unresolved\": [\n        \"대통령령으로 정하는 증명서류 수취 예외사유\",\n        \"매입자발행계산서·매입자발행세금계산서 발행·보관 요건\",\n        \"사업소득이 있는 자와 사업자의 범위\"\n      ],\n      \"dependencies\": [\n        \"제27조·제37조\",\n        \"제163조·법인세법 제121조\",\n        \"부가가치세법 제32조·제34조의2제2항\",\n        \"여신전문금융업법\",\n        \"제162조의3제1항·제163조의3\",\n        \"대통령령\"\n      ]\n    },\n    {\n      \"id\": \"art-160-3\",\n      \"category\": \"conditional\",\n      \"evidence\": \"기부금영수증을 발급하는 거주자 또는 비거주자(이하 이 조에서 “기부금 영수증을 발급하는 자”로 한다)는 대통령령으로 정하는 기부자별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.\",\n      \"rationale\": \"기부자별 발급명세 5년 보관, 발급합계표 차기 연도 6월 30일 제출, 3억원 초과 시 다음 연도 1월 10일 전자발급 등 기한·요건이 명시되나 '대통령령으로 정하는 금액' 등 판정기준과 제출 요청이 위임되어 있다.\",\n      \"formalizable\": [\n        \"발급명세를 발급일부터 5년 보관\",\n        \"기부자별 발급명세를 관할 세무서장 요청 시 제출\",\n        \"발급합계표를 해당 과세기간 다음 연도 6월 30일까지 제출\",\n        \"직전 과세기간 발급총액 3억원 이상인 경우 다음 연도 1월 10일까지 전자발급\"\n      ],\n      \"unresolved\": [\n        \"대통령령으로 정하는 금액(3억원 초과 여부 판정)\",\n        \"기부자별 발급명세 구체적 기재 항목\",\n        \"전자기부금영수증 예외(비발급 간주) 범위\",\n        \"관할 세무서장 요청의 구체 요건\"\n      ],\n      \"dependencies\": [\n        \"대통령령\",\n        \"제168조제5항\"\n      ]\n    },\n    {\n      \"id\": \"art-160-4\",\n      \"category\": \"conditional\",\n      \"evidence\": \"금융회사등은 이 법 또는 「조세특례제한법」에 따른 소득공제에 필요한 증명서를 발급하는 경우 대통령령으로 정하는 개인별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.\",\n      \"rationale\": \"발급 시 개인별 발급명세 작성·5년 보관·국세청장 요청 시 제출 구조가 명시되나 개인별 발급명세 내용과 증명서 범위가 위임법령에 의존한다.\",\n      \"formalizable\": [\n        \"증명서 발급 시 개인별 발급명세 작성\",\n        \"발급일부터 5년 보관\",\n        \"국세청장 요청 시 보관 명세 제출\"\n      ],\n      \"unresolved\": [\n        \"개인별 발급명세 구체적 기재 항목\",\n        \"소득공제에 필요한 증명서의 범위\",\n        \"국세청장 요청의 요건·방법\"\n      ],\n      \"dependencies\": [\n        \"대통령령\",\n        \"조세특례제한법\"\n      ]\n    },\n    {\n      \"id\": \"art-160-5\",\n      \"category\": \"conditional\",\n      \"evidence\": \"복식부기의무자는 복식부기의무자에 해당하는 과세기간의 개시일(사업 개시와 동시에 복식부기의무자에 해당되는 경우에는 다음 과세기간 개시일)부터 6개월 이내에 사업용계좌를 해당 사업자의 사업장 관할 세무서장 또는 납세지 관할 세무서장에게 신고하여야 한다.\",\n      \"rationale\": \"사업용계좌 최초 신고기한(과세기간 개시일부터 6개월 이내)과 변경·추가 신고기한(확정신고기한까지), 의무사용 거래 유형이 명시되나 거래 범위와 사업용계좌 정의가 위임되어 있다.\",\n      \"formalizable\": [\n        \"복식부기의무자 최초 신고기한: 과세기간 개시일부터 6개월 이내\",\n        \"사업용계좌 변경·추가 신고기한: 확정신고기한까지\",\n        \"금융회사 통한 대금 결제·결제, 인건비·임차료 지급 시 사업용계좌 사용\"\n      ],\n      \"unresolved\": [\n        \"사업용계좌의 구체적 정의\",\n        \"인건비와 임차료 중 상대방 사정으로 사용이 어려운 거래 예외 범위\",\n        \"사업용계좌 사용 대상 거래의 범위\",\n        \"복식부기의무자 해당 여부 판정(제160조 연계)\"\n      ],\n      \"dependencies\": [\n        \"대통령령\",\n        \"제70조·제70조의2(확정신고기한)\",\n        \"제160조(복식부기의무자 정의)\"\n      ]\n    }\n  ]\n}",
+          "reasoning": "Let me analyze each article and classify them according to the given categories:\n\n- **direct**: Main rules can be expressed as explicit arithmetic/logic/deadlines (input fact determination is separate)\n- **conditional**: Calculation or logic structure exists but requires delegation/orders/external requirements/interpretations to be specified\n- **structural**: Can model purpose/organization/authority/procedure/connection structure but not centered on numeric calculation\n- **unformalized**: Cannot determine independently meaningful criteria like values/purposes from this text alone\n\nLet me go through each:\n\n**art-156-7 (제156조의7)**: This is about withholding special rule for income of dispatched workers from foreign corporations. It involves:\n- Computing withholding tax using tax rate under 조세특례제한법 제18조의2제2항\n- Payment deadline: by 10th of next month after withholding date\n- Various delegated matters to Presidential Decree\n\nThe core calculation rule is: amount paid × tax rate from 조특법 18조의2②, but the exact rate depends on the external law and Presidential Decree details. However, the structure is clear: pay amount × rate → withhold → pay by 10th next month. The tax rate itself comes from an external law, so it's conditional.\n\nBut wait - the rule itself says \"apply the rate under 조특법 18조의2② to the amount paid\" - that's an explicit arithmetic operation, just the rate source is external. I'd say this is **conditional** because the rate and verification procedure are defined by Presidential Decree and external law.\n\n**art-156-8 (제156조의8)**: Special rate application for interest, dividends, royalties. The rule: apply the lower of (treaty limited rate) and (domestic rate + possibly additional for local income tax). This is a direct arithmetic comparison (min of two rates). The domestic rates come from 제156조제1항. The local income tax addition is 10% of withholding income tax per 지방세법. This is quite **direct** - the computation is explicit comparison of rates, though the rates themselves come from referenced provisions.\n\n**art-156-9 (제156조의9)**: Withholding special rule for income through foreign omnibus accounts. The withholding agent withholds at 제156조제1항 rates. Then non-resident can request correction. Procedural/structural. The calculation part is direct (withhold at specified rates), but the correction request is procedural. I'd say **conditional** because it depends on external law definitions (foreign omnibus account definition from 자본시장법) and the correction procedure references other articles.\n\n**art-157 (제157조)**: Succession of withholding obligation. This is about legal liability transfer upon dissolution/merger. This is **structural** - it's about legal succession of tax liability, not numeric calculation.\n\n**art-160 (제160조)**: Books and records keeping. This is about bookkeeping obligations. **structural** - organizational/procedural requirements.\n\n**art-160-2 (제160조의2)**: Receipt and storage of expenditure proof. About keeping proof documents for 5 years. There's a deadline (5 years from end of final return period, with exception for loss carryforward). **conditional** - has time-based rules with exceptions and document types defined by external laws.\n\n**art-160-3 (제160조의3)**: Duty to prepare and store donation receipt issuance details. Storage for 5 years, submission deadlines (June 30 next year, or Jan 10 for certain cases). **conditional** - has deadlines and thresholds (3억원) but thresholds defined by Presidential Decree.\n\n**art-160-4 (제160조의4)**: Financial companies' duty to prepare and store certificate issuance details. Storage for 5 years. **conditional** - simple but depends on Presidential Decree for details.\n\n**art-160-5 (제160조의5)**: Business account reporting/use obligation. Various deadlines (6 months from taxable period start for initial report, final return deadline for changes). **conditional** - has clear deadlines but scope defined by Presidential Decree, and \"복식부기의무자\" definition is from another provision.\n\nLet me now write the JSON output.\n\nFor each article I need:\n- id\n- category\n- evidence: 20-100 char direct quote from the text\n- rationale: 1 sentence\n- formalizable: list of concrete elements\n- unresolved: remaining interpretation/delegation/external facts\n- dependencies: delegated laws or referenced articles\n\nLet me be more precise:\n\n**art-156-7**: \n- Category: conditional (the rate is from external law 조특법 제18조의2제2항, verification procedure delegated to Presidential Decree, payment deadline is explicit)\n- Evidence: \"파견외국법인에 지급하는 때에 그 지급하는 금액...에 「조세특례제한법」 제18조의2제2항에 따른 세율을 적용하여 계산한 금액을 소득세로 원천징수하여 그 원천징수하는 날이 속하는 달의 다음 달 10일까지\"\n- Rationale: 계산 구조(지급금액×외부법률상 세율)와 납부기한(다음 달 10일)이 명시되나 세율과 확인방법·절차가 위임법령에 의존한다.\n- Formalizable: 지급금액, 세율 적용, 원천징수, 납부 마감일(다음 달 10일)\n- Unresolved: 조세특례제한법 제18조의2제2항의 세율, 파견근로자 확인 방법·기준, 사용내국법인의 확인 절차\n- Dependencies: 조세특례제한법 제18조의2제2항, 대통령령\n\n**art-156-8**:\n- Category: direct (lower of two rates - treaty rate vs domestic rate with possible local tax addition - is explicit comparison)\n- Evidence: \"조세조약의 규정상 비거주자의 국내원천소득 중 이자, 배당 또는 사용료소득에 대해서는 제한세율과 다음 각 호의 어느 하나에 규정된 세율 중 낮은 세율을 적용한다.\"\n- Rationale: 제한세율과 법정 세율 중 낮은 세율을 적용하는 비교 연산이 본문에 명시되고, 지방소득세 포함 여부만 분기 조건이다.\n- Formalizable: 제한세율, 제156조제1항 세율을 저장→min 연산, 지방소득세 포함 시 +10% 반영 분기\n- Unresolved: 조세조약상 제한세율의 구체적 값(조약별), 제156조제1항 각 호 세율값(표), 제156조의4제1항 해당 여부 판정\n- Dependencies: 제156조제1항제1·2·6호, 지방세법 제103조의18제1항, 제156조의4\n\n**art-156-9**:\n- Category: conditional (withholding at specific rates is direct, but the whole structure depends on foreign omnibus account definition, correction procedure references)\n- Evidence: \"비거주자가 외국인 통합계좌...를 통하여 제119조에 따른 국내원천소득을 지급받는 경우 해당 국내원천소득을 외국인 통합계좌를 통하여 지급하는 자는 외국인 통합계좌의 명의인에게 그 소득금액을 지급할 때 제156조제1항 각 호에 따른 금액을 소득세로 원천징수하여야 한다.\"\n- Rationale: 원천징수세율(제156조제1항)과 경정청구 절차가 명시되나 통합계좌 정의·원천징수 대상·경정 요건이 외부 법령과 준용규정에 의존한다.\n- Formalizable: 통합계좌 명의인 지급 시 제156조제1항 세율 원천징수, 비거주자의 경정청구 권리, 준용되는 기한·방법\n- Unresolved: 외국인 통합계좌 해당 여부(자본시장법 제12조제2항제1호나목 해석), 비과세·면제·제한세율 적용 요건, 원천징수 대상 국내원천소득의 범위\n- Dependencies: 자본시장법 제12조제2항제1호나목, 제119조, 제156조제1항, 제156조의2제5~7항, 제156조의6제5~7항\n\n**art-157**:\n- Category: structural (legal succession of tax liability - not numeric calculation)\n- Evidence: \"법인이 해산한 경우에 원천징수를 하여야 할 소득세를 징수하지 아니하였거나 징수한 소득세를 납부하지 아니하고 잔여재산을 분배하였을 때에는 청산인은 그 분배액을 한도로 하여 분배를 받은 자와 연대하여 납세의무를 진다.\"\n- Rationale: 원천징수 납세의무의 승계와 연대책임 구조를 규정하며, 숫자 계산은 분배액 한도라는 제한개념 외에 주된 산술규칙이 없다.\n- Formalizable: 해산 시 청산인의 분배액 한도 연대납세의무, 합병 시 존속/신설법인의 납세의무 승계\n- Unresolved: 징수하지 않은 소득세의 확정 방법, 분배액 산정 기준, 연대책임의 구체적 범위\n- Dependencies: 별도 법령 없음(본문 내 완결)\n\n**art-160**:\n- Category: structural (bookkeeping obligation structure)\n- Evidence: \"사업자는 소득금액을 계산할 수 있도록 증명서류 등을 갖춰 놓고 그 사업에 관한 모든 거래 사실이 객관적으로 파악될 수 있도록 복식부기에 따라 장부에 기록ㆍ관리하여야 한다.\"\n- Rationale: 장부 비치·기록 의무와 복식부기 원칙, 업종별 간편장부 인정 등 조직·절차 구조를 규정하며 구체적 숫자 계산 규칙은 아니다.\n- Formalizable: 복식부기 기록의무, 간편장부 요건 충족 시 의무이행 간주, 업종별 규모 기준 위임, 사업소득 내 부동산소득 구분경리, 공통수입·공통경비 안분\n- Unresolved: 업종별 일정 규모 기준, 간편장부 구체적 형태, 공통경비 안분방법\n- Dependencies: 대통령령(업종별 규모·간편장부), 제119조제3호\n\n**art-160-2**:\n- Category: conditional (has explicit 5-year retention deadline with exception logic, but document types depend on external laws and exceptions delegated)\n- Evidence: \"그 비용의 지출에 대한 증명서류를 받아 이를 확정신고기간 종료일부터 5년간 보관하여야 한다. 다만, 각 과세기간의 개시일 5년 전에 발생한 결손금을 공제받은 자는 해당 결손금이 발생한 과세기간의 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관하여야 한다.\"\n- Rationale: 5년 보관기한과 결손금 공제 시 예외 기한이 명시되어 있고 증명서류 종류도 열거되나 예외사유·서류종류·상대방 범위가 외부법과 위임에 걸린다.\n- Formalizable: 확정신고기간 종료일부터 5년 보관, 결손금 공제자 예외(다음다음 연도 5월 31일), 적격 증명서류 4종 열거\n- Unresolved: 대통령령으로 정하는 예외사유, 사업자 범위, 매입자발행계산서·세금계산서 요건\n- Dependencies: 제163조, 법인세법 제121조, 부가가치세법 제32조·제34조의2제2항, 여신전문금융업법, 제162조의3제1항, 제163조의3, 대통령령\n\n**art-160-3**:\n- Category: conditional (deadlines explicit: 5년 보관, 6월 30일 제출, 1월 10일 전자발급, threshold 3억원 but 초과 기준 delegated)\n- Evidence: \"기부자별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다...해당 과세기간의 기부금영수증 총 발급 건수 및 금액 등을 기재한 기부금영수증 발급합계표를 해당 과세기간의 다음 연도 6월 30일까지...제출하여야 한다.\"\n- Rationale: 5년 보관·6월 30일 제출·3억원 초과 시 1월 10일 전자발급 의무가 기한과 함께 명시되나 '대통령령으로 정하는 금액' 등 판정기준이 위임되어 있다.\n- Formalizable: 발급명세를 발급일부터 5년 보관, 발급합계표 차기 연도 6월 30일 제출, 직전 과세기간 합계액 3억원 이상 시 다음 연도 1월 10일 전자발급\n- Unresolved: 대통령령으로 정하는 금액(3억원 초과 판정), 기부자별 발급명세 구체적 항목, 전자기부금영수증 예외 범위\n- Dependencies: 대통령령, 제168조제5항\n\n**art-160-4**:\n- Category: conditional (simple 5년 보관 and 제출 의무, but 개인별 발급명세 내용 and submission requests depend on Commissioner)\n- Evidence: \"금융회사등은 이 법 또는 「조세특례제한법」에 따른 소득공제에 필요한 증명서를 발급하는 경우 대통령령으로 정하는 개인별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.\"\n- Rationale: 5년 보관과 국세청장 요청 시 제출의무가 명시되나 개인별 발급명세의 구체적 항목과 증명서 범위가 위임법령에 의존한다.\n- Formalizable: 증명서 발급 시 개인별 발급명세 작성, 발급일부터 5년 보관, 국세청장 요청 시 제출\n- Unresolved: 개인별 발급명세 구체적 기재 항목, 증명서 범위\n- Dependencies: 대통령령, 조세특례제한법\n\n**art-160-5**:\n- Category: conditional (explicit deadlines: 6개월 이내 신고, 확정신고기한까지 변경신고, but scope of transactions and business account definition delegated)\n- Evidence: \"복식부기의무자는 복식부기의무자에 해당하는 과세기간의 개시일...부터 6개월 이내에 사업용계좌를 해당 사업자의 사업장 관할 세무서장 또는 납세지 관할 세무서장에게 신고하여야 한다.\"\n- Rationale: 사업용계좌 신고기한(6개월)과 변경·추가 신고기한(확정신고기한)이 명시되어 있으나 거래 범위와 사업용계좌 정의가 위임되어 있다.\n- Formalizable: 복식부기의무자 최초 신고 기한(과세기간 개시일부터 6개월 이내), 변경·추가 신고(확정신고기한까지), 대금결제·인건비·임차료 거래 시 사업용계좌 사용\n- Unresolved: 사업용계좌 구체적 정의, 사업용계좌 사용 제외 거래(상대방 사정으로 어려운 경우), 거래 범위\n- Dependencies: 대통령령, 제70조·제70조의2(확정신고기한)\n\nNow let me format the JSON."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3435,
+      "completion_tokens": 5188,
+      "total_tokens": 8623,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2774,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "system_fingerprint": null
+  },
+  "parsed": [
+    {
+      "id": "art-156-7",
+      "category": "conditional",
+      "evidence": "그 지급하는 금액(파견근로자가 파견외국법인으로부터 지급받는 금액을 대통령령으로 정하는 바에 따라 사용내국법인이 확인한 경우에는 그 확인된 금액을 말한다)에 「조세특례제한법」 제18조의2제2항에 따른 세율을 적용하여 계산한 금액을 소득세로 원천징수하여 그 원천징수하는 날이 속하는 달의 다음 달 10일까지",
+      "rationale": "지급금액에 외부법률상 세율을 곱하고 다음 달 10일까지 납부하는 계산·기한 구조는 명시되나 세율·확인방법·절차가 위임법령과 외부법률에 의존한다.",
+      "formalizable": [
+        "지급금액 또는 확인된 금액",
+        "조세특례제한법 제18조의2제2항 세율 적용",
+        "원천징수 후 다음 달 10일까지 납부"
+      ],
+      "unresolved": [
+        "조세특례제한법 제18조의2제2항의 구체적 세율값",
+        "사용내국법인의 파견근로자 소득금액 확인 방법·기준",
+        "파견근로자·사용내국법인의 범위"
+      ],
+      "dependencies": [
+        "조세특례제한법 제18조의2제2항",
+        "제134조제1항",
+        "대통령령"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-156-8",
+      "category": "direct",
+      "evidence": "비거주자의 국내원천소득 중 이자, 배당 또는 사용료소득에 대해서는 제한세율과 다음 각 호의 어느 하나에 규정된 세율 중 낮은 세율을 적용한다.",
+      "rationale": "제한세율과 법정 세율 중 낮은 것을 적용하는 min 비교 연산과 지방소득세 포함 여부 분기조건이 본문에 명시되어 있어 산술규칙이 직접 표현된다.",
+      "formalizable": [
+        "제한세율과 제156조제1항제1·2·6호 세율 중 낮은 값 선택",
+        "지방소득세 미포함 시 해당 세율 그대로 적용",
+        "지방소득세 포함 시 해당 세율 + 소득세법 원천징수세액 10% 반영 세율"
+      ],
+      "unresolved": [
+        "조약별 제한세율의 구체적 수치",
+        "제156조제1항 각 호 세율값",
+        "제156조의4제1항 해당 여부 판정",
+        "제156조의4제3항 경정 시 감면세율과 법정세율 중 낮은 값 적용"
+      ],
+      "dependencies": [
+        "제156조제1항제1호·제2호·제6호",
+        "지방세법 제103조의18제1항",
+        "제156조의4제1항·제3항",
+        "조세조약"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-156-9",
+      "category": "conditional",
+      "evidence": "비거주자가 외국인 통합계좌를 통하여 제119조에 따른 국내원천소득을 지급받는 경우 해당 국내원천소득을 외국인 통합계좌를 통하여 지급하는 자는 외국인 통합계좌의 명의인에게 그 소득금액을 지급할 때 제156조제1항 각 호에 따른 금액을 소득세로 원천징수하여야 한다.",
+      "rationale": "통합계좌 명의인 지급 시 제156조제1항 세율로 원천징수하는 규칙과 경정청구 절차가 있으나 통합계좌 정의·원천징수 대상·경정 요건이 외부법과 준용규정에 의존한다.",
+      "formalizable": [
+        "외국인 통합계좌 명의인에게 지급 시 제156조제1항 각 호 금액으로 원천징수",
+        "비과세·면제·제한세율 적용을 위한 비거주자 경정청구권",
+        "제156조의2제5~7항·제156조의6제5~7항 준용 기한·방법"
+      ],
+      "unresolved": [
+        "외국인 통합계좌 해당 여부(자본시장법 제12조제2항제1호나목 해석)",
+        "제119조 국내원천소득 범위 및 해당 소득 판정",
+        "비과세·면제·제한세율 적용 요건",
+        "비거주자와 실질귀속자 관계 해석"
+      ],
+      "dependencies": [
+        "자본시장법 제12조제2항제1호나목",
+        "제119조",
+        "제156조제1항 각 호",
+        "제156조의2제5~7항",
+        "제156조의6제5~7항"
+      ],
+      "exactEvidence": false
+    },
+    {
+      "id": "art-157",
+      "category": "structural",
+      "evidence": "법인이 해산한 경우에 원천징수를 하여야 할 소득세를 징수하지 아니하였거나 징수한 소득세를 납부하지 아니하고 잔여재산을 분배하였을 때에는 청산인은 그 분배액을 한도로 하여 분배를 받은 자와 연대하여 납세의무를 진다.",
+      "rationale": "해산·감자 시 청산인의 연대납세의무와 합병 시 존속·신설법인의 납세의무 승계라는 조직·책임 구조 규정으로, 주된 숫자 계산 규칙보다는 법적 연결구조를 모형화할 수 있다.",
+      "formalizable": [
+        "해산 시 청산인의 분배액 한도 연대납세의무",
+        "합병 시 존속·신설법인의 소멸법인 미납 원천징수 소득세 납세의무 승계"
+      ],
+      "unresolved": [
+        "징수하지 않은 또는 납부하지 않은 원천징수 소득세의 확정 방식",
+        "분배액의 산정 기준",
+        "연대책임의 구체적 범위와 구상 관계"
+      ],
+      "dependencies": [],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-160",
+      "category": "structural",
+      "evidence": "사업자는 소득금액을 계산할 수 있도록 증명서류 등을 갖춰 놓고 그 사업에 관한 모든 거래 사실이 객관적으로 파악될 수 있도록 복식부기에 따라 장부에 기록ㆍ관리하여야 한다.",
+      "rationale": "장부 비치·기록 의무와 복식부기 원칙, 간편장부 간주, 소득별 구분경리 및 공통비 안분 등 회계·기록 조직 구조를 규정하며 구체적 산출 산술 규칙보다는 구조적 모형화가 중심이다.",
+      "formalizable": [
+        "복식부기에 따른 장부 기록·관리 의무",
+        "간편장부 성실한 기재 시 의무이행 간주",
+        "사업소득 내 부동산소득 구분경리",
+        "공통수입금액과 공통경비의 총수입금액 비례 안분 기록"
+      ],
+      "unresolved": [
+        "업종별 일정 규모 미만 기준",
+        "간편장부 구체적 형태·요건",
+        "공통경비 안분방법의 구체성",
+        "국내사업장이 있거나 제119조제3호 소득이 있는 비거주자 범위"
+      ],
+      "dependencies": [
+        "대통령령",
+        "제119조제3호"
+      ],
+      "exactEvidence": false
+    },
+    {
+      "id": "art-160-2",
+      "category": "conditional",
+      "evidence": "그 비용의 지출에 대한 증명서류를 받아 이를 확정신고기간 종료일부터 5년간 보관하여야 한다. 다만, 각 과세기간의 개시일 5년 전에 발생한 결손금을 공제받은 자는 해당 결손금이 발생한 과세기간의 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관하여야 한다.",
+      "rationale": "확정신고기간 종료일부터 5년 보관과 결손금 공제자 예외 기한(다음다음 연도 5월 31일)이 명시되나 예외사유·증명서류 종류·상대방 범위가 외부법과 위임에 의존한다.",
+      "formalizable": [
+        "필요경비 계산 시 지출 증명서류 수취 및 5년 보관",
+        "결손금 공제자 예외: 해당 결손금 발생 과세기간 증명서류를 공제받은 과세기간의 다음다음 연도 5월 31일까지 보관",
+        "적격 증명서류 4종(계산서·세금계산서·신용카드매출전표·현금영수증)"
+      ],
+      "unresolved": [
+        "대통령령으로 정하는 증명서류 수취 예외사유",
+        "매입자발행계산서·매입자발행세금계산서 발행·보관 요건",
+        "사업소득이 있는 자와 사업자의 범위"
+      ],
+      "dependencies": [
+        "제27조·제37조",
+        "제163조·법인세법 제121조",
+        "부가가치세법 제32조·제34조의2제2항",
+        "여신전문금융업법",
+        "제162조의3제1항·제163조의3",
+        "대통령령"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-160-3",
+      "category": "conditional",
+      "evidence": "기부금영수증을 발급하는 거주자 또는 비거주자(이하 이 조에서 “기부금 영수증을 발급하는 자”로 한다)는 대통령령으로 정하는 기부자별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.",
+      "rationale": "기부자별 발급명세 5년 보관, 발급합계표 차기 연도 6월 30일 제출, 3억원 초과 시 다음 연도 1월 10일 전자발급 등 기한·요건이 명시되나 '대통령령으로 정하는 금액' 등 판정기준과 제출 요청이 위임되어 있다.",
+      "formalizable": [
+        "발급명세를 발급일부터 5년 보관",
+        "기부자별 발급명세를 관할 세무서장 요청 시 제출",
+        "발급합계표를 해당 과세기간 다음 연도 6월 30일까지 제출",
+        "직전 과세기간 발급총액 3억원 이상인 경우 다음 연도 1월 10일까지 전자발급"
+      ],
+      "unresolved": [
+        "대통령령으로 정하는 금액(3억원 초과 여부 판정)",
+        "기부자별 발급명세 구체적 기재 항목",
+        "전자기부금영수증 예외(비발급 간주) 범위",
+        "관할 세무서장 요청의 구체 요건"
+      ],
+      "dependencies": [
+        "대통령령",
+        "제168조제5항"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-160-4",
+      "category": "conditional",
+      "evidence": "금융회사등은 이 법 또는 「조세특례제한법」에 따른 소득공제에 필요한 증명서를 발급하는 경우 대통령령으로 정하는 개인별 발급명세를 작성하여 발급한 날부터 5년간 보관하여야 한다.",
+      "rationale": "발급 시 개인별 발급명세 작성·5년 보관·국세청장 요청 시 제출 구조가 명시되나 개인별 발급명세 내용과 증명서 범위가 위임법령에 의존한다.",
+      "formalizable": [
+        "증명서 발급 시 개인별 발급명세 작성",
+        "발급일부터 5년 보관",
+        "국세청장 요청 시 보관 명세 제출"
+      ],
+      "unresolved": [
+        "개인별 발급명세 구체적 기재 항목",
+        "소득공제에 필요한 증명서의 범위",
+        "국세청장 요청의 요건·방법"
+      ],
+      "dependencies": [
+        "대통령령",
+        "조세특례제한법"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-160-5",
+      "category": "conditional",
+      "evidence": "복식부기의무자는 복식부기의무자에 해당하는 과세기간의 개시일(사업 개시와 동시에 복식부기의무자에 해당되는 경우에는 다음 과세기간 개시일)부터 6개월 이내에 사업용계좌를 해당 사업자의 사업장 관할 세무서장 또는 납세지 관할 세무서장에게 신고하여야 한다.",
+      "rationale": "사업용계좌 최초 신고기한(과세기간 개시일부터 6개월 이내)과 변경·추가 신고기한(확정신고기한까지), 의무사용 거래 유형이 명시되나 거래 범위와 사업용계좌 정의가 위임되어 있다.",
+      "formalizable": [
+        "복식부기의무자 최초 신고기한: 과세기간 개시일부터 6개월 이내",
+        "사업용계좌 변경·추가 신고기한: 확정신고기한까지",
+        "금융회사 통한 대금 결제·결제, 인건비·임차료 지급 시 사업용계좌 사용"
+      ],
+      "unresolved": [
+        "사업용계좌의 구체적 정의",
+        "인건비와 임차료 중 상대방 사정으로 사용이 어려운 거래 예외 범위",
+        "사업용계좌 사용 대상 거래의 범위",
+        "복식부기의무자 해당 여부 판정(제160조 연계)"
+      ],
+      "dependencies": [
+        "대통령령",
+        "제70조·제70조의2(확정신고기한)",
+        "제160조(복식부기의무자 정의)"
+      ],
+      "exactEvidence": true
+    }
+  ]
+}

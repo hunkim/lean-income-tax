@@ -1,0 +1,35 @@
+{
+  "status": "semantic-possibility-reviewed",
+  "sourceEffectiveDate": "20260701",
+  "sourceSha256": "75c504ac6e07a5d3eebe4ea12252fd68aeb035939f7dbee34cf260070a4d3013",
+  "articles": 325,
+  "activeArticles": 258,
+  "deletedArticles": 67,
+  "semanticReviewedArticles": 258,
+  "astraIndependentlyAuditedArticles": 25,
+  "responseModels": [
+    "solar-pro4-260806"
+  ],
+  "astraCorrectedEvidenceArticles": 2,
+  "exactEvidenceArticles": 213,
+  "exactCommonExcerptArticles": 42,
+  "whitespaceNormalizedEvidence": [
+    "art-92"
+  ],
+  "unmatchedEvidence": [],
+  "categories": {
+    "unformalized": 1,
+    "conditional": 155,
+    "structural": 57,
+    "direct": 45,
+    "deleted": 67
+  },
+  "notice": "본문 전체의 조문 단위 형식화 가능성 분류. 부칙·시행령·판례의 의미 검토와 조문 전체 Lean 구현은 별도다. direct도 사실 확정이나 법률 적용의 자동 판정을 뜻하지 않는다. 이미지 수식·표는 제55조 별도 전사표를 제외하고 시각 내용 미검증. 모델별 기록은 연구 재현을 위해 보존하며 모두 개별 이중 검토를 완료했다고 주장하지 않는다.",
+  "categoryDefinitions": {
+    "direct": "주요 규칙을 명시적 산술·논리·기한으로 표현 가능",
+    "conditional": "외부 요건·위임법령·해석 또는 이미지 검증이 필요",
+    "structural": "권한·의무·절차·연결 구조를 표현 가능",
+    "unformalized": "목적·가치 등의 판정 의미가 현재 명시되지 않음",
+    "deleted": "삭제 조문"
+  }
+}

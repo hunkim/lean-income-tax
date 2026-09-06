@@ -1,0 +1,12 @@
+{
+  "accepted_source_sha256": "5264ceb7ba0923a2ec50c6150b13ca1b4927350dde20d132a1614f1cedf28c40",
+  "theorems": [
+    "finalTax_le_assessed",
+    "finalTax_zero_of_le_credits",
+    "not_both_refund_and_additional_positive",
+    "int_diff_additional_refund"
+  ],
+  "compiler_exit_code": 0,
+  "axioms": "'IncomeTax.SettlementSolar.finalTax_le_assessed' depends on axioms: [propext, Quot.sound]\n'IncomeTax.SettlementSolar.finalTax_zero_of_le_credits' depends on axioms: [propext, Quot.sound]\n'IncomeTax.SettlementSolar.not_both_refund_and_additional_positive' depends on axioms: [propext, Quot.sound]\n'IncomeTax.SettlementSolar.int_diff_additional_refund' depends on axioms: [propext, Quot.sound]\n",
+  "stderr": ""
+}

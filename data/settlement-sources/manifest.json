@@ -1,0 +1,46 @@
+[
+  {
+    "file": "nts-2025-index.html",
+    "url": "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=238938&mi=6645",
+    "sha256": "f9e4b9533d111046fc73dec58a9d796d0bcf9aa37f5fe6faaaf9f63ea3e343e1",
+    "bytes": 201193,
+    "retrievedAt": "2026-09-06",
+    "taxYear": 2025
+  },
+  {
+    "file": "nts-2025-guide.zip",
+    "url": "https://www.nts.go.kr/comm/nttFileDownload.do?fileKey=88c482e8d69eb1653515871654a4ab42",
+    "sha256": "e25fe22ef388f12a48cdc39bc23ec762b2941f780a4e7ca0d66925a47594902e",
+    "bytes": 14972179,
+    "retrievedAt": "2026-09-06",
+    "taxYear": 2025
+  },
+  {
+    "file": "nts-2025-guide.pdf",
+    "derivedFrom": "nts-2025-guide.zip",
+    "sha256": "54a1d1c4159682830a2242dbd1a4ac7d6fccc69898372d12e96374d7d755c182",
+    "bytes": 20518140,
+    "taxYear": 2025
+  },
+  {
+    "file": "nts-2025-guide.txt",
+    "derivedFrom": "nts-2025-guide.pdf",
+    "sha256": "3b30ea5166dab5ff7af3b592f25662114ac43b24b3283a464f75172a9408ab51",
+    "bytes": 1075795,
+    "taxYear": 2025
+  },
+  {
+    "file": "nts-2025-guide-correction-20260203.hwp",
+    "sha256": "e6e937887dab2bde0b677bbe0557f69744d7e247c4c62ae0a7cff826b534f345",
+    "bytes": 39424,
+    "derivedFrom": "nts-2025-guide.zip",
+    "taxYear": 2025
+  },
+  {
+    "file": "nts-2025-guide-correction-20260203.txt",
+    "sha256": "69a4060662738751116f477048acf6cabce7c4d53f676cf71e5d60146da09898",
+    "bytes": 963,
+    "derivedFrom": "nts-2025-guide.zip",
+    "taxYear": 2025
+  }
+]

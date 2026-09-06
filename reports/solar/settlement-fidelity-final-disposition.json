@@ -1,0 +1,37 @@
+{
+  "reviewRecord": "settlement-fidelity-final-0a2a93eefe7f.json",
+  "reviewedSourceSha256": "0a2a93eefe7f803410326ae14261cda75c8ee2ffbde89fd26d6fb053095ca418",
+  "reviewedRulesSha256": "c3ec982b1dcb83537d75b8dbce2585efb0a75447a0a2e0383a90d4f7a204f6e8",
+  "reviewModel": "solar-pro4-260806",
+  "assessmentBy": "Astra",
+  "acceptedNewBugs": 0,
+  "scope": "Provided 2025 specification and selected source excerpts; static review, not complete statute or filing validation",
+  "dispositions": [
+    {
+      "symbol": "taxableBase / salaryToDetermined",
+      "status": "rejected-as-reported; external-input boundary retained",
+      "reason": "Lean immediately documents deductions as the aggregate-cap-adjusted total. JS independently calculates addback from card plus other capped deductions exceeding 25m. Solar omitted the source comment and its proposed example mixes salary, earned income, and aggregate-cap-eligible categories. The Lean composition still trusts this normalized input rather than proving legal eligibility."
+    },
+    {
+      "symbol": "pensionCredit / insuranceCredit",
+      "status": "rejected-as-reported; rules prose clarified separately",
+      "reason": "Guide receipt has separate won-valued credit cells for pension savings/retirement and ordinary/disabled insurance. Rule15 discards sub-won fractions of amounts entered in those cells. Each cell is truncated before summing, as implemented. Solar received but overlooked those excerpts. Its 4+4 pension example demonstrates the intended difference rather than a bug."
+    },
+    {
+      "symbol": "earnedCreditCap",
+      "status": "rejected-mathematically",
+      "reason": "For nonnegative exact rational raw and cap, floor(min(raw,cap)) = min(floor(raw),floor(cap)). Flooring each side before min gives identical final won credit. No alleged one-won counterexample exists from this transformation."
+    },
+    {
+      "symbol": "cardDeduction",
+      "status": "confirmed-by-reviewer-after-self-correction",
+      "reason": "Solar initially suspected a scaling issue then itself proved 15*min(S,4A)=400*.15*min(S/4,A), and corresponding second/third identities. The final denominator400 preserves fractional salary-quarter thresholds."
+    },
+    {
+      "symbol": "collectibleBalance",
+      "status": "confirmed",
+      "reason": "Strict positive delta<1000 yields0, negative refunds preserved, delta=1000 collected."
+    }
+  ],
+  "evaluation": "Do not count all listed issues as discovered defects or claim unqualified Solar approval. Korean-source reading and mathematical critique required Astra adjudication; the raw response remains unchanged."
+}

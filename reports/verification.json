@@ -1,6 +1,6 @@
 {
   "leanVersion": "Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
-  "theoremCount": 13,
+  "theoremCount": 37,
   "theorems": [
     "IncomeTax.first_band_agreement",
     "IncomeTax.zero_tax",
@@ -11,6 +11,30 @@
     "IncomeTax.above_first_boundary",
     "IncomeTax.example_20m",
     "IncomeTax.top_boundary",
+    "IncomeTax.Settlement.earned_deduction_cap",
+    "IncomeTax.Settlement.taxable_base_le_salary",
+    "IncomeTax.Settlement.deduction_monotone_base",
+    "IncomeTax.Settlement.credit_bounded_by_cap",
+    "IncomeTax.Settlement.pension_eligible_cap",
+    "IncomeTax.Settlement.credits_cannot_make_negative",
+    "IncomeTax.Settlement.prepaid_increase_reduces_balance",
+    "IncomeTax.Settlement.salary_50m_deduction",
+    "IncomeTax.Settlement.pension_boundary",
+    "IncomeTax.Settlement.pension_above_boundary",
+    "IncomeTax.Settlement.no_child_no_credit",
+    "IncomeTax.Settlement.two_children_2025",
+    "IncomeTax.Settlement.no_rent_above_limit",
+    "IncomeTax.Settlement.cap_fraction_boundary",
+    "IncomeTax.Settlement.small_positive_not_collected",
+    "IncomeTax.Settlement.small_refund_preserved",
+    "IncomeTax.Settlement.thousand_collected",
+    "IncomeTax.Settlement.separate_pension_rounding",
+    "IncomeTax.Settlement.separate_insurance_rounding",
+    "IncomeTax.Settlement.no_salary_no_tax",
+    "IncomeTax.SettlementSolar.finalTax_le_assessed",
+    "IncomeTax.SettlementSolar.finalTax_zero_of_le_credits",
+    "IncomeTax.SettlementSolar.not_both_refund_and_additional_positive",
+    "IncomeTax.SettlementSolar.int_diff_additional_refund",
     "IncomeTax.Solar.firstBandTax100_zero",
     "IncomeTax.Solar.firstBandTax100_14M",
     "IncomeTax.Solar.firstBandTax100_monotone",
@@ -19,9 +43,11 @@
   "sourceHashes": {
     "lean/IncomeTax/Agreement.lean": "9aa2c40cb523867d35b42a5c516b2bd499666ad749d55f88a5cf7f44b4435855",
     "lean/IncomeTax/Basic.lean": "6e4fa1102b107a5775291c69b2489b6d67a2c7a8caf5f5d80a3cdaec58214207",
+    "lean/IncomeTax/Settlement.lean": "0a2a93eefe7f803410326ae14261cda75c8ee2ffbde89fd26d6fb053095ca418",
+    "lean/IncomeTax/SettlementSolar.lean": "5264ceb7ba0923a2ec50c6150b13ca1b4927350dde20d132a1614f1cedf28c40",
     "lean/IncomeTax/Solar.lean": "c80faad027680a2bc982deef43bde1049b94be1ce7434a5e57e0e7c9c7f0ca81"
   },
-  "axioms": "'IncomeTax.first_band_agreement' depends on axioms: [propext]\n'IncomeTax.zero_tax' does not depend on any axioms\n'IncomeTax.first_band' depends on axioms: [propext]\n'IncomeTax.tax_monotone' depends on axioms: [propext, Quot.sound]\n'IncomeTax.increase_bounded' depends on axioms: [propext, Quot.sound]\n'IncomeTax.first_boundary' does not depend on any axioms\n'IncomeTax.above_first_boundary' does not depend on any axioms\n'IncomeTax.example_20m' does not depend on any axioms\n'IncomeTax.top_boundary' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_zero' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_14M' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_monotone' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Solar.firstBandTax100_diff_bound' depends on axioms: [propext, Quot.sound]",
+  "axioms": "'IncomeTax.first_band_agreement' depends on axioms: [propext]\n'IncomeTax.zero_tax' does not depend on any axioms\n'IncomeTax.first_band' depends on axioms: [propext]\n'IncomeTax.tax_monotone' depends on axioms: [propext, Quot.sound]\n'IncomeTax.increase_bounded' depends on axioms: [propext, Quot.sound]\n'IncomeTax.first_boundary' does not depend on any axioms\n'IncomeTax.above_first_boundary' does not depend on any axioms\n'IncomeTax.example_20m' does not depend on any axioms\n'IncomeTax.top_boundary' does not depend on any axioms\n'IncomeTax.Settlement.earned_deduction_cap' depends on axioms: [propext]\n'IncomeTax.Settlement.taxable_base_le_salary' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Settlement.deduction_monotone_base' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Settlement.credit_bounded_by_cap' depends on axioms: [propext]\n'IncomeTax.Settlement.pension_eligible_cap' depends on axioms: [propext]\n'IncomeTax.Settlement.credits_cannot_make_negative' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Settlement.prepaid_increase_reduces_balance' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Settlement.salary_50m_deduction' does not depend on any axioms\n'IncomeTax.Settlement.pension_boundary' does not depend on any axioms\n'IncomeTax.Settlement.pension_above_boundary' does not depend on any axioms\n'IncomeTax.Settlement.no_child_no_credit' does not depend on any axioms\n'IncomeTax.Settlement.two_children_2025' does not depend on any axioms\n'IncomeTax.Settlement.no_rent_above_limit' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Settlement.cap_fraction_boundary' does not depend on any axioms\n'IncomeTax.Settlement.small_positive_not_collected' does not depend on any axioms\n'IncomeTax.Settlement.small_refund_preserved' does not depend on any axioms\n'IncomeTax.Settlement.thousand_collected' does not depend on any axioms\n'IncomeTax.Settlement.separate_pension_rounding' does not depend on any axioms\n'IncomeTax.Settlement.separate_insurance_rounding' does not depend on any axioms\n'IncomeTax.Settlement.no_salary_no_tax' depends on axioms: [propext]\n'IncomeTax.SettlementSolar.finalTax_le_assessed' depends on axioms: [propext, Quot.sound]\n'IncomeTax.SettlementSolar.finalTax_zero_of_le_credits' depends on axioms: [propext, Quot.sound]\n'IncomeTax.SettlementSolar.not_both_refund_and_additional_positive' depends on axioms: [propext, Quot.sound]\n'IncomeTax.SettlementSolar.int_diff_additional_refund' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Solar.firstBandTax100_zero' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_14M' does not depend on any axioms\n'IncomeTax.Solar.firstBandTax100_monotone' depends on axioms: [propext, Quot.sound]\n'IncomeTax.Solar.firstBandTax100_diff_bound' depends on axioms: [propext, Quot.sound]",
   "cases": [
     {
       "base": "0",
@@ -124,5 +150,754 @@
       "scaled": "44993406000000"
     }
   ],
-  "scope": "Article55(1) basic schedule only; no annual-settlement, rounding or eligibility claim."
+  "scope": "Basic schedule and 2025 resident employee settlement numeric components; external eligibility and supported-case limitations apply.",
+  "settlementCases": {
+    "components": [
+      {
+        "salary": "0",
+        "deduction": "0",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "1",
+        "deduction": "0",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "4999999",
+        "deduction": "3499999",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "5000000",
+        "deduction": "3500000",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "5000001",
+        "deduction": "3500000",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "14999999",
+        "deduction": "7499999",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "15000000",
+        "deduction": "7500000",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "15000001",
+        "deduction": "7500000",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "32999999",
+        "deduction": "10199999",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "33000000",
+        "deduction": "10200000",
+        "earnedCap": "740000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "33000001",
+        "deduction": "10200000",
+        "earnedCap": "739999",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "42999999",
+        "deduction": "11699999",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "43000000",
+        "deduction": "11700000",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "43000001",
+        "deduction": "11700000",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "44999999",
+        "deduction": "11999999",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "45000000",
+        "deduction": "12000000",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "45000001",
+        "deduction": "12000000",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "54999999",
+        "deduction": "12499999",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "55000000",
+        "deduction": "12500000",
+        "earnedCap": "660000",
+        "pension": "1350000",
+        "rent": "1700000"
+      },
+      {
+        "salary": "55000001",
+        "deduction": "12500000",
+        "earnedCap": "660000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "65400000",
+        "deduction": "13020000",
+        "earnedCap": "660000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "69999999",
+        "deduction": "13249999",
+        "earnedCap": "660000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "70000000",
+        "deduction": "13250000",
+        "earnedCap": "660000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "70000001",
+        "deduction": "13250000",
+        "earnedCap": "659999",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "70319999",
+        "deduction": "13265999",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "70320000",
+        "deduction": "13266000",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "70320001",
+        "deduction": "13266000",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "79999999",
+        "deduction": "13749999",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "80000000",
+        "deduction": "13750000",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "1500000"
+      },
+      {
+        "salary": "80000001",
+        "deduction": "13750000",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "99999999",
+        "deduction": "14749999",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "100000000",
+        "deduction": "14750000",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "100000001",
+        "deduction": "14750000",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "119999999",
+        "deduction": "15149999",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "120000000",
+        "deduction": "15150000",
+        "earnedCap": "500000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "120000001",
+        "deduction": "15150000",
+        "earnedCap": "499999",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "120599999",
+        "deduction": "15161999",
+        "earnedCap": "200000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "120600000",
+        "deduction": "15162000",
+        "earnedCap": "200000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "120600001",
+        "deduction": "15162000",
+        "earnedCap": "200000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "362499999",
+        "deduction": "19999999",
+        "earnedCap": "200000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "362500000",
+        "deduction": "20000000",
+        "earnedCap": "200000",
+        "pension": "1080000",
+        "rent": "0"
+      },
+      {
+        "salary": "362500001",
+        "deduction": "20000000",
+        "earnedCap": "200000",
+        "pension": "1080000",
+        "rent": "0"
+      }
+    ],
+    "credits": [
+      {
+        "salary": "33000000",
+        "assessed": "0",
+        "credit": "0"
+      },
+      {
+        "salary": "33000000",
+        "assessed": "1",
+        "credit": "0"
+      },
+      {
+        "salary": "33000000",
+        "assessed": "1299999",
+        "credit": "714999"
+      },
+      {
+        "salary": "33000000",
+        "assessed": "1300000",
+        "credit": "715000"
+      },
+      {
+        "salary": "33000000",
+        "assessed": "1300001",
+        "credit": "715000"
+      },
+      {
+        "salary": "33000000",
+        "assessed": "4182750",
+        "credit": "740000"
+      },
+      {
+        "salary": "33000001",
+        "assessed": "0",
+        "credit": "0"
+      },
+      {
+        "salary": "33000001",
+        "assessed": "1",
+        "credit": "0"
+      },
+      {
+        "salary": "33000001",
+        "assessed": "1299999",
+        "credit": "714999"
+      },
+      {
+        "salary": "33000001",
+        "assessed": "1300000",
+        "credit": "715000"
+      },
+      {
+        "salary": "33000001",
+        "assessed": "1300001",
+        "credit": "715000"
+      },
+      {
+        "salary": "33000001",
+        "assessed": "4182750",
+        "credit": "739999"
+      },
+      {
+        "salary": "70000000",
+        "assessed": "0",
+        "credit": "0"
+      },
+      {
+        "salary": "70000000",
+        "assessed": "1",
+        "credit": "0"
+      },
+      {
+        "salary": "70000000",
+        "assessed": "1299999",
+        "credit": "660000"
+      },
+      {
+        "salary": "70000000",
+        "assessed": "1300000",
+        "credit": "660000"
+      },
+      {
+        "salary": "70000000",
+        "assessed": "1300001",
+        "credit": "660000"
+      },
+      {
+        "salary": "70000000",
+        "assessed": "4182750",
+        "credit": "660000"
+      },
+      {
+        "salary": "70000001",
+        "assessed": "0",
+        "credit": "0"
+      },
+      {
+        "salary": "70000001",
+        "assessed": "1",
+        "credit": "0"
+      },
+      {
+        "salary": "70000001",
+        "assessed": "1299999",
+        "credit": "659999"
+      },
+      {
+        "salary": "70000001",
+        "assessed": "1300000",
+        "credit": "659999"
+      },
+      {
+        "salary": "70000001",
+        "assessed": "1300001",
+        "credit": "659999"
+      },
+      {
+        "salary": "70000001",
+        "assessed": "4182750",
+        "credit": "659999"
+      },
+      {
+        "salary": "120000000",
+        "assessed": "0",
+        "credit": "0"
+      },
+      {
+        "salary": "120000000",
+        "assessed": "1",
+        "credit": "0"
+      },
+      {
+        "salary": "120000000",
+        "assessed": "1299999",
+        "credit": "500000"
+      },
+      {
+        "salary": "120000000",
+        "assessed": "1300000",
+        "credit": "500000"
+      },
+      {
+        "salary": "120000000",
+        "assessed": "1300001",
+        "credit": "500000"
+      },
+      {
+        "salary": "120000000",
+        "assessed": "4182750",
+        "credit": "500000"
+      },
+      {
+        "salary": "120000001",
+        "assessed": "0",
+        "credit": "0"
+      },
+      {
+        "salary": "120000001",
+        "assessed": "1",
+        "credit": "0"
+      },
+      {
+        "salary": "120000001",
+        "assessed": "1299999",
+        "credit": "499999"
+      },
+      {
+        "salary": "120000001",
+        "assessed": "1300000",
+        "credit": "499999"
+      },
+      {
+        "salary": "120000001",
+        "assessed": "1300001",
+        "credit": "499999"
+      },
+      {
+        "salary": "120000001",
+        "assessed": "4182750",
+        "credit": "499999"
+      }
+    ],
+    "chains": [
+      {
+        "salary": "0",
+        "deductions": "1500000",
+        "extraCredits": "130000",
+        "prepaid": "0",
+        "determined": "0",
+        "collectible": "0"
+      },
+      {
+        "salary": "50000000",
+        "deductions": "1500000",
+        "extraCredits": "0",
+        "prepaid": "3000000",
+        "determined": "3517500",
+        "collectible": "517500"
+      },
+      {
+        "salary": "65400000",
+        "deductions": "16095000",
+        "extraCredits": "0",
+        "prepaid": "4000000",
+        "determined": "3522750",
+        "collectible": "-477250"
+      },
+      {
+        "salary": "50000000",
+        "deductions": "6000000",
+        "extraCredits": "1350000",
+        "prepaid": "3000000",
+        "determined": "1492500",
+        "collectible": "-1507500"
+      },
+      {
+        "salary": "14000001",
+        "deductions": "1500000",
+        "extraCredits": "10000000",
+        "prepaid": "999",
+        "determined": "0",
+        "collectible": "-999"
+      }
+    ],
+    "cards": [
+      {
+        "salary": "40000000",
+        "a": "0",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "0"
+      },
+      {
+        "salary": "40000000",
+        "a": "20000000",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "1500000"
+      },
+      {
+        "salary": "40000000",
+        "a": "0",
+        "b": "20000000",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "3000000"
+      },
+      {
+        "salary": "40000000",
+        "a": "5000000",
+        "b": "5000000",
+        "c": "0",
+        "d": "5000000",
+        "e": "5000000",
+        "deduction": "4000000"
+      },
+      {
+        "salary": "40000000",
+        "a": "1000000",
+        "b": "1000000",
+        "c": "0",
+        "d": "1000000",
+        "e": "1000000",
+        "deduction": "0"
+      },
+      {
+        "salary": "40000000",
+        "a": "100000000",
+        "b": "100000000",
+        "c": "0",
+        "d": "100000000",
+        "e": "100000000",
+        "deduction": "6000000"
+      },
+      {
+        "salary": "40000001",
+        "a": "0",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "0"
+      },
+      {
+        "salary": "40000001",
+        "a": "20000000",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "1499999"
+      },
+      {
+        "salary": "40000001",
+        "a": "0",
+        "b": "20000000",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "2999999"
+      },
+      {
+        "salary": "40000001",
+        "a": "5000000",
+        "b": "5000000",
+        "c": "0",
+        "d": "5000000",
+        "e": "5000000",
+        "deduction": "3999999"
+      },
+      {
+        "salary": "40000001",
+        "a": "1000000",
+        "b": "1000000",
+        "c": "0",
+        "d": "1000000",
+        "e": "1000000",
+        "deduction": "0"
+      },
+      {
+        "salary": "40000001",
+        "a": "100000000",
+        "b": "100000000",
+        "c": "0",
+        "d": "100000000",
+        "e": "100000000",
+        "deduction": "6000000"
+      },
+      {
+        "salary": "70000000",
+        "a": "0",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "0"
+      },
+      {
+        "salary": "70000000",
+        "a": "20000000",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "375000"
+      },
+      {
+        "salary": "70000000",
+        "a": "0",
+        "b": "20000000",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "750000"
+      },
+      {
+        "salary": "70000000",
+        "a": "5000000",
+        "b": "5000000",
+        "c": "0",
+        "d": "5000000",
+        "e": "5000000",
+        "deduction": "1000000"
+      },
+      {
+        "salary": "70000000",
+        "a": "1000000",
+        "b": "1000000",
+        "c": "0",
+        "d": "1000000",
+        "e": "1000000",
+        "deduction": "0"
+      },
+      {
+        "salary": "70000000",
+        "a": "100000000",
+        "b": "100000000",
+        "c": "0",
+        "d": "100000000",
+        "e": "100000000",
+        "deduction": "6000000"
+      },
+      {
+        "salary": "70000001",
+        "a": "0",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "0"
+      },
+      {
+        "salary": "70000001",
+        "a": "20000000",
+        "b": "0",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "374999"
+      },
+      {
+        "salary": "70000001",
+        "a": "0",
+        "b": "20000000",
+        "c": "0",
+        "d": "0",
+        "e": "0",
+        "deduction": "749999"
+      },
+      {
+        "salary": "70000001",
+        "a": "5000000",
+        "b": "5000000",
+        "c": "0",
+        "d": "5000000",
+        "e": "5000000",
+        "deduction": "999999"
+      },
+      {
+        "salary": "70000001",
+        "a": "1000000",
+        "b": "1000000",
+        "c": "0",
+        "d": "1000000",
+        "e": "1000000",
+        "deduction": "0"
+      },
+      {
+        "salary": "70000001",
+        "a": "100000000",
+        "b": "100000000",
+        "c": "0",
+        "d": "100000000",
+        "e": "100000000",
+        "deduction": "4500000"
+      },
+      {
+        "salary": "40000000",
+        "a": "5000000",
+        "b": "5000000",
+        "c": "3000000",
+        "d": "2000000",
+        "e": "1000000",
+        "deduction": "2100000"
+      }
+    ]
+  }
 }

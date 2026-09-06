@@ -1,0 +1,281 @@
+{
+  "request": {
+    "model": "solar-pro4",
+    "reasoning_effort": "low",
+    "max_tokens": 12000,
+    "messages": [
+      {
+        "role": "system",
+        "content": "당신은 Upstage SolarPro4이며 Astra와 소득세법의 수학적 형식화 가능성을 함께 연구한다. 법률자문이 아니다. 각 조문 전체 텍스트를 읽고 조문 단위의 지배적 분류를 하라. direct=주요 규칙을 명시적 산술/논리/기한으로 표현 가능(입력사실 확정은 별개); conditional=계산 또는 논리구조가 있으나 위임법령/외부 요건/해석을 명시해야 함; structural=목적 외 조직/권한/절차/연결구조를 모형화할 수 있지만 숫자계산 중심 아님; unformalized=가치/목적 등 독립적으로 판정할 의미를 이 텍스트만으로 정하지 못함. 이는 형식화 불가능의 증명이 아니고 조문 전체 구현 여부도 아니다. 이미지 alt는 검증되지 않아 실제 수식/표로 신뢰하지 마라(제55조 세율표만 별도 전사검증). image 미검증이면 반드시 unresolved에 기록하라. 입력된 모든 id를 정확히 1회 출력. 마크다운 없이 JSON {\"articles\":[{\"id\":\"...\",\"category\":\"...\",\"evidence\":\"원문에서 정확히 연속된 20~100자 인용, 생략부호나 번역금지\",\"rationale\":\"이 조문 고유의 분류 이유 1문장\",\"formalizable\":[\"정의할 수 있는 구체적 요소\"],\"unresolved\":[\"남는 구체적 해석/위임/외부사실\"],\"dependencies\":[\"위임법령이나 참조조문\"]}]}만 출력. 문장은 간결하게, 인용문은 반드시 제공 원문의 부분문자열이어야 함. Lean 코드나 이미 검증했다는 주장은 금지."
+      },
+      {
+        "role": "user",
+        "content": "[{\"id\": \"art-110\", \"label\": \"제110조(양도소득과세표준 확정신고)\", \"text\": \"제110조(양도소득과세표준 확정신고) ① 해당 과세기간의 양도소득금액이 있는 거주자는 그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지[제105조제1항제1호 단서에 해당하는 경우에는 토지거래계약에 관한 허가일(토지거래계약허가를 받기 전에 허가구역의 지정이 해제된 경우에는 그 해제일을 말한다)이 속하는 과세기간의 다음 연도 5월 1일부터 5월 31일까지] 대통령령으로 정하는 바에 따라 납세지 관할 세무서장에게 신고하여야 한다. <개정 2017. 12. 19.>\\n② 제1항은 해당 과세기간의 과세표준이 없거나 결손금액이 있는 경우에도 적용한다.\\n③ 제1항에 따른 양도소득 과세표준의 신고를 확정신고라 한다.\\n④ 예정신고를 한 자는 제1항에도 불구하고 해당 소득에 대한 확정신고를 하지 아니할 수 있다. 다만, 해당 과세기간에 누진세율 적용대상 자산에 대한 예정신고를 2회 이상 하는 경우 등으로서 대통령령으로 정하는 경우에는 그러하지 아니하다.\\n⑤ 확정신고를 하는 경우 그 신고서에 양도소득금액 계산의 기초가 된 양도가액과 필요경비 계산에 필요한 서류로서 대통령령으로 정하는 것을 납세지 관할 세무서장에게 제출하여야 한다.\\n⑥ 납세지 관할 세무서장은 제5항에 따라 제출된 신고서나 그 밖의 서류에 미비한 사항 또는 오류가 있는 경우에는 그 보정을 요구할 수 있다.\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-111\", \"label\": \"제111조(확정신고납부)\", \"text\": \"제111조(확정신고납부) ① 거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을 제110조제1항(제118조에 따라 준용되는 제74조제1항부터 제4항까지의 규정을 포함한다)에 따른 확정신고기한까지 대통령령으로 정하는 바에 따라 납세지 관할 세무서, 한국은행 또는 체신관서에 납부하여야 한다.\\n② 제1항에 따른 납부를 이 장에서 “확정신고납부”라 한다. <개정 2020. 12. 29.>\\n③ 확정신고납부를 하는 경우 제107조에 따른 예정신고 산출세액, 제114조에 따라 결정ㆍ경정한 세액 또는 제82조ㆍ제118조에 따른 수시부과세액이 있을 때에는 이를 공제하여 납부한다.\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-112\", \"label\": \"제112조(양도소득세의 분할납부)\", \"text\": \"제112조(양도소득세의 분할납부) 거주자로서 제106조 또는 제111조에 따라 납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다.\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-114\", \"label\": \"제114조(양도소득과세표준과 세액의 결정ㆍ경정 및 통지)\", \"text\": \"제114조(양도소득과세표준과 세액의 결정ㆍ경정 및 통지) ① 납세지 관할 세무서장 또는 지방국세청장은 제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다.\\n② 납세지 관할 세무서장 또는 지방국세청장은 제105조에 따라 예정신고를 한 자 또는 제110조에 따라 확정신고를 한 자의 신고 내용에 탈루 또는 오류가 있는 경우에는 양도소득과세표준과 세액을 경정한다.\\n③ 납세지 관할 세무서장 또는 지방국세청장은 양도소득 과세표준과 세액을 결정 또는 경정한 후 그 결정 또는 경정에 탈루 또는 오류가 있는 것이 발견된 경우에는 즉시 다시 경정한다.\\n④ 납세지 관할 세무서장 또는 지방국세청장은 제1항부터 제3항까지의 규정에 따라 양도소득 과세표준과 세액을 결정 또는 경정하는 경우에는 제96조, 제97조 및 제97조의2에 따른 가액에 따라야 한다. <개정 2014. 1. 1.>\\n⑤ 제94조제1항제1호에 따른 자산의 양도로 양도가액 및 취득가액을 실지거래가액에 따라 양도소득 과세표준 예정신고 또는 확정신고를 하여야 할 자(이하 이 항에서 “신고의무자”라 한다)가 그 신고를 하지 아니한 경우로서 양도소득 과세표준과 세액 또는 신고의무자의 실지거래가액 소명(疏明) 여부 등을 고려하여 대통령령으로 정하는 경우에 해당할 때에는 납세지 관할 세무서장 또는 지방국세청장은 제4항에도 불구하고 「부동산등기법」 제68조에 따라 등기부에 기재된 거래가액(이하 이 항에서 “등기부 기재가액”이라 한다)을 실지거래가액으로 추정하여 양도소득 과세표준과 세액을 결정할 수 있다. 다만, 납세지 관할 세무서장 또는 지방국세청장이 등기부 기재가액이 실지거래가액과 차이가 있음을 확인한 경우에는 그러하지 아니하다. <개정 2011. 4. 12., 2012. 1. 1.>\\n⑥ 제4항을 적용할 때 양도가액 및 취득가액을 실지거래가액에 따라 양도소득 과세표준 예정신고 또는 확정신고를 한 경우로서 그 신고가액이 사실과 달라 납세지 관할 세무서장 또는 지방국세청장이 실지거래가액을 확인한 경우에는 그 확인된 가액을 양도가액 또는 취득가액으로 하여 양도소득 과세표준과 세액을 경정한다.\\n⑦ 제4항부터 제6항까지의 규정을 적용할 때 양도가액 또는 취득가액을 실지거래가액에 따라 정하는 경우로서 대통령령으로 정하는 사유로 장부나 그 밖의 증명서류에 의하여 해당 자산의 양도 당시 또는 취득 당시의 실지거래가액을 인정 또는 확인할 수 없는 경우에는 대통령령으로 정하는 바에 따라 양도가액 또는 취득가액을 매매사례가액, 감정가액, 환산취득가액 또는 기준시가 등에 따라 추계조사하여 결정 또는 경정할 수 있다. <개정 2019. 12. 31., 2020. 12. 29.>\\n⑧ 납세지 관할 세무서장 또는 지방국세청장은 제1항부터 제7항까지의 규정에 따라 거주자의 양도소득 과세표준과 세액을 결정 또는 경정하였을 때에는 이를 그 거주자에게 대통령령으로 정하는 바에 따라 서면으로 알려야 한다.\\n⑨ 납세지 관할 세무서장 또는 지방국세청장은 제1항부터 제3항까지의 규정을 적용할 때 제94조제1항제3호 및 제4호에 따른 주식등의 양도차익에 대한 신고 내용의 탈루 또는 오류, 그 밖에 거래명세의 적정성을 확인할 필요가 있는 경우에는 「금융실명거래 및 비밀보장에 관한 법률」 등 다른 법률의 규정에도 불구하고 대통령령으로 정하는 바에 따라 「자본시장과 금융투자업에 관한 법률」에 따른 투자매매업자 또는 투자중개업자 및 그 주식등의 주권 또는 출자증권을 발행한 법인에 이를 조회할 수 있다. <개정 2020. 12. 29., 2024. 12. 31.>\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-114-2\", \"label\": \"제114조의2(감정가액 또는 환산취득가액 적용에 따른 가산세)\", \"text\": \"제114조의2(감정가액 또는 환산취득가액 적용에 따른 가산세) ① 거주자가 건물을 신축 또는 증축(증축의 경우 바닥면적 합계가 85제곱미터를 초과하는 경우에 한정한다)하고 그 건물의 취득일 또는 증축일부터 5년 이내에 해당 건물을 양도하는 경우로서 제97조제1항제1호나목에 따른 감정가액 또는 환산취득가액을 그 취득가액으로 하는 경우에는 해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다. <개정 2019. 12. 31., 2023. 12. 31.>\\n② 제1항은 제92조제3항제1호에 따른 양도소득 산출세액이 없는 경우에도 적용한다. <개정 2023. 12. 31.>\\n[본조신설 2017. 12. 19.][제목개정 2019. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-115\", \"label\": \"제115조(주식등에 대한 장부의 비치ㆍ기록의무 및 기장 불성실가산세)\", \"text\": \"제115조(주식등에 대한 장부의 비치ㆍ기록의무 및 기장 불성실가산세) ① 법인(중소기업을 포함한다)의 대주주가 양도하는 주식등에 대하여는 대통령령으로 정하는 바에 따라 종목별로 구분하여 거래일자별 거래명세 등을 장부에 기록ㆍ관리하여야 하며 그 증명서류 등을 갖추어 두어야 한다. 다만, 「자본시장과 금융투자업에 관한 법률」에 따른 투자매매업자 또는 투자중개업자가 발행한 거래명세서를 갖추어 둔 경우에는 장부를 비치ㆍ기록한 것으로 본다.\\n② 제1항에 따라 법인의 대주주가 양도하는 주식등에 대하여 거래명세 등을 기장하지 아니하였거나 누락하였을 때에는 기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액(이하 이 조에서 “기장 불성실가산세”라 한다)을 산출세액에 더한다. 다만, 산출세액이 없을 때에는 그 거래금액의 1만분의 7에 해당하는 금액을 기장 불성실가산세로 한다.\\n[본조신설 2024. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-115-2\", \"label\": \"제115조의2(신탁 수익자명부 변동상황명세서의 제출)\", \"text\": \"제115조의2(신탁 수익자명부 변동상황명세서의 제출) 신탁의 수탁자는 제94조제1항제6호에 따른 신탁 수익권에 대하여 신탁이 설정된 경우와 수익권의 양도 등으로 인하여 신탁 수익자의 변동사항이 있는 경우 대통령령으로 정하는 바에 따라 수익자명부 변동상황명세서를 작성ㆍ보관하여야 하며, 신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일(법인과세 신탁재산의 수탁자의 경우에는 「법인세법」 제60조에 따른 신고기한을 말한다)까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다.\\n[본조신설 2020. 12. 29.]\", \"unverifiedImages\": false}, {\"id\": \"art-116\", \"label\": \"제116조(양도소득세의 징수)\", \"text\": \"제116조(양도소득세의 징수) ① 납세지 관할 세무서장은 거주자가 제111조에 따라 해당 과세기간의 양도소득세로 납부하여야 할 세액의 전부 또는 일부를 납부하지 아니한 경우에는 그 미납된 부분의 양도소득세액을 「국세징수법」에 따라 징수한다. 제106조에 따른 예정신고납부세액의 경우에도 또한 같다. <개정 2013. 1. 1.>\\n② 납세지 관할 세무서장은 제114조에 따라 양도소득과세표준과 세액을 결정 또는 경정한 경우 제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액(이하 “추가납부세액”이라 한다)을 해당 거주자에게 알린 날부터 30일 이내에 징수한다. <개정 2018. 12. 31., 2023. 12. 31.>\\n1. 제106조에 따른 예정신고납부세액과 제111조에 따른 확정신고납부세액\\n2. 제1항에 따라 징수하는 세액\\n3. 제82조 및 제118조에 따른 수시부과세액\\n4. 제156조제1항제5호에 따라 원천징수한 세액\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}, {\"id\": \"art-117\", \"label\": \"제117조(양도소득세의 환급)\", \"text\": \"제117조(양도소득세의 환급) 납세지 관할 세무서장은 과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다. <개정 2020. 12. 29., 2023. 12. 31.>\\n[전문개정 2009. 12. 31.]\", \"unverifiedImages\": false}]"
+      }
+    ]
+  },
+  "requestSha256": "f5ba5a3bfce5a1f911fe1c78d2170c3b4fb8b4def7782303816bb4e3607efd82",
+  "articleIds": [
+    "art-110",
+    "art-111",
+    "art-112",
+    "art-114",
+    "art-114-2",
+    "art-115",
+    "art-115-2",
+    "art-116",
+    "art-117"
+  ],
+  "sourceTextSha256": {
+    "art-110": "f27a95bf71bfeddff43132b54cb117736bb04bcd1602f4dcc1a03e78de73a329",
+    "art-111": "2fed5a7e9a299a48e1c207c2c1ca8041b3e134ef080ebfcebd4a234ef6713b6a",
+    "art-112": "2adec6b3454712315dde69e8797b628123d236a0d3393b5892f55eab61ef4365",
+    "art-114": "db7c438fc3e2251030b92e5e8b31bd9fa7b2d763ce6a41c9bd85f9918d4dcea3",
+    "art-114-2": "39f9473f0e28bca9a57d90bc5e21761b2cd96ffee547cf24b7d3783bd66fa013",
+    "art-115": "4e763ced4cfd113c703aeaaeacd57da8102257fc7be8c5573ab903d86350260d",
+    "art-115-2": "77779473c956aae92c4ae67f2711d9aa02d850f8e0f47acaa6a9a15ccd778bbd",
+    "art-116": "12799a351d2a99420bf8e6d3a4cffe42458fb01251b8cf43d0678486e06f9c3d",
+    "art-117": "fbdbc635aac5d9014dd8024b71d3e5565ae099809ae4f13115fb4d0afe9fed90"
+  },
+  "timestamp": "2026-09-06T05:03:28.190772+00:00",
+  "responseRawSha256": "df40f4cdaabea47a27fac465d6ea81f34ba84e8413c131fd246d648300a7fa07",
+  "responseRaw": "{\"id\":\"8e41db4d-71db-4bee-97bb-7cfa030f1b33\",\"object\":\"chat.completion\",\"created\":1788671012,\"model\":\"solar-pro4-260806\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"articles\\\": [\\n    {\\n      \\\"id\\\": \\\"art-110\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\\\",\\n      \\\"rationale\\\": \\\"신고기한은 명시적 산술기간이나 허가일·해제일 조건부 기한과 신고절차 대통령령 위임이 있어 순수 직접법으로 보기 어렵다.\\\",\\n      \\\"formalizable\\\": [\\\"확정신고 기한(다음 연도 5월 1일~5월 31일)\\\", \\\"토지거래허가 관련 조건부 기한 구조\\\"],\\n      \\\"unresolved\\\": [\\\"신고방법·서류 등 대통령령 위임사항\\\", \\\"제105조제1항제1호 단서 적용요건의 사실관계 확정\\\", \\\"허가일·해제일의 구체적 확정 문제\\\"],\\n      \\\"dependencies\\\": [\\\"제105조제1항제1호 단서\\\", \\\"대통령령\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-111\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을\\\",\\n      \\\"rationale\\\": \\\"납부세액 계산식은 산출세액-감면세액-세액공제액으로 명시적이나 감면·공제액 산정과 납부절차가 대통령령에 위임되어 조건부이다.\\\",\\n      \\\"formalizable\\\": [\\\"납부세액 = 양도소득 산출세액 - 감면세액 - 세액공제액\\\", \\\"확정신고납부 기한의 참조구조(제110조제1항)\\\"],\\n      \\\"unresolved\\\": [\\\"감면세액·세액공제액의 구체적 산정 근거\\\", \\\"납부 장소·방법 등 대통령령 위임사항\\\", \\\"제118조로 준용되는 제74조 범위의 확정\\\"],\\n      \\\"dependencies\\\": [\\\"제110조제1항\\\", \\\"제118조\\\", \\\"제74조\\\", \\\"대통령령\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-112\\\",\\n      \\\"category\\\": \\\"direct\\\",\\n      \\\"evidence\\\": \\\"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\\\",\\n      \\\"rationale\\\": \\\"1천만원 초과라는 명시적 수치요건과 납부기한 후 2개월이라는 산술적 기간이 직접 규정되어 있다.\\\",\\n      \\\"formalizable\\\": [\\\"분할납부 요건: 세액 \\u003e 1천만원\\\", \\\"분할납부 가능 기간: 납부기한 경과 후 2개월 이내\\\", \\\"적용대상 세액 범위(제106조·제111조)\\\"],\\n      \\\"unresolved\\\": [\\\"분할납부 가능 금액의 산정 및 분할비율(대통령령 위임)\\\", \\\"분할납부 신청의 구체적 절차\\\"],\\n      \\\"dependencies\\\": [\\\"제106조\\\", \\\"제111조\\\", \\\"대통령령\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-114\\\",\\n      \\\"category\\\": \\\"structural\\\",\\n      \\\"evidence\\\": \\\"제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다\\\",\\n      \\\"rationale\\\": \\\"신고 미이행·탈루·오류 등 조건부 트리거를 절차로 연결하는 결정·경정 체계 중심이며 가액산정은 별도 조문에 위임되어 구조 모형화 대상이다.\\\",\\n      \\\"formalizable\\\": [\\\"신고 미이행 시 결정(①)\\\", \\\"신고 탈루·오류 시 경정(②)\\\", \\\"결정·경정 후 오류 발견 시 재경정(③)\\\", \\\"결정·경정 시 제96조·제97조·제97조의2 가액 적용(④)\\\", \\\"서면 통지 의무(⑧)\\\", \\\"주식등 조회 권한(⑨)\\\"],\\n      \\\"unresolved\\\": [\\\"제96조·제97조·제97조의2의 구체적 가액 산정방식\\\", \\\"등기부 기재가액 추정 적용의 대통령령 판정기준(⑤)\\\", \\\"추계조사의 방법·적용순서(⑦)\\\", \\\"주식등 조회 필요성의 구체적 판단(⑨)\\\"],\\n      \\\"dependencies\\\": [\\\"제96조\\\", \\\"제97조\\\", \\\"제97조의2\\\", \\\"제94조제1항제1호·제3호·제4호\\\", \\\"부동산등기법 제68조\\\", \\\"금융실명거래법\\\", \\\"자본시장법\\\", \\\"대통령령\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-114-2\\\",\\n      \\\"category\\\": \\\"direct\\\",\\n      \\\"evidence\\\": \\\"해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다\\\",\\n      \\\"rationale\\\": \\\"감정가액·환산취득가액의 5%를 결정세액에 가산하는 산술식과 5년·85㎡ 조건이 명시적으로 규정되어 직접형식화가 가능하다.\\\",\\n      \\\"formalizable\\\": [\\\"가산세 = 감정가액 또는 환산취득가액 × 5%\\\", \\\"적용대상: 건물 신축·증축 후 5년 이내 양도\\\", \\\"증축 적용요건: 바닥면적 합계 85㎡ 초과\\\", \\\"증축분 한정: 증축 부분에 한정\\\"],\\n      \\\"unresolved\\\": [\\\"제97조제1항제1호나목 감정가액·환산취득가액의 구체적 산정\\\", \\\"제92조제3항제2호 결정세액과의 계산상 연결\\\"],\\n      \\\"dependencies\\\": [\\\"제97조제1항제1호나목\\\", \\\"제92조제3항제2호\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-115\\\",\\n      \\\"category\\\": \\\"direct\\\",\\n      \\\"evidence\\\": \\\"기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액을 산출세액에 더한다\\\",\\n      \\\"rationale\\\": \\\"기장 누락 소득금액의 비율×산출세액×10%라는 명시적 산술식과 산출세액 없을 때 거래금액×7/10000의 대체산식이 직접 규정되어 있다.\\\",\\n      \\\"formalizable\\\": [\\\"기장 불성실가산세 = (누락 소득금액 / 양도소득금액) × 산출세액 × 10%\\\", \\\"산출세액 없을 때 가산세 = 거래금액 × 7/10000\\\", \\\"장부 기록·관리 의무 및 거래명세서 의제\\\"],\\n      \\\"unresolved\\\": [\\\"종목별·거래일자별 기록의 구체적 형식(대통령령 위임)\\\", \\\"법인 대주주 판정 및 중소기업 포함 범위\\\", \\\"양도소득금액에서 차지하는 비율의 분모 확정\\\"],\\n      \\\"dependencies\\\": [\\\"대통령령\\\", \\\"자본시장법\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-115-2\\\",\\n      \\\"category\\\": \\\"structural\\\",\\n      \\\"evidence\\\": \\\"신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다\\\",\\n      \\\"rationale\\\": \\\"제출의무·기한이라는 절차적 의무구조 중심이며 수치계산보다 의무자·제출대상·기한의 조직적 연결이 형식화 대상이다.\\\",\\n      \\\"formalizable\\\": [\\\"제출의무자: 신탁 수탁자\\\", \\\"제출대상: 신탁 수익권 설정 또는 수익자 변동\\\", \\\"제출기한: 다음 연도 5월 1일~5월 31일(법인과세 신탁은 법인세법 제60조 기한)\\\"],\\n      \\\"unresolved\\\": [\\\"수익자명부 변동상황명세서 작성·보관 형식(대통령령 위임)\\\", \\\"법인과세 신탁재산 수탁자 판정\\\"],\\n      \\\"dependencies\\\": [\\\"제94조제1항제6호\\\", \\\"법인세법 제60조\\\", \\\"대통령령\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-116\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액을 해당 거주자에게 알린 날부터 30일 이내에 징수한다\\\",\\n      \\\"rationale\\\": \\\"총결정세액 과다합계액 초과 시 초과액 징수 및 30일 기한이라는 비교·산술구조가 있으나 각 호 금액과 징수근거가 타 조문·법률에 의존하여 조건부이다.\\\",\\n      \\\"formalizable\\\": [\\\"추가납부세액 = 총결정세액 - (각 호 합계액)\\\", \\\"각 호 합계액 구성: 예정·확정·수시·징수·원천징수세액\\\", \\\"징수기한: 통지일부터 30일 이내\\\"],\\n      \\\"unresolved\\\": [\\\"각 호 금액의 구체적 확정(제106조·제111조·제114조·제82조·제118조·제156조)\\\", \\\"미납분 징수 시 국세징수법 적용방식\\\"],\\n      \\\"dependencies\\\": [\\\"제106조\\\", \\\"제111조\\\", \\\"제114조\\\", \\\"제82조\\\", \\\"제118조\\\", \\\"제156조제1항제5호\\\", \\\"국세징수법\\\", \\\"제92조제3항제3호\\\"]\\n    },\\n    {\\n      \\\"id\\\": \\\"art-117\\\",\\n      \\\"category\\\": \\\"conditional\\\",\\n      \\\"evidence\\\": \\\"과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다\\\",\\n      \\\"rationale\\\": \\\"환급 요건(총결정세액 초과액)과 처리방식(환급·충당)이 명시적 비교구조이나 기준금액이 제116조제2항·제92조에 의존하여 조건부이다.\\\",\\n      \\\"formalizable\\\": [\\\"환급액 = (제116조제2항 각 호 합계액) - 총결정세액\\\", \\\"처리방식: 환급 또는 다른 국세·강제징수비 충당\\\"],\\n      \\\"unresolved\\\": [\\\"제116조제2항 각 호 금액의 구체적 확정\\\", \\\"충당의 우선순위·절차 등 세부방법\\\"],\\n      \\\"dependencies\\\": [\\\"제116조제2항\\\", \\\"제92조제3항제3호\\\"]\\n    }\\n  ]\\n}\",\"reasoning\":\"The user wants me to analyze Korean Income Tax Act articles related to capital gains tax (양도소득세) regarding formalizability. I need to classify each article into categories: direct, conditional, structural, or unformalized. I need to output JSON with specific format.\\n\\nLet me analyze each article:\\n\\n1. **art-110** (제110조 양도소득과세표준 확정신고): This article is about the final tax return deadline for capital gains. It specifies the deadline (May 1-31 of the following year), with exceptions for land transaction permit cases. The calculation of the deadline is explicit, but the detailed procedures are delegated to Presidential Decree. Category: conditional (since there's explicit deadline logic but delegation to subordinate regulations).\\n\\n2. **art-111** (제111조 확정신고납부): This is about final tax payment. It specifies that the tax amount is calculated as (tax base × rate - deductions) and payment deadline follows Article 110. The calculation structure is explicit (산출세액 - 감면세액 - 세액공제액), but the detailed payment methods are delegated. Category: conditional.\\n\\n3. **art-112** (제112조 분할납부): Installment payment if tax exceeds 10 million won, within 2 months after deadline. Explicit threshold (1천만원) and period (2개월). Category: direct (explicit arithmetic threshold and time period).\\n\\n4. **art-114** (제114조 결정ㆍ경정 및 통지): This is about determination/correction by tax authorities. It has multiple paragraphs with different rules. The article contains procedural rules with some explicit logic (if no return → determine, if error → correct, etc.), but heavily delegates to Presidential Decree and references other articles for valuation. Category: structural (mainly procedural/organizational, with some conditional logic but heavy delegation).\\n\\n5. **art-114-2** (제114조의2 감정가액 또는 환산취득가액 적용에 따른 가산세): Additional tax of 5% on appraisal value or converted acquisition value for buildings built/extended and transferred within 5 years. This has explicit percentage (100분의 5) and conditions (5년 이내, 85제곱미터 초과). Category: direct (explicit arithmetic formula with conditions).\\n\\n6. **art-115** (제115조 주식등에 대한 장부의 비치ㆍ기록의무 및 기장 불성실가산세): Record-keeping duty for stock transactions by major shareholders of corporations, and penalty tax of 10% of tax amount calculated by (unrecorded income / total income × tax amount), or 7/10000 of transaction amount if no tax. Explicit formula. Category: direct (explicit arithmetic formula).\\n\\n7. **art-115-2** (제115조의2 신탁 수익자명부 변동상황명세서 제출): Submission obligation for trust beneficiary register change statement. Deadline is May 1-31 of following year (or corporate tax deadline for corporate taxation trust). Procedural/submission obligation. Category: structural (procedural obligation with deadline but no arithmetic calculation).\\n\\n8. **art-116** (제116조 양도소득세의 징수): Collection of unpaid tax. Paragraph 1: collect unpaid amount per National Tax Collection Act. Paragraph 2: if total determined tax exceeds sum of certain items (예정신고납부세액 + 확정신고납부세액 + 징수세액 + 수시부과세액 + 원천징수세액), collect excess within 30 days. Category: conditional (has explicit comparison logic but delegates to other laws and articles).\\n\\n9. **art-117** (제117조 양도소득세의 환급): Refund if sum of items in Article 116(2) exceeds total determined tax. Category: conditional (explicit comparison but references Article 116 and 92).\\n\\nNow let me format the JSON output. I need to include:\\n- id\\n- category\\n- evidence (20-100 char exact substring from the text)\\n- rationale (1 sentence)\\n- formalizable (list of specific elements)\\n- unresolved (list of remaining interpretation/delegation/external facts)\\n- dependencies (list of delegated laws or referenced articles)\\n\\nLet me check the exact text for evidence extraction.\\n\\nFor art-110: \\\"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\\\" or similar. Let me pick: \\\"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\\\" — this is about the deadline, which is the key formalizable element. Actually, I should pick something that captures the main rule. Maybe: \\\"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\\\" \\n\\nFor art-111: \\\"거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을\\\" — this captures the calculation formula.\\n\\nFor art-112: \\\"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\\\" — this is the key rule. But I need 20-100 chars. Let me select: \\\"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\\\"\\n\\nFor art-114: This is long. I'll pick a representative part. Maybe paragraph 1: \\\"납세지 관할 세무서장 또는 지방국세청장은 제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다\\\"\\n\\nFor art-114-2: \\\"거주자가 건물을 신축 또는 증축(증축의 경우 바닥면적 합계가 85제곱미터를 초과하는 경우에 한정한다)하고 그 건물의 취득일 또는 증축일부터 5년 이내에 해당 건물을 양도하는 경우로서 제97조제1항제1호나목에 따른 감정가액 또는 환산취득가액을 그 취득가액으로 하는 경우에는 해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을\\\" — this captures the main conditional + arithmetic.\\n\\nFor art-115: \\\"제1항에 따라 법인의 대주주가 양도하는 주식등에 대하여 거래명세 등을 기장하지 아니하였거나 누락하였을 때에는 기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액...을 산출세액에 더한다\\\" — captures the formula.\\n\\nFor art-115-2: \\\"신탁의 수탁자는 제94조제1항제6호에 따른 신탁 수익권에 대하여 신탁이 설정된 경우와 수익권의 양도 등으로 인하여 신탁 수익자의 변동사항이 있는 경우 대통령령으로 정하는 바에 따라 수익자명부 변동상황명세서를 작성ㆍ보관하여야 하며\\\"\\n\\nFor art-116: \\\"제114조에 따라 양도소득과세표준과 세액을 결정 또는 경정한 경우 제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액...을 해당 거주자에게 알린 날부터 30일 이내에 징수한다\\\"\\n\\nFor art-117: \\\"과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다\\\"\\n\\nNow I need to be careful about the exact substring. Let me verify the exact text from the provided JSON.\\n\\nLooking at art-110 text: \\\"제110조(양도소득과세표준 확정신고) ① 해당 과세기간의 양도소득금액이 있는 거주자는 그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지[제105조제1항제1호 단서에 해당하는 경우에는 토지거래계약에 관한 허가일(토지거래계약허가를 받기 전에 허가구역의 지정이 해제된 경우에는 그 해제일을 말한다)이 속하는 과세기간의 다음 연도 5월 1일부터 5월 31일까지] 대통령령으로 정하는 바에 따라 납세지 관할 세무서장에게 신고하여야 한다.\\\"\\n\\nEvidence for art-110: \\\"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\\\" — 36 chars. Good.\\n\\nArt-111: \\\"제111조(확정신고납부) ① 거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을 제110조제1항(제118조에 따라 준용되는 제74조제1항부터 제4항까지의 규정을 포함한다)에 따른 확정신고기한까지 대통령령으로 정하는 바에 따라 납세지 관할 세무서, 한국은행 또는 체신관서에 납부하여야 한다.\\\"\\n\\nEvidence: \\\"거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을\\\" — 47 chars.\\n\\nArt-112: \\\"제112조(양도소득세의 분할납부) 거주자로서 제106조 또는 제111조에 따라 납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다.\\\"\\n\\nEvidence: \\\"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\\\" — 79 chars.\\n\\nArt-114: This is long. I'll pick paragraph 1: \\\"제114조 ① 납세지 관할 세무서장 또는 지방국세청장은 제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다.\\\"\\n\\nEvidence: \\\"제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다\\\" — 73 chars.\\n\\nArt-114-2: \\\"제114조의2 ① 거주자가 건물을 신축 또는 증축(증축의 경우 바닥면적 합계가 85제곱미터를 초과하는 경우에 한정한다)하고 그 건물의 취득일 또는 증축일부터 5년 이내에 해당 건물을 양도하는 경우로서 제97조제1항제1호나목에 따른 감정가액 또는 환산취득가액을 그 취득가액으로 하는 경우에는 해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다.\\\"\\n\\nEvidence: \\\"해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다\\\" — 99 chars. Or alternatively: \\\"거주자가 건물을 신축 또는 증축(증축의 경우 바닥면적 합계가 85제곱미터를 초과하는 경우에 한정한다)하고 그 건물의 취득일 또는 증축일부터 5년 이내에 해당 건물을 양도하는 경우\\\" — this captures conditions. Let me use: \\\"해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다\\\" — 99 chars, within limit.\\n\\nArt-115: \\\"제115조 ② 제1항에 따라 법인의 대주주가 양도하는 주식등에 대하여 거래명세 등을 기장하지 아니하였거나 누락하였을 때에는 기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액(이하 이 조에서 “기장 불성실가산세”라 한다)을 산출세액에 더한다.\\\"\\n\\nEvidence: \\\"기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액을 산출세액에 더한다\\\" — 80 chars.\\n\\nArt-115-2: \\\"제115조의2(신탁 수익자명부 변동상황명세서의 제출) 신탁의 수탁자는 제94조제1항제6호에 따른 신탁 수익권에 대하여 신탁이 설정된 경우와 수익권의 양도 등으로 인하여 신탁 수익자의 변동사항이 있는 경우 대통령령으로 정하는 바에 따라 수익자명부 변동상황명세서를 작성ㆍ보관하여야 하며, 신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일(법인과세 신탁재산의 수탁자의 경우에는 「법인세법」 제60조에 따른 신고기한을 말한다)까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다.\\\"\\n\\nEvidence: \\\"신탁의 수탁자는 제94조제1항제6호에 따른 신탁 수익권에 대하여 신탁이 설정된 경우와 수익권의 양도 등으로 인하여 신탁 수익자의 변동사항이 있는 경우 대통령령으로 정하는 바에 따라 수익자명부 변동상황명세서를 작성ㆍ보관하여야 하며\\\" — 100 chars. Let me check: this is exactly 100? I'll use a shorter one: \\\"신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다\\\" — 73 chars.\\n\\nArt-116: \\\"제116조 ② 납세지 관할 세무서장은 제114조에 따라 양도소득과세표준과 세액을 결정 또는 경정한 경우 제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액(이하 “추가납부세액”이라 한다)을 해당 거주자에게 알린 날부터 30일 이내에 징수한다.\\\"\\n\\nEvidence: \\\"제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액(이하 “추가납부세액”이라 한다)을 해당 거주자에게 알린 날부터 30일 이내에 징수한다\\\" — 95 chars.\\n\\nArt-117: \\\"제117조(양도소득세의 환급) 납세지 관할 세무서장은 과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다.\\\"\\n\\nEvidence: \\\"과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다\\\" — 90 chars.\\n\\nNow for categories:\\n\\n- art-110: conditional (deadline is explicit but procedures delegated, exception for land permit adds conditional logic)\\n- art-111: conditional (calculation formula explicit: 산출세액 - 감면세액 - 세액공제액, but payment method delegated, references Article 110)\\n- art-112: direct (explicit threshold 1천만원, explicit period 2개월, simple conditional)\\n- art-114: structural (primarily procedural determination/correction authority, heavy delegation to Presidential Decree, references to other articles for valuation, multiple paragraphs with conditional triggers but organizational/procedural focus)\\n- art-114-2: direct (explicit 5% rate, explicit 5-year condition, explicit 85㎡ condition, arithmetic addition)\\n- art-115: direct (explicit formula: (unrecorded income / total income) × tax × 10%, or 7/10000 of transaction amount)\\n- art-115-2: structural (procedural submission obligation with deadline, no arithmetic calculation)\\n- art-116: conditional (explicit comparison: total determined tax \\u003e sum of items → collect excess within 30 days, but references other articles and National Tax Collection Act)\\n- art-117: conditional (explicit comparison for refund, references Article 116 and 92)\\n\\nNow for formalizable elements and unresolved:\\n\\nart-110:\\n- formalizable: [\\\"신고기한(다음 연도 5월 1일~5월 31일)\\\", \\\"토지거래허가 관련 예외기한 구조\\\"]\\n- unresolved: [\\\"대통령령에 위임된 신고절차\\\", \\\"제105조제1항제1호 단서 적용요건의 구체적 판단\\\", \\\"토지거래계약 허가일/해제일 확정 문제\\\"]\\n- dependencies: [\\\"제105조제1항제1호 단서\\\", \\\"대통령령\\\"]\\n\\nart-111:\\n- formalizable: [\\\"납부세액 = 산출세액 - 감면세액 - 세액공제액\\\", \\\"확정신고기한 = 제110조제1항 기한\\\"]\\n- unresolved: [\\\"감면세액과 세액공제액의 구체적 산정방법\\\", \\\"납부 절차 및 장소의 세부방법(대통령령 위임)\\\", \\\"제118조에 따라 준용되는 제74조의 범위\\\"]\\n- dependencies: [\\\"제110조제1항\\\", \\\"제118조\\\", \\\"제74조\\\", \\\"대통령령\\\"]\\n\\nart-112:\\n- formalizable: [\\\"분할납부 요건: 납부할 세액 \\u003e 1천만원\\\", \\\"분할납부 기간: 납부기한 경과 후 2개월 이내\\\", \\\"분할납부 대상: 제106조 또는 제111조에 따른 세액\\\"]\\n- unresolved: [\\\"분할납부 가능 금액의 산정방법(대통령령 위임)\\\", \\\"분할납부의 구체적 절차\\\"]\\n- dependencies: [\\\"제106조\\\", \\\"제111조\\\", \\\"대통령령\\\"]\\n\\nart-114:\\n- formalizable: [\\\"신고 미이행 시 결정(①)\\\", \\\"신고 내용 탈루/오류 시 경정(②)\\\", \\\"결정/경정 후 오류 발견 시 재경정(③)\\\", \\\"결정/경정 시 제96조·제97조·제97조의2 가액 적용(④)\\\", \\\"등기부 기재가액 추정 규정(⑤)\\\", \\\"실지거래가액 확인 시 경정(⑥)\\\", \\\"추계조사 결정/경정(⑦)\\\", \\\"서면 통지 의무(⑧)\\\", \\\"주식등 조회 권한(⑨)\\\"]\\n- unresolved: [\\\"제96조·제97조·제97조의2의 구체적 가액 산정방법\\\", \\\"대통령령에 위임된 실지거래가액 소명 판단 기준(⑤)\\\", \\\"추계조사의 구체적 방법 및 적용 순서(⑦)\\\", \\\"주식등 조회 사유의 구체적 범위(⑨)\\\"]\\n- dependencies: [\\\"제96조\\\", \\\"제97조\\\", \\\"제97조의2\\\", \\\"제94조제1항제1호\\\", \\\"제94조제1항제3호·제4호\\\", \\\"부동산등기법 제68조\\\", \\\"금융실명거래법\\\", \\\"자본시장법\\\", \\\"대통령령\\\"]\\n\\nart-114-2:\\n- formalizable: [\\\"가산세 = 감정가액 또는 환산취득가액 × 5%\\\", \\\"적용대상: 건물 신축/증축 후 5년 이내 양도\\\", \\\"증축의 경우 바닥면적 합계 85㎡ 초과 조건\\\", \\\"증축분은 증축 부분에 한정\\\"]\\n- unresolved: [\\\"제97조제1항제1호나목에 따른 감정가액/환산취득가액의 구체적 산정\\\", \\\"제92조제3항제2호 결정세액의 의미 및 계산구조와의 연결\\\"]\\n- dependencies: [\\\"제97조제1항제1호나목\\\", \\\"제92조제3항제2호\\\"]\\n\\nart-115:\\n- formalizable: [\\\"기장 불성실가산세 = (기장 누락 소득금액 / 양도소득금액) × 산출세액 × 10%\\\", \\\"산출세액 없는 경우: 거래금액 × 7/10000\\\", \\\"주식등 거래명세 장부 기록·관리 의무\\\", \\\"거래명세서 구비 시 장부 비치·기록 의제\\\"]\\n- unresolved: [\\\"종목별 구분 및 거래일자별 기록의 구체적 형식(대통령령 위임)\\\", \\\"중소기업 포함 법인의 대주주 판정기준\\\", \\\"양도소득금액에서 차지하는 비율의 계산 기초\\\"]\\n- dependencies: [\\\"대통령령\\\", \\\"자본시장법\\\"]\\n\\nart-115-2:\\n- formalizable: [\\\"제출의무자: 신탁 수탁자\\\", \\\"제출대상: 신탁 수익권 설정 또는 수익자 변동\\\", \\\"제출기한: 다음 연도 \"},\"logprobs\":null,\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":2932,\"completion_tokens\":6087,\"total_tokens\":9019,\"prompt_tokens_details\":{\"cached_tokens\":0,\"audio_tokens\":0},\"completion_tokens_details\":{\"reasoning_tokens\":4096,\"audio_tokens\":0,\"accepted_prediction_tokens\":0,\"rejected_prediction_tokens\":0}},\"system_fingerprint\":null}\n",
+  "response": {
+    "id": "8e41db4d-71db-4bee-97bb-7cfa030f1b33",
+    "object": "chat.completion",
+    "created": 1788671012,
+    "model": "solar-pro4-260806",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"articles\": [\n    {\n      \"id\": \"art-110\",\n      \"category\": \"conditional\",\n      \"evidence\": \"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\",\n      \"rationale\": \"신고기한은 명시적 산술기간이나 허가일·해제일 조건부 기한과 신고절차 대통령령 위임이 있어 순수 직접법으로 보기 어렵다.\",\n      \"formalizable\": [\"확정신고 기한(다음 연도 5월 1일~5월 31일)\", \"토지거래허가 관련 조건부 기한 구조\"],\n      \"unresolved\": [\"신고방법·서류 등 대통령령 위임사항\", \"제105조제1항제1호 단서 적용요건의 사실관계 확정\", \"허가일·해제일의 구체적 확정 문제\"],\n      \"dependencies\": [\"제105조제1항제1호 단서\", \"대통령령\"]\n    },\n    {\n      \"id\": \"art-111\",\n      \"category\": \"conditional\",\n      \"evidence\": \"거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을\",\n      \"rationale\": \"납부세액 계산식은 산출세액-감면세액-세액공제액으로 명시적이나 감면·공제액 산정과 납부절차가 대통령령에 위임되어 조건부이다.\",\n      \"formalizable\": [\"납부세액 = 양도소득 산출세액 - 감면세액 - 세액공제액\", \"확정신고납부 기한의 참조구조(제110조제1항)\"],\n      \"unresolved\": [\"감면세액·세액공제액의 구체적 산정 근거\", \"납부 장소·방법 등 대통령령 위임사항\", \"제118조로 준용되는 제74조 범위의 확정\"],\n      \"dependencies\": [\"제110조제1항\", \"제118조\", \"제74조\", \"대통령령\"]\n    },\n    {\n      \"id\": \"art-112\",\n      \"category\": \"direct\",\n      \"evidence\": \"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\",\n      \"rationale\": \"1천만원 초과라는 명시적 수치요건과 납부기한 후 2개월이라는 산술적 기간이 직접 규정되어 있다.\",\n      \"formalizable\": [\"분할납부 요건: 세액 > 1천만원\", \"분할납부 가능 기간: 납부기한 경과 후 2개월 이내\", \"적용대상 세액 범위(제106조·제111조)\"],\n      \"unresolved\": [\"분할납부 가능 금액의 산정 및 분할비율(대통령령 위임)\", \"분할납부 신청의 구체적 절차\"],\n      \"dependencies\": [\"제106조\", \"제111조\", \"대통령령\"]\n    },\n    {\n      \"id\": \"art-114\",\n      \"category\": \"structural\",\n      \"evidence\": \"제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다\",\n      \"rationale\": \"신고 미이행·탈루·오류 등 조건부 트리거를 절차로 연결하는 결정·경정 체계 중심이며 가액산정은 별도 조문에 위임되어 구조 모형화 대상이다.\",\n      \"formalizable\": [\"신고 미이행 시 결정(①)\", \"신고 탈루·오류 시 경정(②)\", \"결정·경정 후 오류 발견 시 재경정(③)\", \"결정·경정 시 제96조·제97조·제97조의2 가액 적용(④)\", \"서면 통지 의무(⑧)\", \"주식등 조회 권한(⑨)\"],\n      \"unresolved\": [\"제96조·제97조·제97조의2의 구체적 가액 산정방식\", \"등기부 기재가액 추정 적용의 대통령령 판정기준(⑤)\", \"추계조사의 방법·적용순서(⑦)\", \"주식등 조회 필요성의 구체적 판단(⑨)\"],\n      \"dependencies\": [\"제96조\", \"제97조\", \"제97조의2\", \"제94조제1항제1호·제3호·제4호\", \"부동산등기법 제68조\", \"금융실명거래법\", \"자본시장법\", \"대통령령\"]\n    },\n    {\n      \"id\": \"art-114-2\",\n      \"category\": \"direct\",\n      \"evidence\": \"해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다\",\n      \"rationale\": \"감정가액·환산취득가액의 5%를 결정세액에 가산하는 산술식과 5년·85㎡ 조건이 명시적으로 규정되어 직접형식화가 가능하다.\",\n      \"formalizable\": [\"가산세 = 감정가액 또는 환산취득가액 × 5%\", \"적용대상: 건물 신축·증축 후 5년 이내 양도\", \"증축 적용요건: 바닥면적 합계 85㎡ 초과\", \"증축분 한정: 증축 부분에 한정\"],\n      \"unresolved\": [\"제97조제1항제1호나목 감정가액·환산취득가액의 구체적 산정\", \"제92조제3항제2호 결정세액과의 계산상 연결\"],\n      \"dependencies\": [\"제97조제1항제1호나목\", \"제92조제3항제2호\"]\n    },\n    {\n      \"id\": \"art-115\",\n      \"category\": \"direct\",\n      \"evidence\": \"기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액을 산출세액에 더한다\",\n      \"rationale\": \"기장 누락 소득금액의 비율×산출세액×10%라는 명시적 산술식과 산출세액 없을 때 거래금액×7/10000의 대체산식이 직접 규정되어 있다.\",\n      \"formalizable\": [\"기장 불성실가산세 = (누락 소득금액 / 양도소득금액) × 산출세액 × 10%\", \"산출세액 없을 때 가산세 = 거래금액 × 7/10000\", \"장부 기록·관리 의무 및 거래명세서 의제\"],\n      \"unresolved\": [\"종목별·거래일자별 기록의 구체적 형식(대통령령 위임)\", \"법인 대주주 판정 및 중소기업 포함 범위\", \"양도소득금액에서 차지하는 비율의 분모 확정\"],\n      \"dependencies\": [\"대통령령\", \"자본시장법\"]\n    },\n    {\n      \"id\": \"art-115-2\",\n      \"category\": \"structural\",\n      \"evidence\": \"신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다\",\n      \"rationale\": \"제출의무·기한이라는 절차적 의무구조 중심이며 수치계산보다 의무자·제출대상·기한의 조직적 연결이 형식화 대상이다.\",\n      \"formalizable\": [\"제출의무자: 신탁 수탁자\", \"제출대상: 신탁 수익권 설정 또는 수익자 변동\", \"제출기한: 다음 연도 5월 1일~5월 31일(법인과세 신탁은 법인세법 제60조 기한)\"],\n      \"unresolved\": [\"수익자명부 변동상황명세서 작성·보관 형식(대통령령 위임)\", \"법인과세 신탁재산 수탁자 판정\"],\n      \"dependencies\": [\"제94조제1항제6호\", \"법인세법 제60조\", \"대통령령\"]\n    },\n    {\n      \"id\": \"art-116\",\n      \"category\": \"conditional\",\n      \"evidence\": \"제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액을 해당 거주자에게 알린 날부터 30일 이내에 징수한다\",\n      \"rationale\": \"총결정세액 과다합계액 초과 시 초과액 징수 및 30일 기한이라는 비교·산술구조가 있으나 각 호 금액과 징수근거가 타 조문·법률에 의존하여 조건부이다.\",\n      \"formalizable\": [\"추가납부세액 = 총결정세액 - (각 호 합계액)\", \"각 호 합계액 구성: 예정·확정·수시·징수·원천징수세액\", \"징수기한: 통지일부터 30일 이내\"],\n      \"unresolved\": [\"각 호 금액의 구체적 확정(제106조·제111조·제114조·제82조·제118조·제156조)\", \"미납분 징수 시 국세징수법 적용방식\"],\n      \"dependencies\": [\"제106조\", \"제111조\", \"제114조\", \"제82조\", \"제118조\", \"제156조제1항제5호\", \"국세징수법\", \"제92조제3항제3호\"]\n    },\n    {\n      \"id\": \"art-117\",\n      \"category\": \"conditional\",\n      \"evidence\": \"과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다\",\n      \"rationale\": \"환급 요건(총결정세액 초과액)과 처리방식(환급·충당)이 명시적 비교구조이나 기준금액이 제116조제2항·제92조에 의존하여 조건부이다.\",\n      \"formalizable\": [\"환급액 = (제116조제2항 각 호 합계액) - 총결정세액\", \"처리방식: 환급 또는 다른 국세·강제징수비 충당\"],\n      \"unresolved\": [\"제116조제2항 각 호 금액의 구체적 확정\", \"충당의 우선순위·절차 등 세부방법\"],\n      \"dependencies\": [\"제116조제2항\", \"제92조제3항제3호\"]\n    }\n  ]\n}",
+          "reasoning": "The user wants me to analyze Korean Income Tax Act articles related to capital gains tax (양도소득세) regarding formalizability. I need to classify each article into categories: direct, conditional, structural, or unformalized. I need to output JSON with specific format.\n\nLet me analyze each article:\n\n1. **art-110** (제110조 양도소득과세표준 확정신고): This article is about the final tax return deadline for capital gains. It specifies the deadline (May 1-31 of the following year), with exceptions for land transaction permit cases. The calculation of the deadline is explicit, but the detailed procedures are delegated to Presidential Decree. Category: conditional (since there's explicit deadline logic but delegation to subordinate regulations).\n\n2. **art-111** (제111조 확정신고납부): This is about final tax payment. It specifies that the tax amount is calculated as (tax base × rate - deductions) and payment deadline follows Article 110. The calculation structure is explicit (산출세액 - 감면세액 - 세액공제액), but the detailed payment methods are delegated. Category: conditional.\n\n3. **art-112** (제112조 분할납부): Installment payment if tax exceeds 10 million won, within 2 months after deadline. Explicit threshold (1천만원) and period (2개월). Category: direct (explicit arithmetic threshold and time period).\n\n4. **art-114** (제114조 결정ㆍ경정 및 통지): This is about determination/correction by tax authorities. It has multiple paragraphs with different rules. The article contains procedural rules with some explicit logic (if no return → determine, if error → correct, etc.), but heavily delegates to Presidential Decree and references other articles for valuation. Category: structural (mainly procedural/organizational, with some conditional logic but heavy delegation).\n\n5. **art-114-2** (제114조의2 감정가액 또는 환산취득가액 적용에 따른 가산세): Additional tax of 5% on appraisal value or converted acquisition value for buildings built/extended and transferred within 5 years. This has explicit percentage (100분의 5) and conditions (5년 이내, 85제곱미터 초과). Category: direct (explicit arithmetic formula with conditions).\n\n6. **art-115** (제115조 주식등에 대한 장부의 비치ㆍ기록의무 및 기장 불성실가산세): Record-keeping duty for stock transactions by major shareholders of corporations, and penalty tax of 10% of tax amount calculated by (unrecorded income / total income × tax amount), or 7/10000 of transaction amount if no tax. Explicit formula. Category: direct (explicit arithmetic formula).\n\n7. **art-115-2** (제115조의2 신탁 수익자명부 변동상황명세서 제출): Submission obligation for trust beneficiary register change statement. Deadline is May 1-31 of following year (or corporate tax deadline for corporate taxation trust). Procedural/submission obligation. Category: structural (procedural obligation with deadline but no arithmetic calculation).\n\n8. **art-116** (제116조 양도소득세의 징수): Collection of unpaid tax. Paragraph 1: collect unpaid amount per National Tax Collection Act. Paragraph 2: if total determined tax exceeds sum of certain items (예정신고납부세액 + 확정신고납부세액 + 징수세액 + 수시부과세액 + 원천징수세액), collect excess within 30 days. Category: conditional (has explicit comparison logic but delegates to other laws and articles).\n\n9. **art-117** (제117조 양도소득세의 환급): Refund if sum of items in Article 116(2) exceeds total determined tax. Category: conditional (explicit comparison but references Article 116 and 92).\n\nNow let me format the JSON output. I need to include:\n- id\n- category\n- evidence (20-100 char exact substring from the text)\n- rationale (1 sentence)\n- formalizable (list of specific elements)\n- unresolved (list of remaining interpretation/delegation/external facts)\n- dependencies (list of delegated laws or referenced articles)\n\nLet me check the exact text for evidence extraction.\n\nFor art-110: \"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\" or similar. Let me pick: \"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\" — this is about the deadline, which is the key formalizable element. Actually, I should pick something that captures the main rule. Maybe: \"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\" \n\nFor art-111: \"거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을\" — this captures the calculation formula.\n\nFor art-112: \"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\" — this is the key rule. But I need 20-100 chars. Let me select: \"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\"\n\nFor art-114: This is long. I'll pick a representative part. Maybe paragraph 1: \"납세지 관할 세무서장 또는 지방국세청장은 제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다\"\n\nFor art-114-2: \"거주자가 건물을 신축 또는 증축(증축의 경우 바닥면적 합계가 85제곱미터를 초과하는 경우에 한정한다)하고 그 건물의 취득일 또는 증축일부터 5년 이내에 해당 건물을 양도하는 경우로서 제97조제1항제1호나목에 따른 감정가액 또는 환산취득가액을 그 취득가액으로 하는 경우에는 해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을\" — this captures the main conditional + arithmetic.\n\nFor art-115: \"제1항에 따라 법인의 대주주가 양도하는 주식등에 대하여 거래명세 등을 기장하지 아니하였거나 누락하였을 때에는 기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액...을 산출세액에 더한다\" — captures the formula.\n\nFor art-115-2: \"신탁의 수탁자는 제94조제1항제6호에 따른 신탁 수익권에 대하여 신탁이 설정된 경우와 수익권의 양도 등으로 인하여 신탁 수익자의 변동사항이 있는 경우 대통령령으로 정하는 바에 따라 수익자명부 변동상황명세서를 작성ㆍ보관하여야 하며\"\n\nFor art-116: \"제114조에 따라 양도소득과세표준과 세액을 결정 또는 경정한 경우 제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액...을 해당 거주자에게 알린 날부터 30일 이내에 징수한다\"\n\nFor art-117: \"과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다\"\n\nNow I need to be careful about the exact substring. Let me verify the exact text from the provided JSON.\n\nLooking at art-110 text: \"제110조(양도소득과세표준 확정신고) ① 해당 과세기간의 양도소득금액이 있는 거주자는 그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지[제105조제1항제1호 단서에 해당하는 경우에는 토지거래계약에 관한 허가일(토지거래계약허가를 받기 전에 허가구역의 지정이 해제된 경우에는 그 해제일을 말한다)이 속하는 과세기간의 다음 연도 5월 1일부터 5월 31일까지] 대통령령으로 정하는 바에 따라 납세지 관할 세무서장에게 신고하여야 한다.\"\n\nEvidence for art-110: \"그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지\" — 36 chars. Good.\n\nArt-111: \"제111조(확정신고납부) ① 거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을 제110조제1항(제118조에 따라 준용되는 제74조제1항부터 제4항까지의 규정을 포함한다)에 따른 확정신고기한까지 대통령령으로 정하는 바에 따라 납세지 관할 세무서, 한국은행 또는 체신관서에 납부하여야 한다.\"\n\nEvidence: \"거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을\" — 47 chars.\n\nArt-112: \"제112조(양도소득세의 분할납부) 거주자로서 제106조 또는 제111조에 따라 납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다.\"\n\nEvidence: \"납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다\" — 79 chars.\n\nArt-114: This is long. I'll pick paragraph 1: \"제114조 ① 납세지 관할 세무서장 또는 지방국세청장은 제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다.\"\n\nEvidence: \"제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다\" — 73 chars.\n\nArt-114-2: \"제114조의2 ① 거주자가 건물을 신축 또는 증축(증축의 경우 바닥면적 합계가 85제곱미터를 초과하는 경우에 한정한다)하고 그 건물의 취득일 또는 증축일부터 5년 이내에 해당 건물을 양도하는 경우로서 제97조제1항제1호나목에 따른 감정가액 또는 환산취득가액을 그 취득가액으로 하는 경우에는 해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다.\"\n\nEvidence: \"해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다\" — 99 chars. Or alternatively: \"거주자가 건물을 신축 또는 증축(증축의 경우 바닥면적 합계가 85제곱미터를 초과하는 경우에 한정한다)하고 그 건물의 취득일 또는 증축일부터 5년 이내에 해당 건물을 양도하는 경우\" — this captures conditions. Let me use: \"해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다\" — 99 chars, within limit.\n\nArt-115: \"제115조 ② 제1항에 따라 법인의 대주주가 양도하는 주식등에 대하여 거래명세 등을 기장하지 아니하였거나 누락하였을 때에는 기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액(이하 이 조에서 “기장 불성실가산세”라 한다)을 산출세액에 더한다.\"\n\nEvidence: \"기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액을 산출세액에 더한다\" — 80 chars.\n\nArt-115-2: \"제115조의2(신탁 수익자명부 변동상황명세서의 제출) 신탁의 수탁자는 제94조제1항제6호에 따른 신탁 수익권에 대하여 신탁이 설정된 경우와 수익권의 양도 등으로 인하여 신탁 수익자의 변동사항이 있는 경우 대통령령으로 정하는 바에 따라 수익자명부 변동상황명세서를 작성ㆍ보관하여야 하며, 신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일(법인과세 신탁재산의 수탁자의 경우에는 「법인세법」 제60조에 따른 신고기한을 말한다)까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다.\"\n\nEvidence: \"신탁의 수탁자는 제94조제1항제6호에 따른 신탁 수익권에 대하여 신탁이 설정된 경우와 수익권의 양도 등으로 인하여 신탁 수익자의 변동사항이 있는 경우 대통령령으로 정하는 바에 따라 수익자명부 변동상황명세서를 작성ㆍ보관하여야 하며\" — 100 chars. Let me check: this is exactly 100? I'll use a shorter one: \"신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다\" — 73 chars.\n\nArt-116: \"제116조 ② 납세지 관할 세무서장은 제114조에 따라 양도소득과세표준과 세액을 결정 또는 경정한 경우 제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액(이하 “추가납부세액”이라 한다)을 해당 거주자에게 알린 날부터 30일 이내에 징수한다.\"\n\nEvidence: \"제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액(이하 “추가납부세액”이라 한다)을 해당 거주자에게 알린 날부터 30일 이내에 징수한다\" — 95 chars.\n\nArt-117: \"제117조(양도소득세의 환급) 납세지 관할 세무서장은 과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다.\"\n\nEvidence: \"과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다\" — 90 chars.\n\nNow for categories:\n\n- art-110: conditional (deadline is explicit but procedures delegated, exception for land permit adds conditional logic)\n- art-111: conditional (calculation formula explicit: 산출세액 - 감면세액 - 세액공제액, but payment method delegated, references Article 110)\n- art-112: direct (explicit threshold 1천만원, explicit period 2개월, simple conditional)\n- art-114: structural (primarily procedural determination/correction authority, heavy delegation to Presidential Decree, references to other articles for valuation, multiple paragraphs with conditional triggers but organizational/procedural focus)\n- art-114-2: direct (explicit 5% rate, explicit 5-year condition, explicit 85㎡ condition, arithmetic addition)\n- art-115: direct (explicit formula: (unrecorded income / total income) × tax × 10%, or 7/10000 of transaction amount)\n- art-115-2: structural (procedural submission obligation with deadline, no arithmetic calculation)\n- art-116: conditional (explicit comparison: total determined tax > sum of items → collect excess within 30 days, but references other articles and National Tax Collection Act)\n- art-117: conditional (explicit comparison for refund, references Article 116 and 92)\n\nNow for formalizable elements and unresolved:\n\nart-110:\n- formalizable: [\"신고기한(다음 연도 5월 1일~5월 31일)\", \"토지거래허가 관련 예외기한 구조\"]\n- unresolved: [\"대통령령에 위임된 신고절차\", \"제105조제1항제1호 단서 적용요건의 구체적 판단\", \"토지거래계약 허가일/해제일 확정 문제\"]\n- dependencies: [\"제105조제1항제1호 단서\", \"대통령령\"]\n\nart-111:\n- formalizable: [\"납부세액 = 산출세액 - 감면세액 - 세액공제액\", \"확정신고기한 = 제110조제1항 기한\"]\n- unresolved: [\"감면세액과 세액공제액의 구체적 산정방법\", \"납부 절차 및 장소의 세부방법(대통령령 위임)\", \"제118조에 따라 준용되는 제74조의 범위\"]\n- dependencies: [\"제110조제1항\", \"제118조\", \"제74조\", \"대통령령\"]\n\nart-112:\n- formalizable: [\"분할납부 요건: 납부할 세액 > 1천만원\", \"분할납부 기간: 납부기한 경과 후 2개월 이내\", \"분할납부 대상: 제106조 또는 제111조에 따른 세액\"]\n- unresolved: [\"분할납부 가능 금액의 산정방법(대통령령 위임)\", \"분할납부의 구체적 절차\"]\n- dependencies: [\"제106조\", \"제111조\", \"대통령령\"]\n\nart-114:\n- formalizable: [\"신고 미이행 시 결정(①)\", \"신고 내용 탈루/오류 시 경정(②)\", \"결정/경정 후 오류 발견 시 재경정(③)\", \"결정/경정 시 제96조·제97조·제97조의2 가액 적용(④)\", \"등기부 기재가액 추정 규정(⑤)\", \"실지거래가액 확인 시 경정(⑥)\", \"추계조사 결정/경정(⑦)\", \"서면 통지 의무(⑧)\", \"주식등 조회 권한(⑨)\"]\n- unresolved: [\"제96조·제97조·제97조의2의 구체적 가액 산정방법\", \"대통령령에 위임된 실지거래가액 소명 판단 기준(⑤)\", \"추계조사의 구체적 방법 및 적용 순서(⑦)\", \"주식등 조회 사유의 구체적 범위(⑨)\"]\n- dependencies: [\"제96조\", \"제97조\", \"제97조의2\", \"제94조제1항제1호\", \"제94조제1항제3호·제4호\", \"부동산등기법 제68조\", \"금융실명거래법\", \"자본시장법\", \"대통령령\"]\n\nart-114-2:\n- formalizable: [\"가산세 = 감정가액 또는 환산취득가액 × 5%\", \"적용대상: 건물 신축/증축 후 5년 이내 양도\", \"증축의 경우 바닥면적 합계 85㎡ 초과 조건\", \"증축분은 증축 부분에 한정\"]\n- unresolved: [\"제97조제1항제1호나목에 따른 감정가액/환산취득가액의 구체적 산정\", \"제92조제3항제2호 결정세액의 의미 및 계산구조와의 연결\"]\n- dependencies: [\"제97조제1항제1호나목\", \"제92조제3항제2호\"]\n\nart-115:\n- formalizable: [\"기장 불성실가산세 = (기장 누락 소득금액 / 양도소득금액) × 산출세액 × 10%\", \"산출세액 없는 경우: 거래금액 × 7/10000\", \"주식등 거래명세 장부 기록·관리 의무\", \"거래명세서 구비 시 장부 비치·기록 의제\"]\n- unresolved: [\"종목별 구분 및 거래일자별 기록의 구체적 형식(대통령령 위임)\", \"중소기업 포함 법인의 대주주 판정기준\", \"양도소득금액에서 차지하는 비율의 계산 기초\"]\n- dependencies: [\"대통령령\", \"자본시장법\"]\n\nart-115-2:\n- formalizable: [\"제출의무자: 신탁 수탁자\", \"제출대상: 신탁 수익권 설정 또는 수익자 변동\", \"제출기한: 다음 연도 "
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2932,
+      "completion_tokens": 6087,
+      "total_tokens": 9019,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4096,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "system_fingerprint": null
+  },
+  "parsed": [
+    {
+      "id": "art-110",
+      "category": "conditional",
+      "evidence": "그 양도소득 과세표준을 그 과세기간의 다음 연도 5월 1일부터 5월 31일까지",
+      "rationale": "신고기한은 명시적 산술기간이나 허가일·해제일 조건부 기한과 신고절차 대통령령 위임이 있어 순수 직접법으로 보기 어렵다.",
+      "formalizable": [
+        "확정신고 기한(다음 연도 5월 1일~5월 31일)",
+        "토지거래허가 관련 조건부 기한 구조"
+      ],
+      "unresolved": [
+        "신고방법·서류 등 대통령령 위임사항",
+        "제105조제1항제1호 단서 적용요건의 사실관계 확정",
+        "허가일·해제일의 구체적 확정 문제"
+      ],
+      "dependencies": [
+        "제105조제1항제1호 단서",
+        "대통령령"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-111",
+      "category": "conditional",
+      "evidence": "거주자는 해당 과세기간의 과세표준에 대한 양도소득 산출세액에서 감면세액과 세액공제액을 공제한 금액을",
+      "rationale": "납부세액 계산식은 산출세액-감면세액-세액공제액으로 명시적이나 감면·공제액 산정과 납부절차가 대통령령에 위임되어 조건부이다.",
+      "formalizable": [
+        "납부세액 = 양도소득 산출세액 - 감면세액 - 세액공제액",
+        "확정신고납부 기한의 참조구조(제110조제1항)"
+      ],
+      "unresolved": [
+        "감면세액·세액공제액의 구체적 산정 근거",
+        "납부 장소·방법 등 대통령령 위임사항",
+        "제118조로 준용되는 제74조 범위의 확정"
+      ],
+      "dependencies": [
+        "제110조제1항",
+        "제118조",
+        "제74조",
+        "대통령령"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-112",
+      "category": "direct",
+      "evidence": "납부할 세액이 각각 1천만원을 초과하는 자는 대통령령으로 정하는 바에 따라 그 납부할 세액의 일부를 납부기한이 지난 후 2개월 이내에 분할납부할 수 있다",
+      "rationale": "1천만원 초과라는 명시적 수치요건과 납부기한 후 2개월이라는 산술적 기간이 직접 규정되어 있다.",
+      "formalizable": [
+        "분할납부 요건: 세액 > 1천만원",
+        "분할납부 가능 기간: 납부기한 경과 후 2개월 이내",
+        "적용대상 세액 범위(제106조·제111조)"
+      ],
+      "unresolved": [
+        "분할납부 가능 금액의 산정 및 분할비율(대통령령 위임)",
+        "분할납부 신청의 구체적 절차"
+      ],
+      "dependencies": [
+        "제106조",
+        "제111조",
+        "대통령령"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-114",
+      "category": "structural",
+      "evidence": "제105조에 따라 예정신고를 하여야 할 자 또는 제110조에 따라 확정신고를 하여야 할 자가 그 신고를 하지 아니한 경우에는 해당 거주자의 양도소득과세표준과 세액을 결정한다",
+      "rationale": "신고 미이행·탈루·오류 등 조건부 트리거를 절차로 연결하는 결정·경정 체계 중심이며 가액산정은 별도 조문에 위임되어 구조 모형화 대상이다.",
+      "formalizable": [
+        "신고 미이행 시 결정(①)",
+        "신고 탈루·오류 시 경정(②)",
+        "결정·경정 후 오류 발견 시 재경정(③)",
+        "결정·경정 시 제96조·제97조·제97조의2 가액 적용(④)",
+        "서면 통지 의무(⑧)",
+        "주식등 조회 권한(⑨)"
+      ],
+      "unresolved": [
+        "제96조·제97조·제97조의2의 구체적 가액 산정방식",
+        "등기부 기재가액 추정 적용의 대통령령 판정기준(⑤)",
+        "추계조사의 방법·적용순서(⑦)",
+        "주식등 조회 필요성의 구체적 판단(⑨)"
+      ],
+      "dependencies": [
+        "제96조",
+        "제97조",
+        "제97조의2",
+        "제94조제1항제1호·제3호·제4호",
+        "부동산등기법 제68조",
+        "금융실명거래법",
+        "자본시장법",
+        "대통령령"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-114-2",
+      "category": "direct",
+      "evidence": "해당 건물의 감정가액(증축의 경우 증축한 부분에 한정한다) 또는 환산취득가액(증축의 경우 증축한 부분에 한정한다)의 100분의 5에 해당하는 금액을 제92조제3항제2호에 따른 양도소득 결정세액에 더한다",
+      "rationale": "감정가액·환산취득가액의 5%를 결정세액에 가산하는 산술식과 5년·85㎡ 조건이 명시적으로 규정되어 직접형식화가 가능하다.",
+      "formalizable": [
+        "가산세 = 감정가액 또는 환산취득가액 × 5%",
+        "적용대상: 건물 신축·증축 후 5년 이내 양도",
+        "증축 적용요건: 바닥면적 합계 85㎡ 초과",
+        "증축분 한정: 증축 부분에 한정"
+      ],
+      "unresolved": [
+        "제97조제1항제1호나목 감정가액·환산취득가액의 구체적 산정",
+        "제92조제3항제2호 결정세액과의 계산상 연결"
+      ],
+      "dependencies": [
+        "제97조제1항제1호나목",
+        "제92조제3항제2호"
+      ],
+      "exactEvidence": true
+    },
+    {
+      "id": "art-115",
+      "category": "direct",
+      "evidence": "기장을 하지 아니한 소득금액 또는 누락한 소득금액이 양도소득금액에서 차지하는 비율을 산출세액에 곱하여 계산한 금액의 100분의 10에 해당하는 금액을 산출세액에 더한다",
+      "rationale": "기장 누락 소득금액의 비율×산출세액×10%라는 명시적 산술식과 산출세액 없을 때 거래금액×7/10000의 대체산식이 직접 규정되어 있다.",
+      "formalizable": [
+        "기장 불성실가산세 = (누락 소득금액 / 양도소득금액) × 산출세액 × 10%",
+        "산출세액 없을 때 가산세 = 거래금액 × 7/10000",
+        "장부 기록·관리 의무 및 거래명세서 의제"
+      ],
+      "unresolved": [
+        "종목별·거래일자별 기록의 구체적 형식(대통령령 위임)",
+        "법인 대주주 판정 및 중소기업 포함 범위",
+        "양도소득금액에서 차지하는 비율의 분모 확정"
+      ],
+      "dependencies": [
+        "대통령령",
+        "자본시장법"
+      ],
+      "exactEvidence": false
+    },
+    {
+      "id": "art-115-2",
+      "category": "structural",
+      "evidence": "신탁 설정 또는 수익자 변동이 발생한 과세기간의 다음 연도 5월 1일부터 5월 31일까지 수익자명부 변동상황명세서를 납세지 관할 세무서장에게 제출하여야 한다",
+      "rationale": "제출의무·기한이라는 절차적 의무구조 중심이며 수치계산보다 의무자·제출대상·기한의 조직적 연결이 형식화 대상이다.",
+      "formalizable": [
+        "제출의무자: 신탁 수탁자",
+        "제출대상: 신탁 수익권 설정 또는 수익자 변동",
+        "제출기한: 다음 연도 5월 1일~5월 31일(법인과세 신탁은 법인세법 제60조 기한)"
+      ],
+      "unresolved": [
+        "수익자명부 변동상황명세서 작성·보관 형식(대통령령 위임)",
+        "법인과세 신탁재산 수탁자 판정"
+      ],
+      "dependencies": [
+        "제94조제1항제6호",
+        "법인세법 제60조",
+        "대통령령"
+      ],
+      "exactEvidence": false
+    },
+    {
+      "id": "art-116",
+      "category": "conditional",
+      "evidence": "제92조제3항제3호에 따른 양도소득 총결정세액이 다음 각 호의 금액의 합계액을 초과할 때에는 그 초과하는 세액을 해당 거주자에게 알린 날부터 30일 이내에 징수한다",
+      "rationale": "총결정세액 과다합계액 초과 시 초과액 징수 및 30일 기한이라는 비교·산술구조가 있으나 각 호 금액과 징수근거가 타 조문·법률에 의존하여 조건부이다.",
+      "formalizable": [
+        "추가납부세액 = 총결정세액 - (각 호 합계액)",
+        "각 호 합계액 구성: 예정·확정·수시·징수·원천징수세액",
+        "징수기한: 통지일부터 30일 이내"
+      ],
+      "unresolved": [
+        "각 호 금액의 구체적 확정(제106조·제111조·제114조·제82조·제118조·제156조)",
+        "미납분 징수 시 국세징수법 적용방식"
+      ],
+      "dependencies": [
+        "제106조",
+        "제111조",
+        "제114조",
+        "제82조",
+        "제118조",
+        "제156조제1항제5호",
+        "국세징수법",
+        "제92조제3항제3호"
+      ],
+      "exactEvidence": false
+    },
+    {
+      "id": "art-117",
+      "category": "conditional",
+      "evidence": "과세기간별로 제116조제2항 각 호의 금액의 합계액이 제92조제3항제3호에 따른 양도소득 총결정세액을 초과할 때에는 그 초과하는 세액을 환급하거나 다른 국세 및 강제징수비에 충당하여야 한다",
+      "rationale": "환급 요건(총결정세액 초과액)과 처리방식(환급·충당)이 명시적 비교구조이나 기준금액이 제116조제2항·제92조에 의존하여 조건부이다.",
+      "formalizable": [
+        "환급액 = (제116조제2항 각 호 합계액) - 총결정세액",
+        "처리방식: 환급 또는 다른 국세·강제징수비 충당"
+      ],
+      "unresolved": [
+        "제116조제2항 각 호 금액의 구체적 확정",
+        "충당의 우선순위·절차 등 세부방법"
+      ],
+      "dependencies": [
+        "제116조제2항",
+        "제92조제3항제3호"
+      ],
+      "exactEvidence": true
+    }
+  ]
+}

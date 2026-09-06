@@ -1,0 +1,5 @@
+# Preserve official source snapshots and model response artifacts verbatim.
+data/sources/* -whitespace
+data/settlement-sources/* -whitespace
+reports/classification/** -whitespace
+reports/solar/** -whitespace

@@ -20,7 +20,45 @@
       ]
     }
   ],
-  "corpusClassification": "Other articles pending; no whole-law semantic review claim.",
+  "corpusClassification": "325 articles classified;258 active articles have source-evidence-backed possibility reviews. Full article implementation is separate.",
   "sourceSha256": "987d1730ca7bd9d55f1346f45f254e219f419adbfa82b9ccf88b4987ff084f94",
-  "numericReview": "reports/solar/numeric-review-final.json"
+  "numericReview": "reports/solar/numeric-review-final.json",
+  "settlement2025": {
+    "status": "supported-resident-employee-numeric-flow",
+    "ruleSpecification": "data/settlement-2025-rules.json",
+    "sourceReport": "reports/settlement-sources.md",
+    "leanModules": [
+      "lean/IncomeTax/Settlement.lean",
+      "lean/IncomeTax/SettlementSolar.lean"
+    ],
+    "automatic": [
+      "earned deduction",
+      "personal deductions",
+      "earned tax credit",
+      "pension accounts",
+      "insurance",
+      "education",
+      "rent",
+      "children and birth/adoption",
+      "marriage",
+      "card deduction",
+      "standard credit",
+      "signed balance and small positive noncollection"
+    ],
+    "externalNormalized": [
+      "medical credit",
+      "donation credit",
+      "complex housing deductions"
+    ],
+    "unsupported": [
+      "other comprehensive income",
+      "tax reductions",
+      "foreign flat rate",
+      "foreign tax credit",
+      "local income tax",
+      "rural special tax",
+      "carryforward and recapture"
+    ],
+    "rounding": "Per receipt amount slot discard fractions; pension and insurance distinct slots, education total slot. No blanket ten-won individual tax rounding."
+  }
 }

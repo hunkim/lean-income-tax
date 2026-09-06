@@ -1,0 +1,12 @@
+{
+  "requested_model": "solar-pro4",
+  "response_model": "solar-pro4-260806",
+  "evaluation_mode": "guided: Std omega/simp/decide provided; not unaided",
+  "first_guided_attempt_passed": false,
+  "compiler_retry_used": true,
+  "stronger_guidance_used": true,
+  "syntax_retry_used": true,
+  "accepted": true,
+  "accepted_sha256": "5264ceb7ba0923a2ec50c6150b13ca1b4927350dde20d132a1614f1cedf28c40",
+  "scope": "External-input nonrefundable-credit subtraction, refund/additional arithmetic. No legal eligibility or rounding theorem."
+}
